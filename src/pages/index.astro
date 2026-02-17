@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const HERO_IMG = "https://private-us-east-1.manuscdn.com/sessionFile/xMNUTrot6HjFyvAEp9Uci7/sandbox/tYsErljqQtTOdscNHSXHLW-img-1_1771268228000_na1fn_aGVyby1ob21lcGFnZQ.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUveE1OVVRyb3Q2SGpGeXZBRXA5VWNpNy9zYW5kYm94L3RZc0VybGpxUXRUT2RzY05IU1hITFctaW1nLTFfMTc3MTI2ODIyODAwMF9uYTFmbl9hR1Z5Ynkxb2IyMWxjR0ZuWlEucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=rsYJtCjZsoO8UB1zLPEqwxZK9nCdjChfu4rfZsQkOkDwd5IQAyd-3l9TYTPIfNUPuKU8YRWxZAuBK6vnGLr7GkmmUUBSJuvS-PUvml8qawL2lx7XBAXI~IjTccjRpDwEAEFnSdNES9B~0xoTLrN2YJaeqzEZa7adMsJbey0RlVKG2WsRwWU24g49Sp~DLXhn~OSNH3yoBe8jSbWB7u7VDDJdO-yqcbWAwKthiKNL6~LHUXcUTeX5Wzr2cjMfjn-THdBU0PTx0AJoD03a7rlI2vSf4FSy6LoPQFAW6~80sIkDki-pPMxYM9G-Ikiivf9s2i-0Hfe4ynw2pG9TLhin3Q__";
+
+const LEAD_MAGNET_IMG = "https://private-us-east-1.manuscdn.com/sessionFile/xMNUTrot6HjFyvAEp9Uci7/sandbox/1FNKfWkKr1rQC5fIYgccPN-img-3_1771216856000_na1fn_bGVhZC1tYWduZXQtcHJldmlldw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUveE1OVVRyb3Q2SGpGeXZBRXA5VWNpNy9zYW5kYm94LzFGTktmV2tLcjFyUUM1ZklZZ2NjUE4taW1nLTNfMTc3MTIxNjg1NjAwMF9uYTFmbl9iR1ZoWkMxdFlXZHVaWFF0Y0hKbGRtbGxkdy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=Q4b5gPvJO8YmdETKngPFm2RwALG6t6ShN7PmBgP0Tv8TsOpGrzPf2sIHCsz6PNdQD-o882lgRp7W4XGaQa8knR5V3-3KAK~vXGThO5SHkZ2xa7tV22Q831ZvNtAS~D8ibH~tJnoyn3GRuY1~lMhNvpcgMWuCMISX2cx~ArKMyMIPJaYVrvR0xye2rZrPaJZ3hUwI2jXFcha2q0H8zfV9PrqsIsh6b-h~-3Y7oaeKdRQ8AOk4D-43-Fn-Op2~ppGETDtfzmh3Z2WLCD~FIhnKx2D4aZMIvAHHrFjQ2~JbHsO32Vs0-aUvYT533SmoF78w-Gkyt-CXxzDtQjQs-p~9Kg__";
+
+const categories = [
+  { icon: "📊", label: "CRM & Automation", desc: "Track leads, manage customers, automate follow-ups", href: "/hvac/crm/best-crm-for-small-hvac-companies" },
+  { icon: "🚚", label: "Dispatch & Scheduling", desc: "Optimize routes, assign jobs, reduce drive time", href: "/hvac/dispatch/best-dispatch-software-for-hvac" },
+  { icon: "⚖️", label: "Comparisons", desc: "Head-to-head tool comparisons with clear verdicts", href: "/hvac/crm/housecall-pro-vs-jobber" },
+  { icon: "📞", label: "Call Tracking", desc: "Track which marketing channels generate your calls", href: "/hvac/call-tracking/best-call-tracking-for-hvac" },
+  { icon: "📖", label: "Buyer's Guide", desc: "Step-by-step framework to choose the right stack", href: "/hvac/guides/how-to-choose-hvac-software" },
+];
+
+const articles = [
+  { slug: "best-crm-for-small-hvac-companies", catSlug: "crm", title: "Best CRM for Small HVAC Companies (2026): Under 10 Techs", desc: "We compared the top 5 CRMs for small HVAC companies. See scores, screenshots, and pricing.", category: "CRM & Automation", intent: "BOFU", readTime: "14 min read", date: "2026-02-15" },
+  { slug: "servicetitan-alternatives", catSlug: "crm", title: "ServiceTitan Alternatives for HVAC Companies (2026)", desc: "Paying too much for ServiceTitan? We scored 5 alternatives on cost savings and feature parity.", category: "CRM & Automation", intent: "BOFU", readTime: "12 min read", date: "2026-02-17" },
+  { slug: "housecall-pro-vs-jobber", catSlug: "crm", title: "Housecall Pro vs Jobber: Which Is Better for Your HVAC Team?", desc: "We compared Housecall Pro and Jobber across 7 categories. See the head-to-head table and verdict.", category: "Comparisons", intent: "BOFU", readTime: "10 min read", date: "2026-02-19" },
+  { slug: "best-dispatch-software-for-hvac", catSlug: "dispatch", title: "Best Dispatch Software for HVAC Companies (2026)", desc: "We scored 5 dispatch tools on board quality, route optimization, and ease of use.", category: "Dispatch & Scheduling", intent: "BOFU", readTime: "13 min read", date: "2026-02-21" },
+  { slug: "best-call-tracking-for-hvac", catSlug: "call-tracking", title: "Best Call Tracking Software for HVAC Companies (2026)", desc: "We compared 5 call tracking platforms. See pricing, features, and which shows where leads come from.", category: "Call Tracking", intent: "BOFU", readTime: "11 min read", date: "2026-02-23" },
+  { slug: "jobber-vs-servicetitan", catSlug: "crm", title: "Jobber vs ServiceTitan: Which Is Right for Your HVAC Company?", desc: "Detailed comparison of Jobber vs ServiceTitan. See pricing, features, and which fits your team size.", category: "Comparisons", intent: "BOFU", readTime: "12 min read", date: "2026-02-24" },
+  { slug: "how-to-choose-hvac-software", catSlug: "guides", title: "How to Choose HVAC Software: The Complete Buyer's Guide", desc: "A step-by-step guide to choosing the right software stack for your HVAC or plumbing company.", category: "Buyer's Guide", intent: "MOFU", readTime: "15 min read", date: "2026-02-25" },
+];
+---
+
+<Layout
+  title="HVAC Software Hub — Independent Software Reviews for Contractors"
+  description="Independent reviews and comparisons of CRM, dispatch, scheduling, and call tracking software for HVAC and plumbing companies. Scored reviews with transparent methodology. No hype."
+  canonicalPath="/"
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0">
+      <img src={HERO_IMG} alt="" class="w-full h-full object-cover" loading="eager" />
+      <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30"></div>
+    </div>
+    <div class="relative container py-20 md:py-28">
+      <div class="max-w-2xl">
+        <p class="data-label text-orange-300 mb-4">Independent Software Reviews for HVAC Contractors</p>
+        <h1 class="font-bold text-3xl md:text-5xl text-white leading-tight mb-6" style="font-family: var(--font-heading);">
+          Find the Right Software Stack for Your HVAC Business
+        </h1>
+        <p class="text-lg text-white/80 mb-8 leading-relaxed">
+          We compare CRM, dispatch, scheduling, and call tracking tools so you can stop guessing and start growing. No hype. No fluff. Just scored reviews built for contractors.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="/hvac/crm/best-crm-for-small-hvac-companies" class="cta-button">Read Our CRM Guide →</a>
+          <a href="/lead-magnet" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 text-white border border-white/20 rounded-md font-medium text-sm hover:bg-white/20 transition-colors no-underline">Get Free Toolkit ↓</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="container py-16">
+    <h2 class="font-semibold text-2xl mb-2" style="font-family: var(--font-heading);">Browse by Category</h2>
+    <p class="text-[var(--color-muted)] mb-8">Every review is scored on a weighted framework built for HVAC businesses.</p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {categories.map((cat) => (
+        <a href={cat.href} class="group border border-[var(--color-border)] rounded-lg p-5 bg-white hover:border-[var(--color-primary)]/30 hover:shadow-sm transition-all no-underline">
+          <span class="text-2xl mb-3 block">{cat.icon}</span>
+          <h3 class="font-semibold text-sm mb-1 text-[var(--color-foreground)] group-hover:text-[var(--color-primary)] transition-colors" style="font-family: var(--font-heading);">{cat.label}</h3>
+          <p class="text-xs text-[var(--color-muted)]">{cat.desc}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Latest Guides -->
+  <section class="container pb-16">
+    <h2 class="font-semibold text-2xl mb-2" style="font-family: var(--font-heading);">Latest Guides</h2>
+    <p class="text-[var(--color-muted)] mb-8">Published this month. Updated regularly.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {articles.map((article) => (
+        <a href={`/hvac/${article.catSlug}/${article.slug}`} class="group border border-[var(--color-border)] rounded-lg bg-white overflow-hidden hover:border-[var(--color-primary)]/30 hover:shadow-sm transition-all no-underline">
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="data-label bg-[var(--color-accent)] px-2 py-0.5 rounded text-xs">{article.category}</span>
+              <span class="data-label text-xs">{article.intent}</span>
+            </div>
+            <h3 class="font-semibold text-lg text-[var(--color-foreground)] group-hover:text-[var(--color-primary)] transition-colors mb-2" style="font-family: var(--font-heading);">{article.title}</h3>
+            <p class="text-sm text-[var(--color-muted)] mb-3">{article.desc}</p>
+            <div class="flex items-center gap-3 text-xs text-[var(--color-muted)]">
+              <span>{article.readTime}</span>
+              <span>&middot;</span>
+              <span>{new Date(article.date).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</span>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Lead Magnet CTA -->
+  <section class="bg-white border-t border-b border-[var(--color-border)]">
+    <div class="container py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="data-label text-[var(--color-primary)] mb-3">Free Download</p>
+          <h2 class="font-bold text-2xl md:text-3xl mb-4" style="font-family: var(--font-heading);">The Contractor Follow-Up Kit</h2>
+          <p class="text-[var(--color-foreground)]/70 mb-6 leading-relaxed">Stop losing jobs to slow follow-up. This free toolkit includes a 5-stage CRM pipeline template, 5 ready-to-use SMS scripts, and a missed call recovery checklist.</p>
+          <ul class="space-y-2 mb-6 list-none p-0">
+            <li class="flex items-center gap-2 text-sm"><span class="w-5 h-5 rounded-full bg-[var(--color-primary)]/10 flex items-center justify-center flex-shrink-0"><span class="text-[var(--color-primary)] text-xs">✓</span></span>CRM Pipeline Stages Template</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-5 h-5 rounded-full bg-[var(--color-primary)]/10 flex items-center justify-center flex-shrink-0"><span class="text-[var(--color-primary)] text-xs">✓</span></span>5 SMS Follow-Up Scripts</li>
+            <li class="flex items-center gap-2 text-sm"><span class="w-5 h-5 rounded-full bg-[var(--color-primary)]/10 flex items-center justify-center flex-shrink-0"><span class="text-[var(--color-primary)] text-xs">✓</span></span>Missed Call Recovery Checklist</li>
+          </ul>
+          <a href="/lead-magnet" class="cta-button">Get the Free Kit ↓</a>
+          <p class="text-xs text-[var(--color-muted)] mt-3">No spam. Unsubscribe anytime.</p>
+        </div>
+        <div class="flex justify-center">
+          <img src={LEAD_MAGNET_IMG} alt="Contractor Follow-Up Kit preview" class="w-80 md:w-96 rounded-lg shadow-lg" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <section class="container py-12 text-center">
+    <p class="text-sm text-[var(--color-muted)] max-w-2xl mx-auto">
+      HVAC Software Hub is an independent review site. We research, test, and score software tools using a transparent methodology. Some links are affiliate links — we may earn a commission if you purchase through them, at no extra cost to you.
+      <a href="/disclosure" class="text-[var(--color-primary)] underline">Read our full disclosure</a>.
+    </p>
+  </section>
+</Layout>

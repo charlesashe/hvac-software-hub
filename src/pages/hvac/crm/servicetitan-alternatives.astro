@@ -1,0 +1,397 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+
+const tocItems = [
+  { id: "why-switch", label: "Why Contractors Switch" },
+  { id: "fit-score", label: "Alternative Fit Score" },
+  { id: "miss-vs-save", label: "What You'll Miss vs Save" },
+  { id: "housecall-pro", label: "1. Housecall Pro" },
+  { id: "workiz", label: "2. Workiz" },
+  { id: "jobber", label: "3. Jobber" },
+  { id: "fieldedge", label: "4. FieldEdge" },
+  { id: "service-fusion", label: "5. Service Fusion" },
+  { id: "faq", label: "FAQ" },
+  { id: "verdict", label: "Verdict" }
+];
+const faqItems = [
+  { q: "Is it hard to switch from ServiceTitan?", a: "The technical migration (exporting data, importing to a new tool) takes 1-3 weeks depending on the platform. The harder part is retraining your team. Budget 2-4 weeks for the full transition. Most alternatives offer migration support." },
+  { q: "Will I lose my customer data?", a: "No. ServiceTitan allows data export. All alternatives accept CSV imports. Your customer records, job history, and contact information can be transferred." },
+  { q: "What features will I actually miss?", a: "The two features most contractors miss are ServiceTitan's marketing attribution dashboard and its pricebook with dynamic pricing. If these are critical to your operation, switching may not be worth the savings." },
+  { q: "Can I try an alternative before canceling ServiceTitan?", a: "Yes. Housecall Pro, Jobber, and Workiz all offer free trials. Run them in parallel for 2 weeks before making the switch." },
+  { q: "What about my ServiceTitan contract?", a: "ServiceTitan uses annual contracts. Check your renewal date and cancellation terms. Some contractors negotiate early termination by citing the cost savings." }
+];
+---
+
+<ArticleLayout
+  title="5 ServiceTitan Alternatives for HVAC Companies (2026) — HVAC Software Hub"
+  description="Paying too much for ServiceTitan? We scored 5 alternatives on cost savings, feature parity, and switching ease."
+  canonicalPath="/hvac/crm/servicetitan-alternatives"
+  category="CRM & Automation"
+  publishDate="2026-02-17"
+  readTime="12 min read"
+  intent="BOFU"
+  tocItems={tocItems}
+  faqItems={faqItems}
+>
+<div class="container py-8">
+        <div class="flex gap-12">
+          <article class="flex-1 min-w-0 max-w-3xl">
+
+            <div class="prose mt-8" id="why-switch">
+              <h2>Why HVAC Contractors Look for ServiceTitan Alternatives</h2>
+              <p>
+                ServiceTitan is the most powerful field service management platform available. But power comes at a cost — literally. At <strong>$245-$398 per technician per month</strong>, plus implementation fees of $5,000-$50,000, many HVAC companies find themselves paying for features they do not use. Reddit threads from HVAC owners consistently cite three reasons for switching: cost, contract lock-in, and complexity.
+              </p>
+              <p>
+                This guide scores five alternatives on the factors that matter most to a ServiceTitan switcher: <strong>how much you will save, how many features you will keep, and how hard it is to switch</strong>.
+              </p>
+            </div>
+
+            <div id="fit-score" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">ServiceTitan Alternative Fit Score</h2>
+              <p class="text-sm text-foreground/70 mb-4">
+                Cost Savings vs ST and Core Feature Parity are weighted 2x because they are the primary reasons contractors switch.
+              </p>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Factor</th>
+  <th>Description</th>
+  <th>Weight</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Cost Savings vs ST</td>
+  <td>How much will you save compared to ServiceTitan?</td>
+  <td>2x</td>
+</tr>
+<tr>
+  <td>Core Feature Parity</td>
+  <td>Does it replace ST's essential features?</td>
+  <td>2x</td>
+</tr>
+<tr>
+  <td>Ease of Switching</td>
+  <td>How hard is the migration?</td>
+  <td>1x</td>
+</tr>
+<tr>
+  <td>Call/Lead Integration</td>
+  <td>Does it handle call tracking and lead capture?</td>
+  <td>1x</td>
+</tr>
+<tr>
+  <td>Affordability</td>
+  <td>What is the absolute monthly cost?</td>
+  <td>1x</td>
+</tr>
+</tbody>
+</table>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Tool</th>
+  <th>Savings (x2)</th>
+  <th>Parity (x2)</th>
+  <th>Switch (x1)</th>
+  <th>Calls (x1)</th>
+  <th>Afford. (x1)</th>
+  <th>Total</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Housecall Pro</td>
+  <td>16</td>
+  <td>14</td>
+  <td>8</td>
+  <td>7</td>
+  <td>8</td>
+  <td>58/70</td>
+</tr>
+<tr>
+  <td>Workiz</td>
+  <td>14</td>
+  <td>14</td>
+  <td>7</td>
+  <td>9</td>
+  <td>7</td>
+  <td>57/70</td>
+</tr>
+<tr>
+  <td>Jobber</td>
+  <td>18</td>
+  <td>12</td>
+  <td>9</td>
+  <td>5</td>
+  <td>9</td>
+  <td>56/70</td>
+</tr>
+<tr>
+  <td>FieldEdge</td>
+  <td>12</td>
+  <td>14</td>
+  <td>6</td>
+  <td>7</td>
+  <td>6</td>
+  <td>53/70</td>
+</tr>
+<tr>
+  <td>Service Fusion</td>
+  <td>14</td>
+  <td>12</td>
+  <td>7</td>
+  <td>5</td>
+  <td>7</td>
+  <td>50/70</td>
+</tr>
+</tbody>
+</table>
+            </div>
+
+            <div id="miss-vs-save" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">What You'll Miss vs What You'll Save</h2>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Alternative</th>
+  <th>Monthly Savings (5 techs)</th>
+  <th>Features You Keep</th>
+  <th>Features You Lose</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Housecall Pro</td>
+  <td>~$800-$1,200/mo</td>
+  <td>Dispatch, scheduling, invoicing, reviews</td>
+  <td>Marketing attribution, pricebook depth</td>
+</tr>
+<tr>
+  <td>Workiz</td>
+  <td>~$700-$1,100/mo</td>
+  <td>Dispatch, call tracking, invoicing</td>
+  <td>Marketing attribution, advanced reporting</td>
+</tr>
+<tr>
+  <td>Jobber</td>
+  <td>~$900-$1,300/mo</td>
+  <td>Scheduling, invoicing, client portal</td>
+  <td>Dispatch board depth, call tracking</td>
+</tr>
+<tr>
+  <td>FieldEdge</td>
+  <td>~$400-$800/mo</td>
+  <td>Dispatch, QB Desktop, reporting</td>
+  <td>Marketing tools, modern UI</td>
+</tr>
+<tr>
+  <td>Service Fusion</td>
+  <td>~$700-$1,100/mo</td>
+  <td>Dispatch, unlimited users, GPS</td>
+  <td>Call tracking, marketing attribution</td>
+</tr>
+</tbody>
+</table>
+              <p class="text-xs text-muted-foreground italic mt-2">
+                Savings estimates based on a 5-technician team comparing ServiceTitan's reported $1,000-$1,700/mo total cost against each alternative's published pricing. Your actual savings will depend on team size, plan tier, and add-ons. These are estimates, not guarantees.
+              </p>
+            </div>
+
+            <!-- Tool Reviews -->
+            <div class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-6">Detailed Reviews</h2>
+
+              <div id="housecall-pro" class="mb-10 border border-border rounded-lg p-6 bg-white">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 class="font-heading font-semibold text-xl">1. Housecall Pro</h3>
+                    <p class="text-sm text-muted-foreground">Best Overall ServiceTitan Alternative</p>
+                  </div>
+                  <div class="score-badge high">58</div>
+                </div>
+                <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                  Housecall Pro replaces about 80% of what ServiceTitan does at a fraction of the cost. The biggest gap is marketing attribution — HCP does not track which ad campaign generated which job. But for most HVAC companies under 10 techs, that trade-off is worth $800-$1,200/mo in savings.
+                </p>
+                <p class="text-sm text-foreground/80 mb-4">
+                  <strong>Switching from ServiceTitan:</strong> HCP offers a dedicated migration team for larger accounts. Data import via CSV is straightforward. The main adjustment is losing ServiceTitan's pricebook depth — HCP's pricebook is simpler. Budget 2 weeks for the full transition.
+                </p>
+                <table class="comparison-table">
+<thead><tr>
+  <th>Plan</th>
+  <th>Monthly</th>
+  <th>Users</th>
+  <th>Notes</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Basic</td>
+  <td>$79/mo</td>
+  <td>1</td>
+  <td>Single users — most ST switchers need Essentials+</td>
+</tr>
+<tr>
+  <td>Essentials</td>
+  <td>$149/mo ($189 monthly)</td>
+  <td>Up to 5</td>
+  <td>Reporting, GPS, QuickBooks, reviews</td>
+</tr>
+<tr>
+  <td>MAX</td>
+  <td>Custom</td>
+  <td>8+</td>
+  <td>Dedicated success manager</td>
+</tr>
+</tbody>
+</table>
+                <div class="cta-box">
+  <h3>Try Housecall Pro Free</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Best overall alternative to ServiceTitan for HVAC teams.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+              </div>
+
+              <div id="workiz" class="mb-10 border border-border rounded-lg p-6 bg-white">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 class="font-heading font-semibold text-xl">2. Workiz</h3>
+                    <p class="text-sm text-muted-foreground">Best for Replacing ST's Call Tracking</p>
+                  </div>
+                  <div class="score-badge high">57</div>
+                </div>
+                <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                  If the main ServiceTitan feature you actually use is call tracking and lead attribution, Workiz is the closest replacement. It has a built-in VoIP phone system that tracks calls, records them, and automatically creates leads from missed calls.
+                </p>
+                <p class="text-sm text-foreground/80 mb-4">
+                  <strong>Switching from ServiceTitan:</strong> The phone number porting process takes 1-2 weeks. Workiz can import your customer data via CSV. The dispatch board is comparable to ServiceTitan's, though the reporting is less deep.
+                </p>
+                <div class="cta-box">
+  <h3>Try Workiz Free</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Built-in call tracking replaces one of ServiceTitan's best features.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+              </div>
+
+              <div id="jobber" class="mb-10 border border-border rounded-lg p-6 bg-white">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 class="font-heading font-semibold text-xl">3. Jobber</h3>
+                    <p class="text-sm text-muted-foreground">Easiest and Most Affordable Alternative</p>
+                  </div>
+                  <div class="score-badge high">56</div>
+                </div>
+                <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                  Jobber is the simplest and most affordable option. It does not try to replace everything ServiceTitan does — instead, it focuses on doing the basics exceptionally well. If you are switching because ServiceTitan is too complex and too expensive, Jobber is the cleanest break.
+                </p>
+                <p class="text-sm text-foreground/80 mb-4">
+                  <strong>Switching from ServiceTitan:</strong> The easiest migration of any alternative. CSV import, clean interface, minimal training needed. Most teams are operational in 1-3 days. The trade-off is losing dispatch board depth and call tracking.
+                </p>
+                <div class="cta-box">
+  <h3>Try Jobber Free</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">The simplest path away from ServiceTitan. Operational in a day.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+              </div>
+
+              <div id="fieldedge" class="mb-10 border border-border rounded-lg p-6 bg-white">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 class="font-heading font-semibold text-xl">4. FieldEdge</h3>
+                    <p class="text-sm text-muted-foreground">Best for QuickBooks Desktop Users</p>
+                  </div>
+                  <div class="score-badge mid">53</div>
+                </div>
+                <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                  FieldEdge is the strongest alternative for HVAC companies that rely on QuickBooks Desktop (not Online). Its two-way sync with QB Desktop is the best in the industry. However, customer service has received mixed reviews recently.
+                </p>
+                <p class="text-sm text-foreground/80 mb-4">
+                  <strong>Switching from ServiceTitan:</strong> FieldEdge's feature set is comparable to ServiceTitan's for core operations. The main advantage is the QB Desktop integration. The main risk is customer support quality — verify current support response times before committing.
+                </p>
+                <div class="verdict-strip">
+                  <p class="text-sm"><strong>Non-affiliate link:</strong> <a href="https://fieldedge.com/pricing/" target="_blank" rel="noopener noreferrer" class="text-primary underline">See FieldEdge pricing</a></p>
+                </div>
+              </div>
+
+              <div id="service-fusion" class="mb-10 border border-border rounded-lg p-6 bg-white">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 class="font-heading font-semibold text-xl">5. Service Fusion</h3>
+                    <p class="text-sm text-muted-foreground">Best Flat-Rate Pricing</p>
+                  </div>
+                  <div class="score-badge mid">50</div>
+                </div>
+                <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                  Service Fusion's unlimited-user pricing model is the opposite of ServiceTitan's per-technician model. If per-user fees are the main reason you are leaving ServiceTitan, Service Fusion eliminates that problem entirely.
+                </p>
+                <p class="text-sm text-foreground/80 mb-4">
+                  <strong>Switching from ServiceTitan:</strong> The feature set covers core operations but lacks call tracking and marketing attribution. The interface is less modern. The value proposition is purely financial — predictable pricing with no per-user surprises.
+                </p>
+                <div class="verdict-strip">
+                  <p class="text-sm"><strong>Non-affiliate link:</strong> <a href="https://www.servicefusion.com/pricing" target="_blank" rel="noopener noreferrer" class="text-primary underline">See Service Fusion pricing</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div id="faq">
+              
+            </div>
+
+            <div id="verdict" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Verdict</h2>
+              <div class="prose">
+                <p>
+                  <strong>Housecall Pro</strong> is the best overall ServiceTitan alternative for most HVAC companies. It replaces the most features at the best price point. <strong>Workiz</strong> is the pick if call tracking is your must-have. <strong>Jobber</strong> is the easiest and cheapest path if you just want simplicity.
+                </p>
+              </div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                <div class="cta-box">
+  <h3>Our #1 Alternative: Housecall Pro</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Replaces 80% of ServiceTitan at a fraction of the cost.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+                <div class="cta-box">
+  <h3>Free Contractor Follow-Up Kit</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Pipeline template, SMS scripts, and missed call checklist.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+              </div>
+            </div>
+
+
+            <div class="mt-10 pt-6 border-t border-border">
+              <h3 class="data-label mb-3">Related Guides</h3>
+              <ul class="space-y-2 text-sm">
+                <li><a href="/hvac/crm/best-crm-for-small-hvac-companies" class="text-primary hover:underline">Best CRM for Small HVAC Companies</a></li>
+                <li><a href="/hvac/crm/housecall-pro-vs-jobber" class="text-primary hover:underline">Housecall Pro vs Jobber</a></li>
+                <li><a href="/hvac/dispatch/best-dispatch-software-for-hvac" class="text-primary hover:underline">Best Dispatch Software for HVAC</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <aside class="hidden lg:block w-64 flex-shrink-0">
+          </aside>
+        </div>
+      </div>
+
+<!-- FAQ Section -->
+<div id="faq" class="mt-10">
+  <h2 class="font-semibold text-2xl mb-4" style="font-family: var(--font-heading);">Frequently Asked Questions</h2>
+  <div class="space-y-0">
+    <div class="faq-item">
+      <p class="faq-question">Is it hard to switch from ServiceTitan?</p>
+      <p class="faq-answer">The technical migration (exporting data, importing to a new tool) takes 1-3 weeks depending on the platform. The harder part is retraining your team. Budget 2-4 weeks for the full transition. Most alternatives offer migration support.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Will I lose my customer data?</p>
+      <p class="faq-answer">No. ServiceTitan allows data export. All alternatives accept CSV imports. Your customer records, job history, and contact information can be transferred.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">What features will I actually miss?</p>
+      <p class="faq-answer">The two features most contractors miss are ServiceTitan's marketing attribution dashboard and its pricebook with dynamic pricing. If these are critical to your operation, switching may not be worth the savings.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Can I try an alternative before canceling ServiceTitan?</p>
+      <p class="faq-answer">Yes. Housecall Pro, Jobber, and Workiz all offer free trials. Run them in parallel for 2 weeks before making the switch.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">What about my ServiceTitan contract?</p>
+      <p class="faq-answer">ServiceTitan uses annual contracts. Check your renewal date and cancellation terms. Some contractors negotiate early termination by citing the cost savings.</p>
+    </div>
+  </div>
+</div>
+</ArticleLayout>

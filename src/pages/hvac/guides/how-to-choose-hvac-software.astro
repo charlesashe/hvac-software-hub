@@ -1,0 +1,457 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+
+const tocItems = [
+  { id: "who-needs", label: "Who Needs This Guide" },
+  { id: "categories", label: "Software Categories" },
+  { id: "crm-dispatch", label: "CRM & Dispatch" },
+  { id: "call-tracking", label: "Call Tracking" },
+  { id: "reviews", label: "Review Management" },
+  { id: "accounting", label: "Accounting Integration" },
+  { id: "stack-by-size", label: "Recommended Stacks by Size" },
+  { id: "evaluation", label: "Evaluation Checklist" },
+  { id: "mistakes", label: "Common Mistakes" },
+  { id: "faq", label: "FAQ" }
+];
+const faqItems = [
+  { q: "How much should an HVAC company spend on software?", a: "A reasonable benchmark is 1-3% of annual revenue. A $1M/year company should budget $10,000-30,000/year for their full software stack (CRM, accounting, call tracking, reviews). Start with the essentials (CRM + accounting) and add tools as revenue grows." },
+  { q: "Should I get an all-in-one platform or best-of-breed tools?", a: "For companies under 10 techs, an all-in-one platform like Jobber or Housecall Pro is usually the better choice — simpler to manage, lower total cost, fewer integrations to maintain. For companies over 15 techs, a best-of-breed approach (ServiceTitan + CallRail + specialized tools) often provides better depth in each category." },
+  { q: "What is the most important software for a new HVAC company?", a: "Start with a CRM/field service platform (Jobber or Housecall Pro) and QuickBooks. These two tools handle 80% of your operational needs: scheduling, dispatching, invoicing, and accounting. Add call tracking and review management once you start spending on marketing." },
+  { q: "How do I migrate from one platform to another?", a: "Most platforms support CSV data export. The typical migration process is: (1) export customer and job data from old platform, (2) clean the data in a spreadsheet, (3) import into new platform, (4) run both platforms in parallel for 1-2 weeks, (5) fully switch over. Budget 1-4 weeks depending on complexity." },
+  { q: "Do I need separate software for commercial vs residential work?", a: "If commercial work is less than 20% of your revenue, your residential CRM can usually handle it. If commercial is a significant part of your business, consider platforms that handle both well (ServiceTitan, FieldEdge, BuildOps) or run separate systems for each division." }
+];
+---
+
+<ArticleLayout
+  title="How to Choose HVAC Software: Buyer's Guide (2026) — HVAC Software Hub"
+  description="A step-by-step guide to choosing the right software stack for your HVAC or plumbing company."
+  canonicalPath="/hvac/guides/how-to-choose-hvac-software"
+  category="Buyer's Guide"
+  publishDate="2026-02-25"
+  readTime="15 min read"
+  intent="MOFU"
+  tocItems={tocItems}
+  faqItems={faqItems}
+>
+<div class="container py-8">
+        <div class="flex gap-12">
+          <article class="flex-1 min-w-0 max-w-3xl">
+
+            <div class="mt-6">
+              <p class="text-sm text-foreground/80 leading-relaxed">
+                Choosing the right software stack for your HVAC or plumbing company is one of the highest-leverage decisions you will make as a business owner. The right tools save 5-10 hours per week in admin time, reduce missed calls, and give you the data to grow profitably. The wrong tools waste money and create frustration. This guide walks you through every category of software an HVAC company needs, what to look for in each, and our recommended stacks by company size.
+              </p>
+            </div>
+
+            <div id="who-needs" class="mt-8">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Who This Guide Is For</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="border border-border rounded-lg p-4 bg-white">
+                  <h4 class="font-heading font-semibold text-sm mb-2">New HVAC Companies</h4>
+                  <p class="text-xs text-foreground/70">Building your first software stack from scratch. Need to know what to buy and in what order.</p>
+                </div>
+                <div class="border border-border rounded-lg p-4 bg-white">
+                  <h4 class="font-heading font-semibold text-sm mb-2">Growing Companies</h4>
+                  <p class="text-xs text-foreground/70">Outgrowing your current tools. Need to evaluate whether to upgrade or switch platforms.</p>
+                </div>
+                <div class="border border-border rounded-lg p-4 bg-white">
+                  <h4 class="font-heading font-semibold text-sm mb-2">Office Managers</h4>
+                  <p class="text-xs text-foreground/70">Tasked with researching software options. Need a structured framework to present to the owner.</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="categories" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">The 5 Software Categories Every HVAC Company Needs</h2>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Category</th>
+  <th>What It Does</th>
+  <th>Priority</th>
+  <th>Monthly Cost Range</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>CRM & Dispatch</td>
+  <td>Scheduling, dispatching, invoicing, customer management</td>
+  <td>Essential (Day 1)</td>
+  <td>$39-300+/mo</td>
+</tr>
+<tr>
+  <td>Accounting</td>
+  <td>Bookkeeping, payroll, tax prep, financial reporting</td>
+  <td>Essential (Day 1)</td>
+  <td>$30-200/mo</td>
+</tr>
+<tr>
+  <td>Call Tracking</td>
+  <td>Track which marketing channels generate phone calls</td>
+  <td>Important (when running ads)</td>
+  <td>$50-145/mo</td>
+</tr>
+<tr>
+  <td>Review Management</td>
+  <td>Automate review requests, monitor reputation</td>
+  <td>Important (for growth)</td>
+  <td>$0-100/mo</td>
+</tr>
+<tr>
+  <td>Marketing / Email</td>
+  <td>Email campaigns, customer communication, lead nurture</td>
+  <td>Nice-to-have (later)</td>
+  <td>$0-100/mo</td>
+</tr>
+</tbody>
+</table>
+            </div>
+
+            <div id="crm-dispatch" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Category 1: CRM & Dispatch Software</h2>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                This is the backbone of your operation. Your CRM handles everything from the moment a customer calls to the moment the invoice is paid. It includes scheduling, dispatching technicians, creating estimates, sending invoices, and managing customer records. Every HVAC company needs this from day one.
+              </p>
+              <h3 class="font-heading font-semibold text-lg mb-3">What to Look For</h3>
+              <ul class="space-y-2 text-sm text-foreground/80 mb-6">
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5 font-bold">1.</span> <strong>Mobile app quality</strong> — Your techs live on their phones. The app must be fast, reliable, and work offline.</li>
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5 font-bold">2.</span> <strong>Scheduling flexibility</strong> — Drag-and-drop calendar, recurring jobs, multi-day jobs, emergency slots.</li>
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5 font-bold">3.</span> <strong>QuickBooks integration</strong> — Two-way sync with QuickBooks Online is non-negotiable for most companies.</li>
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5 font-bold">4.</span> <strong>Customer communication</strong> — Automated appointment reminders, on-my-way texts, and follow-up emails.</li>
+                <li class="flex items-start gap-2"><span class="text-primary mt-0.5 font-bold">5.</span> <strong>Pricing transparency</strong> — Avoid platforms that require a sales call to see pricing. Published pricing means no surprises.</li>
+              </ul>
+              <h3 class="font-heading font-semibold text-lg mb-3">Our Top Picks</h3>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Platform</th>
+  <th>Best For</th>
+  <th>Starting Price</th>
+  <th>Our Review</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Jobber</td>
+  <td>1-15 tech teams, simplicity</td>
+  <td>$39/mo</td>
+  <td>Read review →</td>
+</tr>
+<tr>
+  <td>Housecall Pro</td>
+  <td>Marketing-focused teams</td>
+  <td>$59/mo</td>
+  <td>Read review →</td>
+</tr>
+<tr>
+  <td>ServiceTitan</td>
+  <td>15+ tech enterprise teams</td>
+  <td>Custom (~$200/tech)</td>
+  <td>Read review →</td>
+</tr>
+<tr>
+  <td>Workiz</td>
+  <td>Teams wanting built-in phone</td>
+  <td>$65/mo</td>
+  <td>Read review →</td>
+</tr>
+<tr>
+  <td>FieldEdge</td>
+  <td>QuickBooks-heavy operations</td>
+  <td>Custom</td>
+  <td>Coming soon</td>
+</tr>
+</tbody>
+</table>
+              <p class="text-sm text-foreground/70 mt-2">
+                For detailed comparisons, see: <a href="/hvac/crm/best-crm-for-small-hvac-companies" class="text-primary underline">Best CRM for Small HVAC Companies</a> | <a href="/hvac/crm/housecall-pro-vs-jobber" class="text-primary underline">Housecall Pro vs Jobber</a> | <a href="/hvac/crm/jobber-vs-servicetitan" class="text-primary underline">Jobber vs ServiceTitan</a>
+              </p>
+            </div>
+
+            <div id="call-tracking" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Category 2: Call Tracking</h2>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                Once you start spending on marketing (Google Ads, LSA, SEO, direct mail), call tracking becomes essential. It tells you which channels generate actual phone calls so you can allocate your budget intelligently. Without it, you are guessing which marketing is working.
+              </p>
+              <h3 class="font-heading font-semibold text-lg mb-3">When to Add Call Tracking</h3>
+              <ul class="space-y-1 text-sm text-foreground/80 mb-4">
+                <li>• You are spending $1,000+/month on marketing</li>
+                <li>• You run Google Ads or Local Service Ads</li>
+                <li>• You use multiple marketing channels and cannot tell which ones work</li>
+                <li>• You want to record calls for training and quality assurance</li>
+              </ul>
+              <p class="text-sm text-foreground/70">
+                For detailed reviews, see: <a href="/hvac/call-tracking/best-call-tracking-for-hvac" class="text-primary underline">Best Call Tracking Software for HVAC Companies</a>
+              </p>
+            </div>
+
+            <div id="reviews" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Category 3: Review Management</h2>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                Google reviews are the single most important factor in local SEO for HVAC companies. A review management tool automates the process of requesting reviews after completed jobs, monitors your online reputation, and helps you respond to reviews quickly. Some CRM platforms (Housecall Pro, ServiceTitan) include basic review automation. If yours does not, add a dedicated tool.
+              </p>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Tool</th>
+  <th>Starting Price</th>
+  <th>Key Feature</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Housecall Pro (built-in)</td>
+  <td>Included</td>
+  <td>Automatic post-job review requests</td>
+</tr>
+<tr>
+  <td>NiceJob</td>
+  <td>$75/mo</td>
+  <td>Multi-platform review requests + social proof widgets</td>
+</tr>
+<tr>
+  <td>Birdeye</td>
+  <td>$299/mo</td>
+  <td>Enterprise review management + surveys</td>
+</tr>
+<tr>
+  <td>Podium</td>
+  <td>Custom</td>
+  <td>Review requests via text message + webchat</td>
+</tr>
+</tbody>
+</table>
+            </div>
+
+            <div id="accounting" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Category 4: Accounting Integration</h2>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                Nearly every HVAC company uses QuickBooks Online or QuickBooks Desktop. The critical requirement is that your CRM integrates with your accounting software via two-way sync — invoices created in your CRM should automatically appear in QuickBooks, and payments should reconcile without manual data entry.
+              </p>
+              <div class="verdict-strip">
+                <p class="text-sm">
+                  <strong>Non-Negotiable:</strong> Whatever CRM you choose, verify that it has a native (not Zapier-based) integration with your accounting platform. Jobber, Housecall Pro, ServiceTitan, and Workiz all integrate with QuickBooks Online. If you use QuickBooks Desktop, check compatibility carefully — not all platforms support it.
+                </p>
+              </div>
+            </div>
+
+            <div id="stack-by-size" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Recommended Software Stacks by Company Size</h2>
+
+              <div class="space-y-6">
+                <div class="border border-border rounded-lg p-6 bg-white">
+                  <h3 class="font-heading font-semibold text-lg mb-1">Solo Operator / 1-3 Techs</h3>
+                  <p class="text-xs text-muted-foreground mb-3">Revenue: Under $500K/year | Monthly software budget: $70-150</p>
+                  <table class="comparison-table">
+<thead><tr>
+  <th>Category</th>
+  <th>Recommendation</th>
+  <th>Monthly Cost</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>CRM & Dispatch</td>
+  <td>Jobber Core</td>
+  <td>$39/mo</td>
+</tr>
+<tr>
+  <td>Accounting</td>
+  <td>QuickBooks Simple Start</td>
+  <td>$30/mo</td>
+</tr>
+<tr>
+  <td>Call Tracking</td>
+  <td>Not needed yet</td>
+  <td>$0</td>
+</tr>
+<tr>
+  <td>Reviews</td>
+  <td>Manual (ask after every job)</td>
+  <td>$0</td>
+</tr>
+<tr>
+  <td>Total</td>
+  <td></td>
+  <td>$69/mo</td>
+</tr>
+</tbody>
+</table>
+                </div>
+
+                <div class="border border-border rounded-lg p-6 bg-white">
+                  <h3 class="font-heading font-semibold text-lg mb-1">Growing Team / 4-10 Techs</h3>
+                  <p class="text-xs text-muted-foreground mb-3">Revenue: $500K-$2M/year | Monthly software budget: $200-500</p>
+                  <table class="comparison-table">
+<thead><tr>
+  <th>Category</th>
+  <th>Recommendation</th>
+  <th>Monthly Cost</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>CRM & Dispatch</td>
+  <td>Housecall Pro Essentials or Jobber Connect</td>
+  <td>$129-149/mo</td>
+</tr>
+<tr>
+  <td>Accounting</td>
+  <td>QuickBooks Online Plus</td>
+  <td>$80/mo</td>
+</tr>
+<tr>
+  <td>Call Tracking</td>
+  <td>CallRail (basic)</td>
+  <td>$50/mo</td>
+</tr>
+<tr>
+  <td>Reviews</td>
+  <td>Included (HCP) or NiceJob</td>
+  <td>$0-75/mo</td>
+</tr>
+<tr>
+  <td>Total</td>
+  <td></td>
+  <td>$259-354/mo</td>
+</tr>
+</tbody>
+</table>
+                </div>
+
+                <div class="border border-border rounded-lg p-6 bg-white">
+                  <h3 class="font-heading font-semibold text-lg mb-1">Established Operation / 10-25 Techs</h3>
+                  <p class="text-xs text-muted-foreground mb-3">Revenue: $2M-$5M/year | Monthly software budget: $500-3,000</p>
+                  <table class="comparison-table">
+<thead><tr>
+  <th>Category</th>
+  <th>Recommendation</th>
+  <th>Monthly Cost</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>CRM & Dispatch</td>
+  <td>ServiceTitan or Jobber Grow</td>
+  <td>$249-2,500/mo</td>
+</tr>
+<tr>
+  <td>Accounting</td>
+  <td>QuickBooks Online Advanced</td>
+  <td>$200/mo</td>
+</tr>
+<tr>
+  <td>Call Tracking</td>
+  <td>CallRail + Intelligence</td>
+  <td>$95/mo</td>
+</tr>
+<tr>
+  <td>Reviews</td>
+  <td>Included (ST) or Birdeye</td>
+  <td>$0-299/mo</td>
+</tr>
+<tr>
+  <td>Marketing</td>
+  <td>ServiceTitan Marketing Pro or Mailchimp</td>
+  <td>$0-100/mo</td>
+</tr>
+<tr>
+  <td>Total</td>
+  <td></td>
+  <td>$544-3,194/mo</td>
+</tr>
+</tbody>
+</table>
+                </div>
+              </div>
+            </div>
+
+            <div id="evaluation" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Software Evaluation Checklist</h2>
+              <p class="text-sm text-foreground/70 mb-4">Use this checklist when evaluating any HVAC software platform:</p>
+              <div class="border border-border rounded-lg p-6 bg-white">
+                <div class="space-y-3 text-sm">
+                  <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>Free trial or live demo available?</strong> Never buy software you have not tested.</span></div>
+                  <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>Published pricing?</strong> If they hide pricing, expect aggressive sales tactics.</span></div>
+                  <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>QuickBooks integration?</strong> Must be native two-way sync, not just Zapier.</span></div>
+                  <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>Mobile app ratings?</strong> Check App Store and Google Play reviews from the last 6 months.</span></div>
+                  <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>Contract terms?</strong> Prefer month-to-month. If annual, negotiate a discount.</span></div>
+                  <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>Data export?</strong> Can you export all your customer and job data if you leave?</span></div>
+                  <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>Support quality?</strong> Call their support line before buying. How long is the wait?</span></div>
+                  <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>Implementation support?</strong> Do they help with data migration and onboarding?</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="mistakes" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">5 Common Software Mistakes HVAC Companies Make</h2>
+              <div class="space-y-4">
+                <div class="border-l-2 border-red-400 pl-4">
+                  <h4 class="font-heading font-semibold text-sm mb-1">1. Buying too much software too early</h4>
+                  <p class="text-sm text-foreground/70">A solo operator does not need ServiceTitan, call tracking, and review management. Start with a basic CRM and QuickBooks. Add tools as your revenue and complexity grow.</p>
+                </div>
+                <div class="border-l-2 border-red-400 pl-4">
+                  <h4 class="font-heading font-semibold text-sm mb-1">2. Choosing based on features instead of fit</h4>
+                  <p class="text-sm text-foreground/70">The platform with the most features is not always the best choice. A tool your team actually uses beats a powerful tool they avoid because it is too complex.</p>
+                </div>
+                <div class="border-l-2 border-red-400 pl-4">
+                  <h4 class="font-heading font-semibold text-sm mb-1">3. Ignoring the true cost</h4>
+                  <p class="text-sm text-foreground/70">The sticker price is never the full cost. Factor in add-ons, per-user fees, implementation costs, and the tools you will need to supplement gaps in the platform.</p>
+                </div>
+                <div class="border-l-2 border-red-400 pl-4">
+                  <h4 class="font-heading font-semibold text-sm mb-1">4. Not testing with your actual team</h4>
+                  <p class="text-sm text-foreground/70">The owner might love a platform, but if your dispatcher and technicians find it confusing, adoption will fail. Include your team in the evaluation process.</p>
+                </div>
+                <div class="border-l-2 border-red-400 pl-4">
+                  <h4 class="font-heading font-semibold text-sm mb-1">5. Signing long-term contracts without testing</h4>
+                  <p class="text-sm text-foreground/70">Never sign an annual contract without at least 2 weeks of hands-on testing. If a vendor will not offer a trial, that is a red flag.</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="faq">
+              
+            </div>
+
+            <div class="cta-box">
+  <h3>Free: Contractor Software Toolkit</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Get our vendor comparison spreadsheet, ROI calculator, and demo prep checklist — everything you need to evaluate HVAC software like a pro.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+
+            <div class="mt-10 pt-6 border-t border-border">
+              <h3 class="data-label mb-3">Detailed Reviews & Comparisons</h3>
+              <ul class="space-y-2 text-sm">
+                <li><a href="/hvac/crm/best-crm-for-small-hvac-companies" class="text-primary hover:underline">Best CRM for Small HVAC Companies</a></li>
+                <li><a href="/hvac/crm/servicetitan-alternatives" class="text-primary hover:underline">ServiceTitan Alternatives</a></li>
+                <li><a href="/hvac/crm/housecall-pro-vs-jobber" class="text-primary hover:underline">Housecall Pro vs Jobber</a></li>
+                <li><a href="/hvac/crm/jobber-vs-servicetitan" class="text-primary hover:underline">Jobber vs ServiceTitan</a></li>
+                <li><a href="/hvac/dispatch/best-dispatch-software-for-hvac" class="text-primary hover:underline">Best Dispatch Software for HVAC</a></li>
+                <li><a href="/hvac/call-tracking/best-call-tracking-for-hvac" class="text-primary hover:underline">Best Call Tracking Software for HVAC</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <aside class="hidden lg:block w-64 flex-shrink-0">
+          </aside>
+        </div>
+      </div>
+
+<!-- FAQ Section -->
+<div id="faq" class="mt-10">
+  <h2 class="font-semibold text-2xl mb-4" style="font-family: var(--font-heading);">Frequently Asked Questions</h2>
+  <div class="space-y-0">
+    <div class="faq-item">
+      <p class="faq-question">How much should an HVAC company spend on software?</p>
+      <p class="faq-answer">A reasonable benchmark is 1-3% of annual revenue. A $1M/year company should budget $10,000-30,000/year for their full software stack (CRM, accounting, call tracking, reviews). Start with the essentials (CRM + accounting) and add tools as revenue grows.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Should I get an all-in-one platform or best-of-breed tools?</p>
+      <p class="faq-answer">For companies under 10 techs, an all-in-one platform like Jobber or Housecall Pro is usually the better choice — simpler to manage, lower total cost, fewer integrations to maintain. For companies over 15 techs, a best-of-breed approach (ServiceTitan + CallRail + specialized tools) often provides better depth in each category.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">What is the most important software for a new HVAC company?</p>
+      <p class="faq-answer">Start with a CRM/field service platform (Jobber or Housecall Pro) and QuickBooks. These two tools handle 80% of your operational needs: scheduling, dispatching, invoicing, and accounting. Add call tracking and review management once you start spending on marketing.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">How do I migrate from one platform to another?</p>
+      <p class="faq-answer">Most platforms support CSV data export. The typical migration process is: (1) export customer and job data from old platform, (2) clean the data in a spreadsheet, (3) import into new platform, (4) run both platforms in parallel for 1-2 weeks, (5) fully switch over. Budget 1-4 weeks depending on complexity.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Do I need separate software for commercial vs residential work?</p>
+      <p class="faq-answer">If commercial work is less than 20% of your revenue, your residential CRM can usually handle it. If commercial is a significant part of your business, consider platforms that handle both well (ServiceTitan, FieldEdge, BuildOps) or run separate systems for each division.</p>
+    </div>
+  </div>
+</div>
+</ArticleLayout>

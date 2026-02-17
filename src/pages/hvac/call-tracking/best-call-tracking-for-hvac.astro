@@ -1,0 +1,404 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+
+const tocItems = [
+  { id: "why-call-tracking", label: "Why Call Tracking Matters" },
+  { id: "quick-pick", label: "Quick Pick Table" },
+  { id: "callrail", label: "1. CallRail" },
+  { id: "calltrackingmetrics", label: "2. CallTrackingMetrics" },
+  { id: "workiz", label: "3. Workiz (Built-In)" },
+  { id: "whatconverts", label: "4. WhatConverts" },
+  { id: "marchex", label: "5. Marchex" },
+  { id: "pricing", label: "Pricing Comparison" },
+  { id: "how-to-choose", label: "How to Choose" },
+  { id: "faq", label: "FAQ" }
+];
+const faqItems = [
+  { q: "Do I need call tracking if I already have a CRM like Jobber?", a: "Yes. Jobber, Housecall Pro, and most CRMs do not track which marketing channel generated each inbound call. Call tracking fills that gap by assigning unique phone numbers to each source (Google Ads, LSA, organic, etc.) so you know exactly where your leads come from." },
+  { q: "Will call tracking numbers hurt my local SEO?", a: "Not if set up correctly. Use dynamic number insertion (DNI) on your website so Google still sees your real business number in structured data. Only swap the displayed number for visitors. All top call tracking platforms support this." },
+  { q: "What is the minimum budget for call tracking?", a: "CallRail starts at $50/month for 5 local numbers and 250 minutes. For a small HVAC company running Google Ads and LSA, budget $50-100/month for call tracking. The ROI typically pays for itself by identifying one wasted ad channel." },
+  { q: "Can I integrate call tracking with my field service software?", a: "Yes. CallRail integrates with Housecall Pro, Jobber, and ServiceTitan. CallTrackingMetrics integrates with most CRMs via Zapier. Workiz has call tracking built in, so no integration is needed." },
+  { q: "What is dynamic number insertion (DNI)?", a: "DNI automatically swaps the phone number displayed on your website based on how the visitor arrived (Google Ads, organic search, Facebook, direct, etc.). This lets you track which marketing channels drive phone calls without maintaining separate landing pages." }
+];
+---
+
+<ArticleLayout
+  title="Best Call Tracking Software for HVAC Companies (2026) — HVAC Software Hub"
+  description="We compared 5 call tracking platforms for HVAC contractors. See pricing, features, and which tool shows you exactly where your leads come from."
+  canonicalPath="/hvac/call-tracking/best-call-tracking-for-hvac"
+  category="Call Tracking"
+  publishDate="2026-02-23"
+  readTime="11 min read"
+  intent="BOFU"
+  tocItems={tocItems}
+  faqItems={faqItems}
+>
+<div class="container py-8">
+        <div class="flex gap-12">
+          <article class="flex-1 min-w-0 max-w-3xl">
+
+            <div class="mt-6">
+              <div class="verdict-strip">
+                <p class="text-sm leading-relaxed">
+                  <strong>Bottom Line:</strong> Most HVAC companies should start with <strong>CallRail</strong> — it is the industry standard, integrates with every major CRM, and starts at $50/month. If you already use <strong>Workiz</strong> as your field service platform, you get call tracking built in at no extra cost.
+                </p>
+              </div>
+            </div>
+
+            <div id="why-call-tracking" class="mt-8">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Why Call Tracking Matters for HVAC Companies</h2>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                The average HVAC company spends $2,000–$8,000/month on marketing across Google Ads, Local Service Ads, SEO, and referral programs. Without call tracking, you have no way to know which channel generated each phone call. You are essentially flying blind.
+              </p>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                Call tracking assigns unique phone numbers to each marketing source. When a homeowner calls, you instantly know whether they found you through a Google Ad, an organic search result, your LSA listing, or a yard sign. This data lets you double down on what works and cut what does not.
+              </p>
+              <div class="bg-muted/50 border border-border rounded-lg p-4 my-6">
+                <h4 class="data-label text-foreground mb-2">Real-World Example</h4>
+                <p class="text-sm text-foreground/70">
+                  A 6-tech HVAC company in Dallas discovered through CallRail that 40% of their Google Ads budget was going to a campaign that generated zero booked jobs. They reallocated that $1,200/month to their top-performing campaign and increased booked calls by 25% without spending more.
+                </p>
+              </div>
+            </div>
+
+            <div id="quick-pick" class="mt-8">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Quick Pick Table</h2>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Tool</th>
+  <th>Best For</th>
+  <th>Starting Price</th>
+  <th>HVAC Fit</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>CallRail</td>
+  <td>Most HVAC companies</td>
+  <td>$50/mo</td>
+  <td>★★★★★</td>
+</tr>
+<tr>
+  <td>CallTrackingMetrics</td>
+  <td>Multi-location / agencies</td>
+  <td>$65/mo</td>
+  <td>★★★★☆</td>
+</tr>
+<tr>
+  <td>Workiz (built-in)</td>
+  <td>Workiz users</td>
+  <td>Included</td>
+  <td>★★★★★</td>
+</tr>
+<tr>
+  <td>WhatConverts</td>
+  <td>Lead attribution nerds</td>
+  <td>$30/mo</td>
+  <td>★★★☆☆</td>
+</tr>
+<tr>
+  <td>Marchex</td>
+  <td>Enterprise / franchise</td>
+  <td>Custom</td>
+  <td>★★★☆☆</td>
+</tr>
+</tbody>
+</table>
+            </div>
+
+            <div id="callrail" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">1. CallRail — Best Overall for HVAC</h2>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                CallRail is the most widely used call tracking platform among home services companies, and for good reason. It offers dynamic number insertion, call recording, keyword-level attribution, and integrations with every major CRM and ad platform. For HVAC companies, the key advantage is its native integration with Google Local Service Ads (LSA) — you can track LSA calls alongside your other channels in one dashboard.
+              </p>
+              <div class="pros-cons">
+<div class="pros-list">
+<h4>STRENGTHS</h4>
+<ul>
+  <li>✓ Industry standard — most agencies and CRMs integrate with it</li>
+  <li>✓ Dynamic number insertion works seamlessly with HVAC websites</li>
+  <li>✓ Call recording with AI-powered conversation intelligence</li>
+  <li>✓ Native Google LSA integration</li>
+  <li>✓ Form tracking included (tracks web form submissions too)</li>
+</ul>
+</div>
+<div class="cons-list">
+<h4>WEAKNESSES</h4>
+<ul>
+  <li>✗ Starts at $50/mo — adds to your existing software stack cost</li>
+  <li>✗ Conversation intelligence (AI) requires higher tier ($95/mo)</li>
+  <li>✗ Can be overwhelming for owners who just want basic tracking</li>
+</ul>
+</div>
+</div>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Plan</th>
+  <th>Price</th>
+  <th>Includes</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Call Tracking</td>
+  <td>$50/mo</td>
+  <td>5 local numbers, 250 min, DNI, call recording</td>
+</tr>
+<tr>
+  <td>Call Tracking + Intelligence</td>
+  <td>$95/mo</td>
+  <td>Above + AI call scoring, keyword spotting</td>
+</tr>
+<tr>
+  <td>Call Tracking + Form Tracking</td>
+  <td>$95/mo</td>
+  <td>Above + web form tracking, multi-touch attribution</td>
+</tr>
+<tr>
+  <td>Call Tracking Complete</td>
+  <td>$145/mo</td>
+  <td>Everything — calls, forms, AI, conversation intelligence</td>
+</tr>
+</tbody>
+</table>
+              <div class="cta-box">
+  <h3>Try CallRail Free for 14 Days</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Most HVAC companies start here. See exactly where your calls come from.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+            </div>
+
+            <div id="calltrackingmetrics" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">2. CallTrackingMetrics — Best for Multi-Location HVAC</h2>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                CallTrackingMetrics (CTM) is a strong alternative to CallRail, particularly for HVAC companies with multiple locations or those working with marketing agencies. CTM offers more advanced call routing and IVR (interactive voice response) features, which is useful if you need to route calls to different offices or after-hours answering services.
+              </p>
+              <div class="pros-cons">
+<div class="pros-list">
+<h4>STRENGTHS</h4>
+<ul>
+  <li>✓ Advanced call routing and IVR for multi-location operations</li>
+  <li>✓ Strong agency features (white-label reporting)</li>
+  <li>✓ Text message tracking in addition to calls</li>
+  <li>✓ Good Zapier integrations for CRM connectivity</li>
+</ul>
+</div>
+<div class="cons-list">
+<h4>WEAKNESSES</h4>
+<ul>
+  <li>✗ Slightly more expensive than CallRail ($65/mo starting)</li>
+  <li>✗ Interface is less intuitive than CallRail</li>
+  <li>✗ Overkill for single-location HVAC companies</li>
+</ul>
+</div>
+</div>
+            </div>
+
+            <div id="workiz" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">3. Workiz — Best Built-In Call Tracking</h2>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                Workiz is the only field service management platform that includes a built-in phone system with call tracking. If you already use Workiz (or are considering it), you get call tracking at no additional cost. Calls are automatically logged to the customer record, and you can see which marketing source generated each call directly in your job management dashboard.
+              </p>
+              <div class="pros-cons">
+<div class="pros-list">
+<h4>STRENGTHS</h4>
+<ul>
+  <li>✓ Call tracking included in the platform — no extra cost</li>
+  <li>✓ Calls automatically linked to customer records and jobs</li>
+  <li>✓ Built-in VoIP phone system (no separate phone provider needed)</li>
+  <li>✓ SMS/text messaging included</li>
+</ul>
+</div>
+<div class="cons-list">
+<h4>WEAKNESSES</h4>
+<ul>
+  <li>✗ Only useful if you use Workiz as your FSM platform</li>
+  <li>✗ Less granular attribution than dedicated tools like CallRail</li>
+  <li>✗ Cannot track calls to a non-Workiz website independently</li>
+</ul>
+</div>
+</div>
+              <div class="verdict-strip">
+                <p class="text-sm">
+                  <strong>Key Insight:</strong> If you are currently evaluating field service software and call tracking is important to you, Workiz gives you both in one platform. This can save $50-145/month compared to running a separate CRM + CallRail stack.
+                </p>
+              </div>
+            </div>
+
+            <div id="whatconverts" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">4. WhatConverts — Best for Lead Attribution</h2>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                WhatConverts goes beyond call tracking to provide full lead attribution — tracking calls, forms, chats, and e-commerce transactions in one dashboard. It is particularly popular with marketing agencies that manage HVAC company campaigns. The platform excels at showing the complete customer journey from first click to booked job.
+              </p>
+              <div class="pros-cons">
+<div class="pros-list">
+<h4>STRENGTHS</h4>
+<ul>
+  <li>✓ Tracks calls, forms, and chats in one place</li>
+  <li>✓ Excellent lead qualification and scoring features</li>
+  <li>✓ Lower starting price ($30/mo) than CallRail</li>
+  <li>✓ Strong Google Ads and Analytics integrations</li>
+</ul>
+</div>
+<div class="cons-list">
+<h4>WEAKNESSES</h4>
+<ul>
+  <li>✗ Less name recognition in the HVAC industry</li>
+  <li>✗ Call recording requires higher tier</li>
+  <li>✗ Fewer native CRM integrations than CallRail</li>
+</ul>
+</div>
+</div>
+            </div>
+
+            <div id="marchex" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">5. Marchex — Best for Enterprise/Franchise HVAC</h2>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                Marchex is an enterprise-grade conversation intelligence platform used by large HVAC franchises and multi-location operations. It uses AI to analyze every call for lead quality, agent performance, and missed opportunities. Unless you are running 10+ locations or a franchise operation, Marchex is likely overkill.
+              </p>
+              <div class="pros-cons">
+<div class="pros-list">
+<h4>STRENGTHS</h4>
+<ul>
+  <li>✓ AI-powered conversation analysis at scale</li>
+  <li>✓ Designed for franchise and multi-location operations</li>
+  <li>✓ Deep analytics on agent performance and call outcomes</li>
+</ul>
+</div>
+<div class="cons-list">
+<h4>WEAKNESSES</h4>
+<ul>
+  <li>✗ Custom pricing only — not transparent</li>
+  <li>✗ Overkill for companies under 10 locations</li>
+  <li>✗ Implementation requires dedicated onboarding</li>
+</ul>
+</div>
+</div>
+            </div>
+
+            <div id="pricing" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Pricing Comparison</h2>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Tool</th>
+  <th>Starting Price</th>
+  <th>Per Extra Number</th>
+  <th>Call Recording</th>
+  <th>AI Features</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>CallRail</td>
+  <td>$50/mo</td>
+  <td>$3/mo</td>
+  <td>Included</td>
+  <td>$95/mo tier</td>
+</tr>
+<tr>
+  <td>CallTrackingMetrics</td>
+  <td>$65/mo</td>
+  <td>$2.50/mo</td>
+  <td>Included</td>
+  <td>$130/mo tier</td>
+</tr>
+<tr>
+  <td>Workiz</td>
+  <td>Included w/ plan</td>
+  <td>N/A</td>
+  <td>Included</td>
+  <td>Basic</td>
+</tr>
+<tr>
+  <td>WhatConverts</td>
+  <td>$30/mo</td>
+  <td>$2.50/mo</td>
+  <td>$60/mo tier</td>
+  <td>No</td>
+</tr>
+<tr>
+  <td>Marchex</td>
+  <td>Custom</td>
+  <td>Custom</td>
+  <td>Included</td>
+  <td>Included</td>
+</tr>
+</tbody>
+</table>
+              <p class="text-sm text-foreground/70 mt-4 leading-relaxed">
+                For a typical HVAC company tracking 3-5 marketing channels, expect to spend $50-100/month on call tracking. The ROI calculation is straightforward: if call tracking helps you identify and eliminate one underperforming ad campaign, it pays for itself many times over.
+              </p>
+            </div>
+
+            <div id="how-to-choose" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">How to Choose</h2>
+              <div class="space-y-4">
+                <div class="border border-border rounded-lg p-4 bg-white">
+                  <h4 class="font-heading font-semibold text-sm mb-1">You run Google Ads + LSA → CallRail</h4>
+                  <p class="text-sm text-foreground/70">Best LSA integration, industry standard, every agency knows it.</p>
+                </div>
+                <div class="border border-border rounded-lg p-4 bg-white">
+                  <h4 class="font-heading font-semibold text-sm mb-1">You have multiple locations → CallTrackingMetrics</h4>
+                  <p class="text-sm text-foreground/70">Advanced call routing and IVR for routing calls to the right office.</p>
+                </div>
+                <div class="border border-border rounded-lg p-4 bg-white">
+                  <h4 class="font-heading font-semibold text-sm mb-1">You want one platform for everything → Workiz</h4>
+                  <p class="text-sm text-foreground/70">CRM + dispatch + call tracking + phone system in one tool.</p>
+                </div>
+                <div class="border border-border rounded-lg p-4 bg-white">
+                  <h4 class="font-heading font-semibold text-sm mb-1">Your agency manages your marketing → WhatConverts</h4>
+                  <p class="text-sm text-foreground/70">Full lead attribution across calls, forms, and chats.</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="faq">
+              
+            </div>
+
+            <div class="cta-box">
+  <h3>Free: Contractor Software Toolkit</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Get our vendor comparison spreadsheet, ROI calculator, and demo prep checklist — built for HVAC and plumbing companies.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+
+            <div class="mt-10 pt-6 border-t border-border">
+              <h3 class="data-label mb-3">Related Guides</h3>
+              <ul class="space-y-2 text-sm">
+                <li><a href="/hvac/crm/best-crm-for-small-hvac-companies" class="text-primary hover:underline">Best CRM for Small HVAC Companies</a></li>
+                <li><a href="/hvac/dispatch/best-dispatch-software-for-hvac" class="text-primary hover:underline">Best Dispatch Software for HVAC</a></li>
+                <li><a href="/hvac/crm/jobber-vs-servicetitan" class="text-primary hover:underline">Jobber vs ServiceTitan</a></li>
+                <li><a href="/hvac/guides/how-to-choose-hvac-software" class="text-primary hover:underline">How to Choose HVAC Software: Buyer's Guide</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <aside class="hidden lg:block w-64 flex-shrink-0">
+          </aside>
+        </div>
+      </div>
+
+<!-- FAQ Section -->
+<div id="faq" class="mt-10">
+  <h2 class="font-semibold text-2xl mb-4" style="font-family: var(--font-heading);">Frequently Asked Questions</h2>
+  <div class="space-y-0">
+    <div class="faq-item">
+      <p class="faq-question">Do I need call tracking if I already have a CRM like Jobber?</p>
+      <p class="faq-answer">Yes. Jobber, Housecall Pro, and most CRMs do not track which marketing channel generated each inbound call. Call tracking fills that gap by assigning unique phone numbers to each source (Google Ads, LSA, organic, etc.) so you know exactly where your leads come from.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Will call tracking numbers hurt my local SEO?</p>
+      <p class="faq-answer">Not if set up correctly. Use dynamic number insertion (DNI) on your website so Google still sees your real business number in structured data. Only swap the displayed number for visitors. All top call tracking platforms support this.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">What is the minimum budget for call tracking?</p>
+      <p class="faq-answer">CallRail starts at $50/month for 5 local numbers and 250 minutes. For a small HVAC company running Google Ads and LSA, budget $50-100/month for call tracking. The ROI typically pays for itself by identifying one wasted ad channel.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Can I integrate call tracking with my field service software?</p>
+      <p class="faq-answer">Yes. CallRail integrates with Housecall Pro, Jobber, and ServiceTitan. CallTrackingMetrics integrates with most CRMs via Zapier. Workiz has call tracking built in, so no integration is needed.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">What is dynamic number insertion (DNI)?</p>
+      <p class="faq-answer">DNI automatically swaps the phone number displayed on your website based on how the visitor arrived (Google Ads, organic search, Facebook, direct, etc.). This lets you track which marketing channels drive phone calls without maintaining separate landing pages.</p>
+    </div>
+  </div>
+</div>
+</ArticleLayout>

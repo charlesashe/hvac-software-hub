@@ -1,0 +1,173 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+}
+
+const { title, description, canonicalPath } = Astro.props;
+const canonicalURL = canonicalPath ? `https://hvacsoftwarehub.com${canonicalPath}` : Astro.url.href;
+
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HVAC Software Hub" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HN21D1286G"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HN21D1286G');
+    </script>
+
+
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[var(--color-border)]">
+      <div class="container flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 no-underline">
+          <div class="w-8 h-8 rounded bg-[var(--color-primary)] flex items-center justify-center">
+            <span class="text-white font-bold text-sm" style="font-family: var(--font-mono);">H</span>
+          </div>
+          <span class="font-bold text-lg text-[var(--color-foreground)]" style="font-family: var(--font-heading);">HVAC Software Hub</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-1">
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] rounded-md transition-colors">
+              HVAC Software
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-[var(--color-border)] py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+              <a href="/hvac/crm/best-crm-for-small-hvac-companies" class="block px-4 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] hover:bg-[var(--color-accent)] no-underline">Best CRM for HVAC</a>
+              <a href="/hvac/dispatch/best-dispatch-software-for-hvac" class="block px-4 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] hover:bg-[var(--color-accent)] no-underline">Best Dispatch Software</a>
+              <a href="/hvac/call-tracking/best-call-tracking-for-hvac" class="block px-4 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] hover:bg-[var(--color-accent)] no-underline">Best Call Tracking</a>
+              <a href="/hvac/guides/how-to-choose-hvac-software" class="block px-4 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] hover:bg-[var(--color-accent)] no-underline">Buyer's Guide</a>
+            </div>
+          </div>
+          <div class="relative group">
+            <button class="flex items-center gap-1 px-3 py-2 text-sm font-medium text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] rounded-md transition-colors">
+              Comparisons
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </button>
+            <div class="absolute top-full left-0 mt-1 w-56 bg-white rounded-lg shadow-lg border border-[var(--color-border)] py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+              <a href="/hvac/crm/servicetitan-alternatives" class="block px-4 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] hover:bg-[var(--color-accent)] no-underline">ServiceTitan Alternatives</a>
+              <a href="/hvac/crm/housecall-pro-vs-jobber" class="block px-4 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] hover:bg-[var(--color-accent)] no-underline">Housecall Pro vs Jobber</a>
+              <a href="/hvac/crm/jobber-vs-servicetitan" class="block px-4 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] hover:bg-[var(--color-accent)] no-underline">Jobber vs ServiceTitan</a>
+            </div>
+          </div>
+          <a href="/lead-magnet" class="px-3 py-2 text-sm font-medium bg-[var(--color-primary)] text-white rounded-md hover:opacity-90 transition-opacity no-underline">Free Toolkit</a>
+        </nav>
+
+        <!-- Mobile toggle -->
+        <button id="mobile-toggle" class="md:hidden p-2 text-[var(--color-foreground)]" aria-label="Toggle menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-nav" class="md:hidden border-t border-[var(--color-border)] bg-white hidden">
+        <nav class="container py-4 flex flex-col gap-1">
+          <span class="data-label block px-3 py-2">HVAC Software</span>
+          <a href="/hvac/crm/best-crm-for-small-hvac-companies" class="block px-6 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] no-underline">Best CRM for HVAC</a>
+          <a href="/hvac/dispatch/best-dispatch-software-for-hvac" class="block px-6 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] no-underline">Best Dispatch Software</a>
+          <a href="/hvac/call-tracking/best-call-tracking-for-hvac" class="block px-6 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] no-underline">Best Call Tracking</a>
+          <a href="/hvac/guides/how-to-choose-hvac-software" class="block px-6 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] no-underline">Buyer's Guide</a>
+          <span class="data-label block px-3 py-2 mt-2">Comparisons</span>
+          <a href="/hvac/crm/servicetitan-alternatives" class="block px-6 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] no-underline">ServiceTitan Alternatives</a>
+          <a href="/hvac/crm/housecall-pro-vs-jobber" class="block px-6 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] no-underline">Housecall Pro vs Jobber</a>
+          <a href="/hvac/crm/jobber-vs-servicetitan" class="block px-6 py-2 text-sm text-[var(--color-foreground)]/70 hover:text-[var(--color-foreground)] no-underline">Jobber vs ServiceTitan</a>
+          <a href="/lead-magnet" class="block px-3 py-2 text-sm font-semibold text-[var(--color-primary)] no-underline mt-2">Free Toolkit</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-[var(--color-border)] bg-white mt-16">
+      <div class="container py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <div class="flex items-center gap-2 mb-3">
+              <div class="w-6 h-6 rounded bg-[var(--color-primary)] flex items-center justify-center">
+                <span class="text-white font-bold text-xs" style="font-family: var(--font-mono);">H</span>
+              </div>
+              <span class="font-semibold text-sm" style="font-family: var(--font-heading);">HVAC Software Hub</span>
+            </div>
+            <p class="text-sm text-[var(--color-muted)] leading-relaxed">Independent reviews and comparisons of software for HVAC and plumbing companies. No hype. Just data.</p>
+          </div>
+          <div>
+            <h4 class="data-label mb-3">HVAC Software</h4>
+            <ul class="space-y-2 text-sm list-none p-0">
+              <li><a href="/hvac/crm/best-crm-for-small-hvac-companies" class="text-[var(--color-muted)] hover:text-[var(--color-foreground)] no-underline">Best CRM for HVAC</a></li>
+              <li><a href="/hvac/dispatch/best-dispatch-software-for-hvac" class="text-[var(--color-muted)] hover:text-[var(--color-foreground)] no-underline">Best Dispatch Software</a></li>
+              <li><a href="/hvac/call-tracking/best-call-tracking-for-hvac" class="text-[var(--color-muted)] hover:text-[var(--color-foreground)] no-underline">Best Call Tracking</a></li>
+              <li><a href="/hvac/crm/servicetitan-alternatives" class="text-[var(--color-muted)] hover:text-[var(--color-foreground)] no-underline">ServiceTitan Alternatives</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="data-label mb-3">Comparisons</h4>
+            <ul class="space-y-2 text-sm list-none p-0">
+              <li><a href="/hvac/crm/housecall-pro-vs-jobber" class="text-[var(--color-muted)] hover:text-[var(--color-foreground)] no-underline">Housecall Pro vs Jobber</a></li>
+              <li><a href="/hvac/crm/jobber-vs-servicetitan" class="text-[var(--color-muted)] hover:text-[var(--color-foreground)] no-underline">Jobber vs ServiceTitan</a></li>
+              <li><a href="/hvac/guides/how-to-choose-hvac-software" class="text-[var(--color-muted)] hover:text-[var(--color-foreground)] no-underline">Buyer's Guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="data-label mb-3">Resources</h4>
+            <ul class="space-y-2 text-sm list-none p-0">
+              <li><a href="/lead-magnet" class="text-[var(--color-muted)] hover:text-[var(--color-foreground)] no-underline">Free Contractor Toolkit</a></li>
+              <li><a href="/disclosure" class="text-[var(--color-muted)] hover:text-[var(--color-foreground)] no-underline">Affiliate Disclosure</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-10 pt-6 border-t border-[var(--color-border)] flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p class="text-xs text-[var(--color-muted)]">&copy; {new Date().getFullYear()} HVAC Software Hub. All rights reserved.</p>
+          <p class="text-xs text-[var(--color-muted)] max-w-lg text-center sm:text-right">
+            Some links on this site are affiliate links. We may earn a commission if you make a purchase, at no extra cost to you. <a href="/disclosure" class="underline">Full disclosure</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile menu toggle script -->
+    <script is:inline>
+      document.getElementById('mobile-toggle')?.addEventListener('click', () => {
+        const nav = document.getElementById('mobile-nav');
+        if (nav) nav.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

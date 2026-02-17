@@ -1,0 +1,411 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+
+const tocItems = [
+  { id: "quick-verdict", label: "Quick Verdict" },
+  { id: "head-to-head", label: "Head-to-Head Table" },
+  { id: "who-each-is-for", label: "Who Each Is For" },
+  { id: "scheduling", label: "Scheduling & Dispatch" },
+  { id: "crm-pipeline", label: "CRM & Pipeline" },
+  { id: "reporting", label: "Reporting & Analytics" },
+  { id: "pricing", label: "Pricing Comparison" },
+  { id: "true-cost", label: "True Cost Analysis" },
+  { id: "migration", label: "Migration Difficulty" },
+  { id: "choose-this-if", label: "Choose This If" },
+  { id: "faq", label: "FAQ" }
+];
+const faqItems = [
+  { q: "Is ServiceTitan worth the price for a small HVAC company?", a: "For most companies under 10 technicians, no. ServiceTitan's per-technician pricing ($200-300+/month per tech) makes it prohibitively expensive for small teams. The ROI only makes sense when you have enough revenue and call volume to justify the advanced reporting and marketing features. Jobber at $39-249/month total is a much better fit for small operations." },
+  { q: "Can Jobber scale as my HVAC company grows?", a: "Jobber can comfortably handle teams up to 15-20 technicians on the Grow plan ($249/month). Beyond that, you may start hitting limitations in reporting depth, marketing attribution, and workflow complexity. Many companies start with Jobber and migrate to ServiceTitan when they reach 15-25+ techs." },
+  { q: "How long does it take to implement ServiceTitan?", a: "ServiceTitan implementation typically takes 6-12 weeks with dedicated onboarding support. This includes data migration, team training, workflow configuration, and integration setup. Jobber can be set up in 1-3 days for basic operations." },
+  { q: "Does Jobber have a pricebook like ServiceTitan?", a: "Jobber has a basic pricebook for creating estimates and invoices, but it is not as sophisticated as ServiceTitan's pricebook which includes flat-rate pricing, equipment databases, and dynamic pricing rules. If flat-rate pricing is critical to your operation, ServiceTitan has a significant advantage." },
+  { q: "Can I try both before committing?", a: "Jobber offers a 14-day free trial with no credit card required. ServiceTitan does not offer a free trial — you need to book a demo and go through a sales process. This is one reason we recommend starting with Jobber if you are unsure." }
+];
+---
+
+<ArticleLayout
+  title="Jobber vs ServiceTitan (2026): HVAC Comparison — HVAC Software Hub"
+  description="Detailed comparison of Jobber vs ServiceTitan for HVAC companies."
+  canonicalPath="/hvac/crm/jobber-vs-servicetitan"
+  category="Comparisons"
+  publishDate="2026-02-24"
+  readTime="12 min read"
+  intent="BOFU"
+  tocItems={tocItems}
+  faqItems={faqItems}
+>
+<div class="container py-8">
+        <div class="flex gap-12">
+          <article class="flex-1 min-w-0 max-w-3xl">
+
+            <div id="quick-verdict" class="mt-6">
+              <div class="verdict-strip">
+                <p class="text-sm leading-relaxed">
+                  <strong>Quick Verdict:</strong> Choose <strong>Jobber</strong> if you have fewer than 15 technicians and want a simple, affordable CRM that you can set up in a day. Choose <strong>ServiceTitan</strong> if you have 15+ techs, need advanced reporting and marketing attribution, and can invest $200-300+/month per technician.
+                </p>
+              </div>
+            </div>
+
+            <div id="head-to-head" class="mt-8">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Head-to-Head Comparison</h2>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Category</th>
+  <th>Jobber</th>
+  <th>ServiceTitan</th>
+  <th>Winner</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Best For</td>
+  <td>1-15 tech teams</td>
+  <td>15-100+ tech teams</td>
+  <td>Depends on size</td>
+</tr>
+<tr>
+  <td>Setup Time</td>
+  <td>1-3 days</td>
+  <td>6-12 weeks</td>
+  <td>Jobber</td>
+</tr>
+<tr>
+  <td>Ease of Use</td>
+  <td>9/10 — very intuitive</td>
+  <td>7/10 — steep learning curve</td>
+  <td>Jobber</td>
+</tr>
+<tr>
+  <td>Scheduling & Dispatch</td>
+  <td>Clean drag-and-drop</td>
+  <td>Advanced with capacity planning</td>
+  <td>ServiceTitan</td>
+</tr>
+<tr>
+  <td>CRM & Pipeline</td>
+  <td>Client Hub + quote follow-ups</td>
+  <td>Full sales pipeline + membership tracking</td>
+  <td>ServiceTitan</td>
+</tr>
+<tr>
+  <td>Pricebook</td>
+  <td>Basic</td>
+  <td>Advanced flat-rate + equipment DB</td>
+  <td>ServiceTitan</td>
+</tr>
+<tr>
+  <td>Reporting</td>
+  <td>Standard KPIs</td>
+  <td>Deep analytics + marketing attribution</td>
+  <td>ServiceTitan</td>
+</tr>
+<tr>
+  <td>Call Tracking</td>
+  <td>Not included</td>
+  <td>Not included (integrates w/ CallRail)</td>
+  <td>Tie</td>
+</tr>
+<tr>
+  <td>Mobile App</td>
+  <td>Clean, fast</td>
+  <td>Feature-rich, heavier</td>
+  <td>Jobber (simplicity)</td>
+</tr>
+<tr>
+  <td>Pricing Transparency</td>
+  <td>Published on website</td>
+  <td>Custom quotes only</td>
+  <td>Jobber</td>
+</tr>
+</tbody>
+</table>
+            </div>
+
+            <div id="who-each-is-for" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Who Each Platform Is Built For</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="border border-border rounded-lg p-6 bg-white">
+                  <h3 class="font-heading font-semibold text-lg mb-3">Jobber</h3>
+                  <p class="text-sm text-foreground/70 mb-3">Built for small-to-mid home service businesses that need a simple, affordable platform to manage scheduling, invoicing, and customer communication.</p>
+                  <ul class="space-y-1 text-sm text-foreground/80">
+                    <li>• Solo operators to 15-tech teams</li>
+                    <li>• Revenue: $200K–$3M/year</li>
+                    <li>• Primarily residential service</li>
+                    <li>• Owners who want to self-implement</li>
+                  </ul>
+                </div>
+                <div class="border border-border rounded-lg p-6 bg-white">
+                  <h3 class="font-heading font-semibold text-lg mb-3">ServiceTitan</h3>
+                  <p class="text-sm text-foreground/70 mb-3">Built for mid-to-large residential and commercial HVAC companies that need enterprise-grade operations management, marketing analytics, and sales tools.</p>
+                  <ul class="space-y-1 text-sm text-foreground/80">
+                    <li>• 15-100+ technician teams</li>
+                    <li>• Revenue: $3M–$50M+/year</li>
+                    <li>• Residential + commercial mix</li>
+                    <li>• Dedicated operations/office staff</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div id="scheduling" class="mt-10">
+              <h2 class="font-heading font-semibold text-xl mb-3">Scheduling & Dispatch</h2>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                Jobber's scheduling is clean and intuitive — drag-and-drop jobs onto a calendar, assign technicians, and send automated notifications. It handles the basics well and is fast to learn. ServiceTitan's dispatch board is significantly more advanced: it includes capacity planning, zone-based routing, technician skill matching, and real-time GPS tracking. For a 5-tech team, Jobber's simplicity is an advantage. For a 20-tech team with multiple service zones, ServiceTitan's dispatch capabilities become essential. <strong>Winner: ServiceTitan (for complex operations).</strong>
+              </p>
+            </div>
+
+            <div id="crm-pipeline" class="mt-8">
+              <h2 class="font-heading font-semibold text-xl mb-3">CRM & Sales Pipeline</h2>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                Jobber's Client Hub is excellent for customer self-service — clients can approve quotes, schedule appointments, and pay invoices online. The quote follow-up automation is solid for a small team. ServiceTitan goes much deeper: it offers a full sales pipeline with membership program management, equipment replacement tracking, financing integration, and detailed customer history. If you sell maintenance agreements or equipment replacements, ServiceTitan's CRM is in a different league. <strong>Winner: ServiceTitan.</strong>
+              </p>
+            </div>
+
+            <div id="reporting" class="mt-8">
+              <h2 class="font-heading font-semibold text-xl mb-3">Reporting & Analytics</h2>
+              <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                This is where the gap between the two platforms is widest. Jobber provides standard KPI dashboards — revenue, job completion rates, outstanding invoices. Useful, but basic. ServiceTitan offers deep analytics including marketing attribution (which campaigns generate revenue, not just leads), technician performance scorecards, revenue per job type, membership program analytics, and custom report builders. If data-driven decision making is important to your growth strategy, ServiceTitan's reporting alone can justify the price difference. <strong>Winner: ServiceTitan (by a wide margin).</strong>
+              </p>
+            </div>
+
+            <div id="pricing" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Pricing Comparison</h2>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Metric</th>
+  <th>Jobber</th>
+  <th>ServiceTitan</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Pricing model</td>
+  <td>Flat monthly fee</td>
+  <td>Per-technician monthly fee</td>
+</tr>
+<tr>
+  <td>Entry price</td>
+  <td>$39/mo (Core, 1 user)</td>
+  <td>~$200/mo per tech (custom quote)</td>
+</tr>
+<tr>
+  <td>Mid-tier</td>
+  <td>$129/mo (Connect, 5 users)</td>
+  <td>~$250/mo per tech</td>
+</tr>
+<tr>
+  <td>Growth tier</td>
+  <td>$249/mo (Grow, 15 users)</td>
+  <td>~$300/mo per tech</td>
+</tr>
+<tr>
+  <td>5-tech team cost</td>
+  <td>$129-249/mo total</td>
+  <td>$1,000-1,500/mo total</td>
+</tr>
+<tr>
+  <td>10-tech team cost</td>
+  <td>$249/mo total</td>
+  <td>$2,000-3,000/mo total</td>
+</tr>
+<tr>
+  <td>Free trial</td>
+  <td>14 days, no credit card</td>
+  <td>No — demo required</td>
+</tr>
+<tr>
+  <td>Contract</td>
+  <td>Month-to-month</td>
+  <td>Annual contract typical</td>
+</tr>
+</tbody>
+</table>
+              <div class="verdict-strip mt-4">
+                <p class="text-sm">
+                  <strong>Price Reality Check:</strong> For a 10-technician HVAC company, Jobber costs roughly <strong>$249/month</strong> while ServiceTitan costs roughly <strong>$2,000-3,000/month</strong>. That is an 8-12x price difference. ServiceTitan needs to generate significantly more revenue or savings to justify that cost.
+                </p>
+              </div>
+            </div>
+
+            <div id="true-cost" class="mt-8">
+              <h2 class="font-heading font-semibold text-2xl mb-4">True Cost Analysis: 10-Tech HVAC Company</h2>
+              <p class="text-sm text-foreground/70 mb-4">
+                Here is the realistic annual cost comparison including common add-ons that HVAC companies typically need:
+              </p>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Line Item</th>
+  <th>Jobber Stack</th>
+  <th>ServiceTitan Stack</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Base platform (annual)</td>
+  <td>$2,988 (Grow plan)</td>
+  <td>$24,000-36,000</td>
+</tr>
+<tr>
+  <td>Call tracking (CallRail)</td>
+  <td>+$1,140</td>
+  <td>+$1,140</td>
+</tr>
+<tr>
+  <td>Review management</td>
+  <td>+$900 (NiceJob)</td>
+  <td>Included (Marketing Pro)</td>
+</tr>
+<tr>
+  <td>Pricebook / flat-rate</td>
+  <td>+$0 (basic included)</td>
+  <td>Included (advanced)</td>
+</tr>
+<tr>
+  <td>Marketing attribution</td>
+  <td>Not available</td>
+  <td>Included</td>
+</tr>
+<tr>
+  <td>Estimated annual total</td>
+  <td>$5,028</td>
+  <td>$25,140-37,140</td>
+</tr>
+</tbody>
+</table>
+              <p class="text-sm text-foreground/70 mt-4 leading-relaxed">
+                The Jobber stack costs roughly <strong>$5,000/year</strong> while the ServiceTitan stack costs <strong>$25,000-37,000/year</strong>. The question is whether ServiceTitan's advanced reporting, marketing attribution, and sales tools generate at least $20,000-32,000 in additional annual revenue or savings. For companies doing $3M+ in revenue, the answer is often yes. For companies under $1.5M, it rarely is.
+              </p>
+            </div>
+
+            <div id="migration" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Migration Difficulty</h2>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Factor</th>
+  <th>Jobber → ServiceTitan</th>
+  <th>ServiceTitan → Jobber</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Data export</td>
+  <td>CSV export available</td>
+  <td>CSV export available</td>
+</tr>
+<tr>
+  <td>Implementation time</td>
+  <td>6-12 weeks</td>
+  <td>1-2 weeks</td>
+</tr>
+<tr>
+  <td>Training required</td>
+  <td>Significant (all staff)</td>
+  <td>Minimal (simpler platform)</td>
+</tr>
+<tr>
+  <td>Downtime risk</td>
+  <td>Low (parallel run possible)</td>
+  <td>Low</td>
+</tr>
+<tr>
+  <td>Common trigger</td>
+  <td>Growing past 15 techs</td>
+  <td>Cost reduction / simplification</td>
+</tr>
+</tbody>
+</table>
+              <p class="text-sm text-foreground/70 mt-4 leading-relaxed">
+                The most common migration path is <strong>Jobber → ServiceTitan</strong> as companies grow past 15 technicians and need deeper reporting. The reverse migration (ServiceTitan → Jobber) happens when companies decide the cost difference is not justified by the features they actually use.
+              </p>
+            </div>
+
+            <div id="choose-this-if" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Choose This If...</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="border border-border rounded-lg p-6 bg-white">
+                  <h3 class="font-heading font-semibold text-lg mb-3">Choose Jobber If:</h3>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start gap-2"><span class="mt-0.5">→</span> You have fewer than 15 technicians</li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5">→</span> Your annual revenue is under $3M</li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5">→</span> You want to be up and running in days, not months</li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5">→</span> Budget is a primary concern</li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5">→</span> You value simplicity over feature depth</li>
+                    <li class="flex items-start gap-2"><span class="mt-0.5">→</span> You want month-to-month flexibility</li>
+                  </ul>
+                </div>
+                <div class="border border-border rounded-lg p-6 bg-white">
+                  <h3 class="font-heading font-semibold text-lg mb-3 text-primary">Choose ServiceTitan If:</h3>
+                  <ul class="space-y-2 text-sm">
+                    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span> You have 15+ technicians</li>
+                    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span> Your annual revenue exceeds $3M</li>
+                    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span> You need advanced reporting and marketing attribution</li>
+                    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span> You sell maintenance memberships and equipment</li>
+                    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span> You have dedicated office/operations staff</li>
+                    <li class="flex items-start gap-2"><span class="text-primary mt-0.5">→</span> Data-driven growth is your strategy</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div id="faq">
+              
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+              <div class="cta-box">
+  <h3>Try Jobber Free for 14 Days</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Best for teams under 15 techs. Set up in a day, no credit card required.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+              <div class="cta-box">
+  <h3>Book a ServiceTitan Demo</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Best for 15+ tech teams doing $3M+ revenue. See the full platform.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+            </div>
+
+            <div class="cta-box">
+  <h3>Free: Contractor Software Toolkit</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Get our vendor comparison spreadsheet, ROI calculator, and demo prep checklist — built for HVAC and plumbing companies.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+
+            <div class="mt-10 pt-6 border-t border-border">
+              <h3 class="data-label mb-3">Related Guides</h3>
+              <ul class="space-y-2 text-sm">
+                <li><a href="/hvac/crm/best-crm-for-small-hvac-companies" class="text-primary hover:underline">Best CRM for Small HVAC Companies</a></li>
+                <li><a href="/hvac/crm/servicetitan-alternatives" class="text-primary hover:underline">ServiceTitan Alternatives</a></li>
+                <li><a href="/hvac/crm/housecall-pro-vs-jobber" class="text-primary hover:underline">Housecall Pro vs Jobber</a></li>
+                <li><a href="/hvac/call-tracking/best-call-tracking-for-hvac" class="text-primary hover:underline">Best Call Tracking Software for HVAC</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <aside class="hidden lg:block w-64 flex-shrink-0">
+          </aside>
+        </div>
+      </div>
+
+<!-- FAQ Section -->
+<div id="faq" class="mt-10">
+  <h2 class="font-semibold text-2xl mb-4" style="font-family: var(--font-heading);">Frequently Asked Questions</h2>
+  <div class="space-y-0">
+    <div class="faq-item">
+      <p class="faq-question">Is ServiceTitan worth the price for a small HVAC company?</p>
+      <p class="faq-answer">For most companies under 10 technicians, no. ServiceTitan's per-technician pricing ($200-300+/month per tech) makes it prohibitively expensive for small teams. The ROI only makes sense when you have enough revenue and call volume to justify the advanced reporting and marketing features. Jobber at $39-249/month total is a much better fit for small operations.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Can Jobber scale as my HVAC company grows?</p>
+      <p class="faq-answer">Jobber can comfortably handle teams up to 15-20 technicians on the Grow plan ($249/month). Beyond that, you may start hitting limitations in reporting depth, marketing attribution, and workflow complexity. Many companies start with Jobber and migrate to ServiceTitan when they reach 15-25+ techs.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">How long does it take to implement ServiceTitan?</p>
+      <p class="faq-answer">ServiceTitan implementation typically takes 6-12 weeks with dedicated onboarding support. This includes data migration, team training, workflow configuration, and integration setup. Jobber can be set up in 1-3 days for basic operations.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Does Jobber have a pricebook like ServiceTitan?</p>
+      <p class="faq-answer">Jobber has a basic pricebook for creating estimates and invoices, but it is not as sophisticated as ServiceTitan's pricebook which includes flat-rate pricing, equipment databases, and dynamic pricing rules. If flat-rate pricing is critical to your operation, ServiceTitan has a significant advantage.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Can I try both before committing?</p>
+      <p class="faq-answer">Jobber offers a 14-day free trial with no credit card required. ServiceTitan does not offer a free trial — you need to book a demo and go through a sales process. This is one reason we recommend starting with Jobber if you are unsure.</p>
+    </div>
+  </div>
+</div>
+</ArticleLayout>

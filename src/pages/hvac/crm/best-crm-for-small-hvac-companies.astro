@@ -1,0 +1,670 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+
+const tocItems = [
+  { id: "fit-score", label: "HVAC CRM Fit Score" },
+  { id: "quick-pick", label: "Quick Pick Table" },
+  { id: "jobber", label: "1. Jobber" },
+  { id: "housecall-pro", label: "2. Housecall Pro" },
+  { id: "workiz", label: "3. Workiz" },
+  { id: "servicetitan", label: "4. ServiceTitan" },
+  { id: "service-fusion", label: "5. Service Fusion" },
+  { id: "decision-tree", label: "How to Choose" },
+  { id: "faq", label: "FAQ" },
+  { id: "summary", label: "Summary" }
+];
+const faqItems = [
+  { q: "Do I need a CRM if I have fewer than 5 technicians?", a: "Yes. Even with 1-2 techs, a CRM pays for itself by preventing lost leads and saving administrative time. A simple CRM like Jobber Core ($39/mo) can centralize your customer data, automate appointment reminders, and make you look more professional." },
+  { q: "How long does setup take?", a: "It varies by platform. Jobber can be operational in 1-3 days. Housecall Pro or Workiz might take 1-2 weeks. ServiceTitan requires a 4-12 week implementation project. Our Ease of Use score reflects this setup time." },
+  { q: "Can I switch CRMs without losing my customer data?", a: "Yes. All major CRMs offer data import via CSV files. You can export your customer list, job history, and price book from your old system and import it into the new one. Most platforms offer support for this process." },
+  { q: "What integrations matter most for an HVAC company?", a: "The most critical integration is QuickBooks (Online or Desktop). Other important integrations include call tracking (CallRail), review platforms (Google, NiceJob, Birdeye), and payment processors (Stripe or Square)." },
+  { q: "What is the real cost, including add-ons?", a: "For a small team (3 users), expect $150/mo for a mid-tier plan like Jobber Connect or Housecall Pro Essentials. Flat-rate plans like Service Fusion have higher starting prices but no per-user fees. Always confirm which features are included in each tier." },
+  { q: "What if I outgrow my CRM?", a: "If you start with Jobber and grow to 10+ technicians, you can migrate to ServiceTitan when the time is right. All tools allow data export. Start with the tool that fits your business today." }
+];
+---
+
+<ArticleLayout
+  title="Best CRM for Small HVAC Companies (2026) — HVAC Software Hub"
+  description="We compared the top 5 CRMs for small HVAC companies. See scores, screenshots, and pricing for Jobber, Housecall Pro, Workiz, and more. Updated for 2026."
+  canonicalPath="/hvac/crm/best-crm-for-small-hvac-companies"
+  category="CRM & Automation"
+  publishDate="2026-02-15"
+  readTime="14 min read"
+  intent="BOFU"
+  heroImage="https://private-us-east-1.manuscdn.com/sessionFile/xMNUTrot6HjFyvAEp9Uci7/sandbox/tYsErljqQtTOdscNHSXHLW-img-2_1771268220000_na1fn_aGVyby1iZXN0LWNybQ.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUveE1OVVRyb3Q2SGpGeXZBRXA5VWNpNy9zYW5kYm94L3RZc0VybGpxUXRUT2RzY05IU1hITFctaW1nLTJfMTc3MTI2ODIyMDAwMF9uYTFmbl9hR1Z5YnkxaVpYTjBMV055YlEucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=m1g24bph4GM7BOLuZf9edmT~z3m9M~sylENGuJd0-AeuaTrFcXhAvwRGYcQszwQDv1XawXSpMSLetWlgjPpdM6L1vCM5jTOZqezDEZwGm4tjP24c12Kjp7J-9Na-KFScZiZV32V2pTYU0-rVnXAAhR1LzmE88KMwlW16lEVwV9IqpkZBwsszd-L3sBMCL~3T70Fh5HyX0A2d2SBnWxL96pmqy2yjt9iwk8RlddLAd87dHzBUq8Opbi1l3~0upjm7YuqLISH3n9vOEcKtedx4798LUwt-Z--K7UPWfmRksFz65VCCI3WKU4nvBRopsBtJBwkpbObtAtzqStM4bPhqLA__"
+  tocItems={tocItems}
+  faqItems={faqItems}
+>
+<div class="container py-8">
+        <div class="flex gap-12">
+          <!-- Main Content -->
+          <article class="flex-1 min-w-0 max-w-3xl">
+
+            <!-- Intro -->
+            <div class="prose mt-8">
+              <h2 id="intro">Who This Guide Is For</h2>
+              <p>
+                If you run an HVAC company with <strong>under 10 technicians</strong> and you are still tracking leads in a spreadsheet, losing customer history in text threads, or wondering why booked jobs keep slipping through the cracks, this guide is for you. It is written for HVAC business owners and office managers who are actively shopping for a CRM that fits the way a small-to-mid-sized contractor actually works.
+              </p>
+              <p>
+                We evaluated each platform on the features that matter most to a growing HVAC shop. This is not just a list of features; we scored each CRM on a 1-10 scale across five critical categories to create the <strong>HVAC CRM Fit Score</strong>.
+              </p>
+            </div>
+
+            <!-- Fit Score -->
+            <div id="fit-score" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">The HVAC CRM Fit Score (2026)</h2>
+              <p class="text-sm text-foreground/70 mb-4">
+                Ease of Use and Affordability are weighted 2x because they matter most to small teams.
+              </p>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Factor</th>
+  <th>Description</th>
+  <th>Weight</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Ease of Use</td>
+  <td>How quickly can your team learn and use the software?</td>
+  <td>2x</td>
+</tr>
+<tr>
+  <td>Affordability</td>
+  <td>What is the real cost for a small team (2-5 techs)?</td>
+  <td>2x</td>
+</tr>
+<tr>
+  <td>Core HVAC Features</td>
+  <td>Scheduling, dispatch, invoicing, and payments</td>
+  <td>1x</td>
+</tr>
+<tr>
+  <td>Sales & Follow-Up</td>
+  <td>Track and convert estimates into jobs</td>
+  <td>1x</td>
+</tr>
+<tr>
+  <td>Integration</td>
+  <td>QuickBooks and other essential tool connections</td>
+  <td>1x</td>
+</tr>
+</tbody>
+</table>
+
+              <h3 class="font-heading font-semibold text-xl mt-8 mb-4">Weighted Fit Score Results</h3>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Tool</th>
+  <th>Ease (x2)</th>
+  <th>Afford. (x2)</th>
+  <th>Core (x1)</th>
+  <th>Sales (x1)</th>
+  <th>Integ. (x1)</th>
+  <th>Total</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Jobber</td>
+  <td>18</td>
+  <td>18</td>
+  <td>8</td>
+  <td>7</td>
+  <td>9</td>
+  <td>60/70</td>
+</tr>
+<tr>
+  <td>Housecall Pro</td>
+  <td>16</td>
+  <td>16</td>
+  <td>8</td>
+  <td>8</td>
+  <td>8</td>
+  <td>56/70</td>
+</tr>
+<tr>
+  <td>Workiz</td>
+  <td>14</td>
+  <td>14</td>
+  <td>9</td>
+  <td>8</td>
+  <td>8</td>
+  <td>53/70</td>
+</tr>
+<tr>
+  <td>ServiceTitan</td>
+  <td>12</td>
+  <td>10</td>
+  <td>10</td>
+  <td>10</td>
+  <td>9</td>
+  <td>51/70</td>
+</tr>
+<tr>
+  <td>Service Fusion</td>
+  <td>14</td>
+  <td>16</td>
+  <td>8</td>
+  <td>6</td>
+  <td>7</td>
+  <td>51/70</td>
+</tr>
+</tbody>
+</table>
+            </div>
+
+            <!-- Quick Pick -->
+            <div id="quick-pick" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Quick Pick Table</h2>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Best For</th>
+  <th>Our Pick</th>
+  <th>Starting Price</th>
+  <th>Top Feature</th>
+  <th>Score</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Best Overall (Small Teams)</td>
+  <td>Jobber</td>
+  <td>$39/mo</td>
+  <td>Simplicity and ease of use</td>
+  <td>60/70</td>
+</tr>
+<tr>
+  <td>Best Mid-Market Value</td>
+  <td>Housecall Pro</td>
+  <td>$59/mo</td>
+  <td>Online booking + reviews</td>
+  <td>56/70</td>
+</tr>
+<tr>
+  <td>Best for Dispatch-Heavy</td>
+  <td>Workiz</td>
+  <td>$187/mo</td>
+  <td>Built-in call tracking</td>
+  <td>53/70</td>
+</tr>
+<tr>
+  <td>Best for Scaling (5-10+)</td>
+  <td>ServiceTitan</td>
+  <td>~$245/tech/mo</td>
+  <td>Most powerful all-in-one</td>
+  <td>51/70</td>
+</tr>
+<tr>
+  <td>Best Budget (Unlimited)</td>
+  <td>Service Fusion</td>
+  <td>$192/mo</td>
+  <td>Flat-rate, no per-user fees</td>
+  <td>51/70</td>
+</tr>
+</tbody>
+</table>
+            </div>
+
+            <!-- Reviews -->
+            <div class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-6">Detailed Reviews</h2>
+
+              <!-- Jobber -->
+              <div id="jobber" class="mb-10 border border-border rounded-lg p-6 bg-white">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 class="font-heading font-semibold text-xl">1. Jobber</h3>
+                    <p class="text-sm text-muted-foreground">Best Overall for Small HVAC Teams (1-5 Techs)</p>
+                  </div>
+                  <div class="score-badge high">60</div>
+                </div>
+                <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                  Jobber is the go-to CRM for small HVAC companies that need to get organized without the complexity or cost of an enterprise platform. The interface is clean, the learning curve is minimal, and you can be up and running in a day. <strong>With the highest weighted Fit Score, it is our top recommendation for small teams.</strong>
+                </p>
+                <table class="comparison-table">
+<thead><tr>
+  <th>Plan</th>
+  <th>Monthly (Annual)</th>
+  <th>Users</th>
+  <th>Key Additions</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Core</td>
+  <td>$39/mo</td>
+  <td>1</td>
+  <td>Quoting, scheduling, invoicing, CRM</td>
+</tr>
+<tr>
+  <td>Connect</td>
+  <td>$129/mo</td>
+  <td>Up to 5</td>
+  <td>Online booking, reminders, GPS</td>
+</tr>
+<tr>
+  <td>Grow</td>
+  <td>$249/mo</td>
+  <td>Up to 15</td>
+  <td>Quote follow-ups, job costing, 2-way SMS</td>
+</tr>
+</tbody>
+</table>
+                <div class="pros-cons">
+<div class="pros-list">
+<h4>STRENGTHS</h4>
+<ul>
+  <li>✓ Very easy to learn and set up (9/10 Ease of Use)</li>
+  <li>✓ Affordable entry point (9/10 Affordability)</li>
+  <li>✓ Excellent client-facing portal</li>
+  <li>✓ Strong QuickBooks integration (9/10)</li>
+</ul>
+</div>
+<div class="cons-list">
+<h4>WEAKNESSES</h4>
+<ul>
+  <li>✗ Limited marketing and lead tracking features</li>
+  <li>✗ No built-in call tracking</li>
+  <li>✗ Reporting is basic on lower tiers</li>
+  <li>✗ No maintenance agreement management on Core</li>
+</ul>
+</div>
+</div>
+                <p class="text-sm text-foreground/70 mb-2"><strong>Implementation Effort:</strong> Low. Most teams are operational within 1-3 days.</p>
+                <div class="cta-box">
+  <h3>Start a Jobber Free Trial</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Our top product pick for small HVAC teams. Get organized in a day.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+              </div>
+
+              <!-- Housecall Pro -->
+              <div id="housecall-pro" class="mb-10 border border-border rounded-lg p-6 bg-white">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 class="font-heading font-semibold text-xl">2. Housecall Pro</h3>
+                    <p class="text-sm text-muted-foreground">Best Mid-Market Value</p>
+                  </div>
+                  <div class="score-badge high">56</div>
+                </div>
+                <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                  Housecall Pro sits in the sweet spot between Jobber's simplicity and ServiceTitan's depth. It offers a strong balance of scheduling, dispatch, invoicing, online booking, and marketing features at a competitive price.
+                </p>
+                <table class="comparison-table">
+<thead><tr>
+  <th>Plan</th>
+  <th>Monthly (Annual)</th>
+  <th>Users</th>
+  <th>Key Additions</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Basic</td>
+  <td>$59/mo ($79 monthly)</td>
+  <td>1</td>
+  <td>Scheduling, invoicing, payments, mobile app</td>
+</tr>
+<tr>
+  <td>Essentials</td>
+  <td>$149/mo ($189 monthly)</td>
+  <td>Up to 5</td>
+  <td>Reporting, GPS, QuickBooks, reviews</td>
+</tr>
+<tr>
+  <td>MAX</td>
+  <td>Custom</td>
+  <td>8+</td>
+  <td>Dedicated success manager, advanced features</td>
+</tr>
+</tbody>
+</table>
+                <div class="pros-cons">
+<div class="pros-list">
+<h4>STRENGTHS</h4>
+<ul>
+  <li>✓ Good balance of features and price (8/10 Affordability)</li>
+  <li>✓ Built-in review request automation</li>
+  <li>✓ Online booking increases lead capture</li>
+  <li>✓ Strong mobile app</li>
+</ul>
+</div>
+<div class="cons-list">
+<h4>WEAKNESSES</h4>
+<ul>
+  <li>✗ MAX pricing is not transparent</li>
+  <li>✗ Less robust reporting than ServiceTitan</li>
+  <li>✗ No built-in call tracking</li>
+  <li>✗ Per-user pricing adds up for larger teams</li>
+</ul>
+</div>
+</div>
+                <p class="text-sm text-foreground/70 mb-2"><strong>Implementation Effort:</strong> Low to Medium. Most teams operational within 1-2 weeks.</p>
+                <div class="cta-box">
+  <h3>Try Housecall Pro Free for 14 Days</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">A strong #2 with great online booking and review automation features.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+              </div>
+
+              <!-- Workiz -->
+              <div id="workiz" class="mb-10 border border-border rounded-lg p-6 bg-white">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 class="font-heading font-semibold text-xl">3. Workiz</h3>
+                    <p class="text-sm text-muted-foreground">Best for Dispatch-Heavy HVAC Operations</p>
+                  </div>
+                  <div class="score-badge mid">53</div>
+                </div>
+                <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                  Workiz differentiates itself with a built-in phone system and call tracking, making it a strong choice for HVAC companies that handle high volumes of inbound service calls. For a deeper dive, see our guide to the <a href="/hvac/dispatch/best-dispatch-software-for-hvac" class="text-primary underline">best dispatch software for HVAC</a>.
+                </p>
+                <table class="comparison-table">
+<thead><tr>
+  <th>Plan</th>
+  <th>Monthly</th>
+  <th>Members</th>
+  <th>Key Additions</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Lite</td>
+  <td>Free</td>
+  <td>Up to 2</td>
+  <td>Basic scheduling, invoicing</td>
+</tr>
+<tr>
+  <td>Kickstart</td>
+  <td>$187/mo</td>
+  <td>1-3</td>
+  <td>Phone system, dispatch board, payments</td>
+</tr>
+<tr>
+  <td>Standard</td>
+  <td>$229/mo</td>
+  <td>1-5</td>
+  <td>Reporting, automations</td>
+</tr>
+</tbody>
+</table>
+                <div class="pros-cons">
+<div class="pros-list">
+<h4>STRENGTHS</h4>
+<ul>
+  <li>✓ Built-in call tracking and VoIP phone system</li>
+  <li>✓ Excellent dispatch board for high-volume shops</li>
+  <li>✓ Free tier available for very small teams</li>
+  <li>✓ Strong automation capabilities</li>
+</ul>
+</div>
+<div class="cons-list">
+<h4>WEAKNESSES</h4>
+<ul>
+  <li>✗ Higher starting price than Jobber or HCP</li>
+  <li>✗ Smaller user community</li>
+  <li>✗ Some features require higher-tier plans</li>
+  <li>✗ QuickBooks integration could be smoother</li>
+</ul>
+</div>
+</div>
+                <p class="text-sm text-foreground/70 mb-2"><strong>Implementation Effort:</strong> Medium. Phone system setup adds 1-2 weeks.</p>
+                <div class="cta-box">
+  <h3>Start a Workiz Free Trial</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Best for HVAC companies with high inbound call volume.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+              </div>
+
+              <!-- ServiceTitan -->
+              <div id="servicetitan" class="mb-10 border border-border rounded-lg p-6 bg-white">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 class="font-heading font-semibold text-xl">4. ServiceTitan</h3>
+                    <p class="text-sm text-muted-foreground">Best for Scaling (5-10+ Techs)</p>
+                  </div>
+                  <div class="score-badge mid">51</div>
+                </div>
+                <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                  ServiceTitan is the dominant platform in the home services space. While it is overkill for a 1-3 tech shop, it becomes a serious contender for companies with 5+ technicians focused on aggressive growth. See our guide to <a href="/hvac/crm/servicetitan-alternatives" class="text-primary underline">ServiceTitan alternatives</a>.
+                </p>
+                <p class="text-sm text-foreground/80 mb-4">
+                  <strong>Pricing:</strong> Per-technician pricing at approximately $245-$398/tech/month. Implementation fees range from $5,000-$50,000. Annual contracts are standard.
+                </p>
+                <div class="pros-cons">
+<div class="pros-list">
+<h4>STRENGTHS</h4>
+<ul>
+  <li>✓ Most comprehensive feature set (10/10 Core Features)</li>
+  <li>✓ Excellent reporting and marketing attribution</li>
+  <li>✓ Strong mobile app for technicians</li>
+  <li>✓ Active user community and training resources</li>
+</ul>
+</div>
+<div class="cons-list">
+<h4>WEAKNESSES</h4>
+<ul>
+  <li>✗ Expensive for small teams (5/10 Affordability)</li>
+  <li>✗ Steep learning curve (6/10 Ease of Use)</li>
+  <li>✗ Annual contract required</li>
+  <li>✗ Not ideal for teams under 5 techs</li>
+</ul>
+</div>
+</div>
+                <p class="text-sm text-foreground/70 mb-2"><strong>Implementation Effort:</strong> High. Expect 4-12 weeks for full onboarding.</p>
+                <div class="cta-box">
+  <h3>Book a ServiceTitan Demo</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">The most powerful all-in-one platform for scaling HVAC companies.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+              </div>
+
+              <!-- Service Fusion -->
+              <div id="service-fusion" class="mb-10 border border-border rounded-lg p-6 bg-white">
+                <div class="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 class="font-heading font-semibold text-xl">5. Service Fusion</h3>
+                    <p class="text-sm text-muted-foreground">Best Budget Option with Unlimited Users</p>
+                  </div>
+                  <div class="score-badge mid">51</div>
+                </div>
+                <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+                  Service Fusion's main advantage is its flat-rate pricing with unlimited users. For HVAC companies tired of per-user pricing that scales with every new hire, this model is a compelling alternative.
+                </p>
+                <table class="comparison-table">
+<thead><tr>
+  <th>Plan</th>
+  <th>Monthly (Annual)</th>
+  <th>Users</th>
+  <th>Key Additions</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Starter</td>
+  <td>$225/mo ($192 annual)</td>
+  <td>Unlimited</td>
+  <td>Scheduling, dispatch, invoicing, GPS</td>
+</tr>
+<tr>
+  <td>Plus</td>
+  <td>$349/mo ($295 annual)</td>
+  <td>Unlimited</td>
+  <td>Inventory, job costing, custom docs</td>
+</tr>
+<tr>
+  <td>Pro</td>
+  <td>$585/mo ($495 annual)</td>
+  <td>Unlimited</td>
+  <td>Advanced reporting, API, priority support</td>
+</tr>
+</tbody>
+</table>
+                <div class="pros-cons">
+<div class="pros-list">
+<h4>STRENGTHS</h4>
+<ul>
+  <li>✓ Unlimited users on every plan (8/10 Affordability)</li>
+  <li>✓ No per-user fees as you grow</li>
+  <li>✓ Flat-rate pricing is predictable</li>
+  <li>✓ Text messaging and auto-reminders included</li>
+</ul>
+</div>
+<div class="cons-list">
+<h4>WEAKNESSES</h4>
+<ul>
+  <li>✗ Higher starting price than Jobber/HCP</li>
+  <li>✗ Interface is less modern than competitors</li>
+  <li>✗ Mobile app has mixed reviews</li>
+  <li>✗ Limited marketing and lead tracking features</li>
+</ul>
+</div>
+</div>
+                <p class="text-sm text-foreground/70 mb-2"><strong>Implementation Effort:</strong> Low to Medium. Most teams operational within 1-2 weeks.</p>
+                <div class="verdict-strip">
+                  <p class="text-sm"><strong>Non-affiliate link:</strong> <a href="https://www.servicefusion.com/pricing" target="_blank" rel="noopener noreferrer" class="text-primary underline">See Service Fusion pricing</a></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Decision Tree -->
+            <div id="decision-tree" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">How to Choose: Decision Tree</h2>
+              <h3 class="font-heading font-semibold text-lg mt-6 mb-3">Step 1: What is your monthly budget?</h3>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Budget</th>
+  <th>Best Options</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Under $100/mo</td>
+  <td>Jobber Core ($39) or Workiz Lite (free)</td>
+</tr>
+<tr>
+  <td>$100-$300/mo</td>
+  <td>HCP Essentials ($149), Jobber Grow ($249), Workiz Standard ($229)</td>
+</tr>
+<tr>
+  <td>$300+/mo</td>
+  <td>Service Fusion Plus ($295), ServiceTitan (if budget allows)</td>
+</tr>
+</tbody>
+</table>
+              <h3 class="font-heading font-semibold text-lg mt-6 mb-3">Step 2: What is your biggest pain point?</h3>
+              <table class="comparison-table">
+<thead><tr>
+  <th>Pain Point</th>
+  <th>Best Fit</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td>Disorganization / using spreadsheets</td>
+  <td>Jobber</td>
+</tr>
+<tr>
+  <td>Missed calls and lost leads</td>
+  <td>Workiz</td>
+</tr>
+<tr>
+  <td>Need more online bookings and reviews</td>
+  <td>Housecall Pro</td>
+</tr>
+<tr>
+  <td>Per-user fees are too high</td>
+  <td>Service Fusion</td>
+</tr>
+<tr>
+  <td>Ready to scale with deep reporting</td>
+  <td>ServiceTitan</td>
+</tr>
+</tbody>
+</table>
+            </div>
+
+            <!-- FAQ -->
+            <div id="faq">
+              
+            </div>
+
+            <!-- Summary -->
+            <div id="summary" class="mt-10">
+              <h2 class="font-heading font-semibold text-2xl mb-4">Summary: Which CRM Should You Choose?</h2>
+              <div class="prose">
+                <p>The right CRM depends on where you are today and where you want to be in 12 months:</p>
+                <ul>
+                  <li><strong>Solo or small team (1-5 techs):</strong> Start with <strong>Jobber</strong>. Affordable, easy, highest Fit Score.</li>
+                  <li><strong>Growing team (4-10 techs):</strong> <strong>Housecall Pro</strong> offers the best balance of features and value.</li>
+                  <li><strong>Missed calls are your biggest problem:</strong> Look at <strong>Workiz</strong> for its built-in phone system.</li>
+                  <li><strong>Approaching 10 technicians:</strong> <strong>ServiceTitan</strong> is the next logical step.</li>
+                  <li><strong>Want predictable pricing:</strong> <strong>Service Fusion</strong> offers unlimited users on every plan.</li>
+                </ul>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                <div class="cta-box">
+  <h3>Our #1 Pick: Jobber</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Best for small HVAC teams. Get organized in a day.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+                <div class="cta-box">
+  <h3>Free Contractor Follow-Up Kit</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Pipeline template, SMS scripts, and missed call checklist.</p>
+  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+</div>
+              </div>
+            </div>
+
+            <!-- Related -->
+            <div class="mt-10 pt-6 border-t border-border">
+              <h3 class="data-label mb-3">Related Guides</h3>
+              <ul class="space-y-2 text-sm">
+                <li><a href="/hvac/crm/servicetitan-alternatives" class="text-primary hover:underline">ServiceTitan Alternatives for HVAC Companies</a></li>
+                <li><a href="/hvac/dispatch/best-dispatch-software-for-hvac" class="text-primary hover:underline">Best Dispatch Software for HVAC</a></li>
+                <li><a href="/hvac/crm/housecall-pro-vs-jobber" class="text-primary hover:underline">Housecall Pro vs Jobber</a></li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Sidebar -->
+          <aside class="hidden lg:block w-64 flex-shrink-0">
+            <div class="mt-8 p-4 bg-accent rounded-lg border border-primary/20">
+              <p class="data-label text-primary mb-2">Free Download</p>
+              <p class="text-sm font-semibold mb-2">Contractor Follow-Up Kit</p>
+              <p class="text-xs text-muted-foreground mb-3">Pipeline template + 5 SMS scripts + missed call checklist</p>
+              <a href="/lead-magnet"
+                class="block text-center px-4 py-2 bg-primary text-primary-foreground rounded text-sm font-medium hover:bg-primary/90 transition-colors no-underline"
+              >
+                Get Free Kit
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+<!-- FAQ Section -->
+<div id="faq" class="mt-10">
+  <h2 class="font-semibold text-2xl mb-4" style="font-family: var(--font-heading);">Frequently Asked Questions</h2>
+  <div class="space-y-0">
+    <div class="faq-item">
+      <p class="faq-question">Do I need a CRM if I have fewer than 5 technicians?</p>
+      <p class="faq-answer">Yes. Even with 1-2 techs, a CRM pays for itself by preventing lost leads and saving administrative time. A simple CRM like Jobber Core ($39/mo) can centralize your customer data, automate appointment reminders, and make you look more professional.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">How long does setup take?</p>
+      <p class="faq-answer">It varies by platform. Jobber can be operational in 1-3 days. Housecall Pro or Workiz might take 1-2 weeks. ServiceTitan requires a 4-12 week implementation project. Our Ease of Use score reflects this setup time.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">Can I switch CRMs without losing my customer data?</p>
+      <p class="faq-answer">Yes. All major CRMs offer data import via CSV files. You can export your customer list, job history, and price book from your old system and import it into the new one. Most platforms offer support for this process.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">What integrations matter most for an HVAC company?</p>
+      <p class="faq-answer">The most critical integration is QuickBooks (Online or Desktop). Other important integrations include call tracking (CallRail), review platforms (Google, NiceJob, Birdeye), and payment processors (Stripe or Square).</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">What is the real cost, including add-ons?</p>
+      <p class="faq-answer">For a small team (3 users), expect $150/mo for a mid-tier plan like Jobber Connect or Housecall Pro Essentials. Flat-rate plans like Service Fusion have higher starting prices but no per-user fees. Always confirm which features are included in each tier.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-question">What if I outgrow my CRM?</p>
+      <p class="faq-answer">If you start with Jobber and grow to 10+ technicians, you can migrate to ServiceTitan when the time is right. All tools allow data export. Start with the tool that fits your business today.</p>
+    </div>
+  </div>
+</div>
+</ArticleLayout>
