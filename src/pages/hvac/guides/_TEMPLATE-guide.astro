@@ -1,0 +1,421 @@
+---
+/**
+ * ============================================================
+ * HVAC SOFTWARE HUB — GUIDES CATEGORY TEMPLATE
+ * ============================================================
+ *
+ * HOW TO USE THIS TEMPLATE:
+ * 1. Copy this file and rename it to your URL slug:
+ *    cp _TEMPLATE-guide.astro your-article-slug.astro
+ *
+ * 2. Replace ALL items marked with [PLACEHOLDER] below.
+ *
+ * 3. Update the tocItems array to match your actual <h2> sections.
+ *    Each { id: "...", label: "..." } must match an id="" attribute
+ *    on a section <div> in the body.
+ *
+ * 4. Update the faqItems array with 3–6 real FAQs. These are used
+ *    for both the visible FAQ section AND the FAQPage JSON-LD schema
+ *    that Google reads for rich snippets.
+ *
+ * 5. Delete this comment block before publishing.
+ *
+ * DESIGN SYSTEM REFERENCE (for this file):
+ *   Fonts:    var(--font-heading) = DM Sans | var(--font-body) = Inter | var(--font-mono) = JetBrains Mono
+ *   Colors:   var(--color-primary) = accent orange | var(--color-muted) = subdued text
+ *   Classes:  .comparison-table | .cta-box | .cta-button | .verdict-strip | .faq-item | .faq-question | .faq-answer | .disclosure-banner
+ *   Intent:   MOFU (middle-of-funnel educational content)
+ * ============================================================
+ */
+
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+
+// ── Table of Contents ──────────────────────────────────────
+// Each entry becomes a sidebar link. The `id` must match a
+// div id="" in the article body below.
+const tocItems = [
+  { id: "who-is-this-for",    label: "[PLACEHOLDER] Who This Is For" },
+  { id: "why-it-matters",     label: "[PLACEHOLDER] Why It Matters" },
+  { id: "key-features",       label: "[PLACEHOLDER] Key Features to Evaluate" },
+  { id: "comparison",         label: "[PLACEHOLDER] Side-by-Side Comparison" },
+  { id: "recommendations",    label: "[PLACEHOLDER] Our Recommendations" },
+  { id: "checklist",          label: "[PLACEHOLDER] Evaluation Checklist" },
+  { id: "mistakes",           label: "[PLACEHOLDER] Common Mistakes" },
+  { id: "faq",                label: "FAQ" }
+];
+
+// ── FAQ Items ──────────────────────────────────────────────
+// Used for both the visible FAQ section AND the FAQPage
+// structured data (JSON-LD) that Google reads for rich results.
+// Aim for 3–6 questions. Keep answers under 300 characters for
+// best snippet performance.
+const faqItems = [
+  {
+    q: "[PLACEHOLDER] What is the first question your reader would ask?",
+    a: "[PLACEHOLDER] Provide a clear, factual answer in 1–3 sentences."
+  },
+  {
+    q: "[PLACEHOLDER] What is the second most common question?",
+    a: "[PLACEHOLDER] Answer here."
+  },
+  {
+    q: "[PLACEHOLDER] What is a question that addresses a misconception?",
+    a: "[PLACEHOLDER] Correct the misconception clearly."
+  },
+  {
+    q: "[PLACEHOLDER] What is a question about cost or budget?",
+    a: "[PLACEHOLDER] Give a realistic range and context."
+  },
+  {
+    q: "[PLACEHOLDER] What is a question about getting started?",
+    a: "[PLACEHOLDER] Give a concrete first step."
+  }
+];
+---
+
+<!--
+  ArticleLayout Props Reference:
+  ┌──────────────┬──────────────────────────────────────────────────────────┐
+  │ Prop         │ Description                                            │
+  ├──────────────┼──────────────────────────────────────────────────────────┤
+  │ title        │ Full <title> tag. Append " — HVAC Software Hub"        │
+  │ description  │ Meta description. 150-160 chars. Include primary KW.   │
+  │ canonicalPath│ URL path starting with /. Must match file location.    │
+  │ category     │ Display label shown in the badge (e.g. "Buyer's Guide")│
+  │ publishDate  │ ISO date string (YYYY-MM-DD)                           │
+  │ readTime     │ Estimated read time (e.g. "12 min read")               │
+  │ intent       │ Funnel stage: "BOFU" | "MOFU" | "TOFU"                 │
+  │ heroImage    │ (optional) Full URL to hero image. Omit for text-only. │
+  │ tocItems     │ Array of { id, label } for sidebar navigation          │
+  │ faqItems     │ Array of { q, a } for FAQ section + JSON-LD schema     │
+  └──────────────┴──────────────────────────────────────────────────────────┘
+-->
+<ArticleLayout
+  title="[PLACEHOLDER] Your Article Title (2026) — HVAC Software Hub"
+  description="[PLACEHOLDER] A 150-160 character meta description with your primary keyword for HVAC/plumbing contractors."
+  canonicalPath="/hvac/guides/[PLACEHOLDER-your-slug]"
+  category="Buyer's Guide"
+  publishDate="2026-02-17"
+  readTime="[PLACEHOLDER] 12 min read"
+  intent="MOFU"
+  tocItems={tocItems}
+  faqItems={faqItems}
+>
+
+<!-- ════════════════════════════════════════════════════════════
+     ARTICLE BODY — Write your content below using standard HTML.
+     The ArticleLayout handles: header, nav, sidebar TOC, footer,
+     author byline, disclosure banner, and FAQ schema automatically.
+     ════════════════════════════════════════════════════════════ -->
+
+<div class="container py-8">
+  <div class="flex gap-12">
+    <article class="flex-1 min-w-0 max-w-3xl">
+
+      <!-- ── Intro Paragraph ─────────────────────────────── -->
+      <div class="mt-6">
+        <p class="text-sm text-foreground/80 leading-relaxed">
+          [PLACEHOLDER] Write a 2–4 sentence introduction that explains what this guide covers, who it's for, and what the reader will walk away with. Lead with the pain point, then promise the solution.
+        </p>
+      </div>
+
+
+      <!-- ── Section 1: Who This Is For ──────────────────── -->
+      <div id="who-is-this-for" class="mt-8">
+        <h2 class="font-heading font-semibold text-2xl mb-4">[PLACEHOLDER] Who This Guide Is For</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="border border-border rounded-lg p-4 bg-white">
+            <h4 class="font-heading font-semibold text-sm mb-2">[PLACEHOLDER] Audience Segment 1</h4>
+            <p class="text-xs text-foreground/70">[PLACEHOLDER] Brief description of this segment and their specific need.</p>
+          </div>
+          <div class="border border-border rounded-lg p-4 bg-white">
+            <h4 class="font-heading font-semibold text-sm mb-2">[PLACEHOLDER] Audience Segment 2</h4>
+            <p class="text-xs text-foreground/70">[PLACEHOLDER] Brief description of this segment and their specific need.</p>
+          </div>
+          <div class="border border-border rounded-lg p-4 bg-white">
+            <h4 class="font-heading font-semibold text-sm mb-2">[PLACEHOLDER] Audience Segment 3</h4>
+            <p class="text-xs text-foreground/70">[PLACEHOLDER] Brief description of this segment and their specific need.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ── Section 2: Why It Matters ───────────────────── -->
+      <div id="why-it-matters" class="mt-10">
+        <h2 class="font-heading font-semibold text-2xl mb-4">[PLACEHOLDER] Why [Topic] Matters for HVAC Companies</h2>
+        <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+          [PLACEHOLDER] Explain the business impact. Use specific numbers where possible (e.g., "HVAC companies that implement X see a 20-30% reduction in Y"). This section builds urgency and justifies the reader's time investment.
+        </p>
+        <!-- Optional: Key stat callout -->
+        <div class="verdict-strip">
+          <p class="text-sm">
+            <strong>[PLACEHOLDER] Key Insight:</strong> [PLACEHOLDER] One sentence that captures the most important takeaway from this section.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- ── Section 3: Key Features to Evaluate ─────────── -->
+      <div id="key-features" class="mt-10">
+        <h2 class="font-heading font-semibold text-2xl mb-4">[PLACEHOLDER] What to Look For in [Topic]</h2>
+        <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
+          [PLACEHOLDER] Brief intro sentence for this section.
+        </p>
+        <ul class="space-y-2 text-sm text-foreground/80 mb-6">
+          <li class="flex items-start gap-2"><span class="text-primary mt-0.5 font-bold">1.</span> <strong>[PLACEHOLDER] Feature 1</strong> — [PLACEHOLDER] Why this matters for HVAC contractors specifically.</li>
+          <li class="flex items-start gap-2"><span class="text-primary mt-0.5 font-bold">2.</span> <strong>[PLACEHOLDER] Feature 2</strong> — [PLACEHOLDER] Explanation.</li>
+          <li class="flex items-start gap-2"><span class="text-primary mt-0.5 font-bold">3.</span> <strong>[PLACEHOLDER] Feature 3</strong> — [PLACEHOLDER] Explanation.</li>
+          <li class="flex items-start gap-2"><span class="text-primary mt-0.5 font-bold">4.</span> <strong>[PLACEHOLDER] Feature 4</strong> — [PLACEHOLDER] Explanation.</li>
+          <li class="flex items-start gap-2"><span class="text-primary mt-0.5 font-bold">5.</span> <strong>[PLACEHOLDER] Feature 5</strong> — [PLACEHOLDER] Explanation.</li>
+        </ul>
+      </div>
+
+
+      <!-- ── Section 4: Side-by-Side Comparison Table ────── -->
+      <div id="comparison" class="mt-10">
+        <h2 class="font-heading font-semibold text-2xl mb-4">[PLACEHOLDER] Comparison: [Tools/Options] at a Glance</h2>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>[PLACEHOLDER] Column 1</th>
+              <th>[PLACEHOLDER] Column 2</th>
+              <th>[PLACEHOLDER] Column 3</th>
+              <th>[PLACEHOLDER] Column 4</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>[PLACEHOLDER] Row 1 data</td>
+              <td>[PLACEHOLDER]</td>
+              <td>[PLACEHOLDER]</td>
+              <td>[PLACEHOLDER]</td>
+            </tr>
+            <tr>
+              <td>[PLACEHOLDER] Row 2 data</td>
+              <td>[PLACEHOLDER]</td>
+              <td>[PLACEHOLDER]</td>
+              <td>[PLACEHOLDER]</td>
+            </tr>
+            <tr>
+              <td>[PLACEHOLDER] Row 3 data</td>
+              <td>[PLACEHOLDER]</td>
+              <td>[PLACEHOLDER]</td>
+              <td>[PLACEHOLDER]</td>
+            </tr>
+            <tr>
+              <td>[PLACEHOLDER] Row 4 data</td>
+              <td>[PLACEHOLDER]</td>
+              <td>[PLACEHOLDER]</td>
+              <td>[PLACEHOLDER]</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <!-- ── Section 5: Our Recommendations by Size ──────── -->
+      <div id="recommendations" class="mt-10">
+        <h2 class="font-heading font-semibold text-2xl mb-4">[PLACEHOLDER] Our Recommendations by Company Size</h2>
+
+        <div class="space-y-6">
+          <!-- Recommendation Tier 1 -->
+          <div class="border border-border rounded-lg p-6 bg-white">
+            <h3 class="font-heading font-semibold text-lg mb-1">[PLACEHOLDER] Small Teams (1-5 Techs)</h3>
+            <p class="text-xs text-muted-foreground mb-3">[PLACEHOLDER] Revenue range | Monthly budget range</p>
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Recommendation</th>
+                  <th>Monthly Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>[PLACEHOLDER]</td>
+                  <td>[PLACEHOLDER]</td>
+                  <td>[PLACEHOLDER]</td>
+                </tr>
+                <tr>
+                  <td>[PLACEHOLDER]</td>
+                  <td>[PLACEHOLDER]</td>
+                  <td>[PLACEHOLDER]</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Recommendation Tier 2 -->
+          <div class="border border-border rounded-lg p-6 bg-white">
+            <h3 class="font-heading font-semibold text-lg mb-1">[PLACEHOLDER] Growing Teams (5-15 Techs)</h3>
+            <p class="text-xs text-muted-foreground mb-3">[PLACEHOLDER] Revenue range | Monthly budget range</p>
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Recommendation</th>
+                  <th>Monthly Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>[PLACEHOLDER]</td>
+                  <td>[PLACEHOLDER]</td>
+                  <td>[PLACEHOLDER]</td>
+                </tr>
+                <tr>
+                  <td>[PLACEHOLDER]</td>
+                  <td>[PLACEHOLDER]</td>
+                  <td>[PLACEHOLDER]</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Recommendation Tier 3 -->
+          <div class="border border-border rounded-lg p-6 bg-white">
+            <h3 class="font-heading font-semibold text-lg mb-1">[PLACEHOLDER] Large Operations (15+ Techs)</h3>
+            <p class="text-xs text-muted-foreground mb-3">[PLACEHOLDER] Revenue range | Monthly budget range</p>
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Recommendation</th>
+                  <th>Monthly Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>[PLACEHOLDER]</td>
+                  <td>[PLACEHOLDER]</td>
+                  <td>[PLACEHOLDER]</td>
+                </tr>
+                <tr>
+                  <td>[PLACEHOLDER]</td>
+                  <td>[PLACEHOLDER]</td>
+                  <td>[PLACEHOLDER]</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ── Section 6: Evaluation Checklist ─────────────── -->
+      <div id="checklist" class="mt-10">
+        <h2 class="font-heading font-semibold text-2xl mb-4">[PLACEHOLDER] Evaluation Checklist</h2>
+        <p class="text-sm text-foreground/70 mb-4">[PLACEHOLDER] Use this checklist when evaluating [topic]:</p>
+        <div class="border border-border rounded-lg p-6 bg-white">
+          <div class="space-y-3 text-sm">
+            <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>[PLACEHOLDER] Checklist item 1</strong> — [PLACEHOLDER] Why this matters.</span></div>
+            <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>[PLACEHOLDER] Checklist item 2</strong> — [PLACEHOLDER] Why this matters.</span></div>
+            <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>[PLACEHOLDER] Checklist item 3</strong> — [PLACEHOLDER] Why this matters.</span></div>
+            <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>[PLACEHOLDER] Checklist item 4</strong> — [PLACEHOLDER] Why this matters.</span></div>
+            <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>[PLACEHOLDER] Checklist item 5</strong> — [PLACEHOLDER] Why this matters.</span></div>
+            <div class="flex items-start gap-3"><span class="text-primary font-mono text-xs mt-0.5">□</span> <span><strong>[PLACEHOLDER] Checklist item 6</strong> — [PLACEHOLDER] Why this matters.</span></div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ── Section 7: Common Mistakes ──────────────────── -->
+      <div id="mistakes" class="mt-10">
+        <h2 class="font-heading font-semibold text-2xl mb-4">[PLACEHOLDER] Common Mistakes to Avoid</h2>
+        <div class="space-y-4">
+          <div class="border-l-2 border-red-400 pl-4">
+            <h4 class="font-heading font-semibold text-sm mb-1">[PLACEHOLDER] 1. Mistake title</h4>
+            <p class="text-sm text-foreground/70">[PLACEHOLDER] Explain the mistake and how to avoid it. Be specific to HVAC/plumbing businesses.</p>
+          </div>
+          <div class="border-l-2 border-red-400 pl-4">
+            <h4 class="font-heading font-semibold text-sm mb-1">[PLACEHOLDER] 2. Mistake title</h4>
+            <p class="text-sm text-foreground/70">[PLACEHOLDER] Explanation.</p>
+          </div>
+          <div class="border-l-2 border-red-400 pl-4">
+            <h4 class="font-heading font-semibold text-sm mb-1">[PLACEHOLDER] 3. Mistake title</h4>
+            <p class="text-sm text-foreground/70">[PLACEHOLDER] Explanation.</p>
+          </div>
+          <div class="border-l-2 border-red-400 pl-4">
+            <h4 class="font-heading font-semibold text-sm mb-1">[PLACEHOLDER] 4. Mistake title</h4>
+            <p class="text-sm text-foreground/70">[PLACEHOLDER] Explanation.</p>
+          </div>
+          <div class="border-l-2 border-red-400 pl-4">
+            <h4 class="font-heading font-semibold text-sm mb-1">[PLACEHOLDER] 5. Mistake title</h4>
+            <p class="text-sm text-foreground/70">[PLACEHOLDER] Explanation.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ── FAQ Section (visible on page) ───────────────── -->
+      <!--
+        NOTE: The faqItems array in the frontmatter generates the
+        JSON-LD schema automatically. This section renders the
+        visible FAQ. Keep them in sync.
+      -->
+      <div id="faq" class="mt-10">
+        <h2 class="font-semibold text-2xl mb-4" style="font-family: var(--font-heading);">Frequently Asked Questions</h2>
+        <div class="space-y-0">
+          <div class="faq-item">
+            <p class="faq-question">[PLACEHOLDER] Question 1 (must match faqItems[0].q)</p>
+            <p class="faq-answer">[PLACEHOLDER] Answer 1 (must match faqItems[0].a)</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">[PLACEHOLDER] Question 2</p>
+            <p class="faq-answer">[PLACEHOLDER] Answer 2</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">[PLACEHOLDER] Question 3</p>
+            <p class="faq-answer">[PLACEHOLDER] Answer 3</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">[PLACEHOLDER] Question 4</p>
+            <p class="faq-answer">[PLACEHOLDER] Answer 4</p>
+          </div>
+          <div class="faq-item">
+            <p class="faq-question">[PLACEHOLDER] Question 5</p>
+            <p class="faq-answer">[PLACEHOLDER] Answer 5</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ── CTA Box (Lead Magnet or Affiliate) ──────────── -->
+      <!--
+        Use rel="sponsored nofollow" on ALL affiliate links.
+        For lead magnet CTAs, link to /lead-magnet instead.
+      -->
+      <div class="cta-box">
+        <h3>[PLACEHOLDER] CTA Headline (e.g., "Free: Contractor Software Toolkit")</h3>
+        <p class="text-sm text-[var(--color-foreground)]/70 mb-4">[PLACEHOLDER] 1-2 sentences describing the value of clicking. Be specific about what they get.</p>
+        <a href="[PLACEHOLDER: /lead-magnet or affiliate URL]" class="cta-button" rel="sponsored nofollow" target="_blank">[PLACEHOLDER] CTA Button Text →</a>
+      </div>
+
+
+      <!-- ── Related Articles (Internal Links) ───────────── -->
+      <!--
+        IMPORTANT: Every article must link to 3-6 related pages
+        on the site. This strengthens the internal link structure
+        and helps Google understand your site's topical authority.
+      -->
+      <div class="mt-10 pt-6 border-t border-border">
+        <h3 class="data-label mb-3">Related Reviews & Guides</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/hvac/crm/best-crm-for-small-hvac-companies" class="text-primary hover:underline">Best CRM for Small HVAC Companies</a></li>
+          <li><a href="/hvac/crm/servicetitan-alternatives" class="text-primary hover:underline">ServiceTitan Alternatives</a></li>
+          <li><a href="/hvac/crm/housecall-pro-vs-jobber" class="text-primary hover:underline">Housecall Pro vs Jobber</a></li>
+          <li><a href="/hvac/crm/jobber-vs-servicetitan" class="text-primary hover:underline">Jobber vs ServiceTitan</a></li>
+          <li><a href="/hvac/dispatch/best-dispatch-software-for-hvac" class="text-primary hover:underline">Best Dispatch Software for HVAC</a></li>
+          <li><a href="/hvac/call-tracking/best-call-tracking-for-hvac" class="text-primary hover:underline">Best Call Tracking Software for HVAC</a></li>
+          <!-- [PLACEHOLDER] Add or remove links relevant to this article -->
+        </ul>
+      </div>
+
+    </article>
+
+    <!-- Sidebar spacer (TOC is rendered by ArticleLayout) -->
+    <aside class="hidden lg:block w-64 flex-shrink-0"></aside>
+  </div>
+</div>
+
+</ArticleLayout>
