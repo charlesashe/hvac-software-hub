@@ -17,8 +17,8 @@ const tocItems = [
 ];
 const faqItems = [
   { q: "How much should an HVAC company spend on software?", a: "A reasonable benchmark is 1-3% of annual revenue. A $1M/year company should budget $10,000-30,000/year for their full software stack (CRM, accounting, call tracking, reviews). Start with the essentials (CRM + accounting) and add tools as revenue grows." },
-  { q: "Should I get an all-in-one platform or best-of-breed tools?", a: "For companies under 10 techs, an all-in-one platform like Jobber or Housecall Pro is usually the better choice — simpler to manage, lower total cost, fewer integrations to maintain. For companies over 15 techs, a best-of-breed approach (ServiceTitan + CallRail + specialized tools) often provides better depth in each category." },
-  { q: "What is the most important software for a new HVAC company?", a: "Start with a CRM/field service platform (Jobber or Housecall Pro) and QuickBooks. These two tools handle 80% of your operational needs: scheduling, dispatching, invoicing, and accounting. Add call tracking and review management once you start spending on marketing." },
+  { q: "Should I get an all-in-one platform or best-of-breed tools?", a: "For companies under 10 techs, an all-in-one platform like Jobber or Workiz is usually the better choice — simpler to manage, lower total cost, fewer integrations to maintain. For companies over 15 techs, a best-of-breed approach (ServiceTitan + CallRail + specialized tools) often provides better depth in each category." },
+  { q: "What is the most important software for a new HVAC company?", a: "Start with a CRM/field service platform (Jobber or Workiz) and QuickBooks. These two tools handle 80% of your operational needs: scheduling, dispatching, invoicing, and accounting. Add call tracking and review management once you start spending on marketing." },
   { q: "How do I migrate from one platform to another?", a: "Most platforms support CSV data export. The typical migration process is: (1) export customer and job data from old platform, (2) clean the data in a spreadsheet, (3) import into new platform, (4) run both platforms in parallel for 1-2 weeks, (5) fully switch over. Budget 1-4 weeks depending on complexity." },
   { q: "Do I need separate software for commercial vs residential work?", a: "If commercial work is less than 20% of your revenue, your residential CRM can usually handle it. If commercial is a significant part of your business, consider platforms that handle both well (ServiceTitan, FieldEdge, BuildOps) or run separate systems for each division." }
 ];
@@ -148,12 +148,6 @@ const faqItems = [
   <td>Read review →</td>
 </tr>
 <tr>
-  <td>Housecall Pro</td>
-  <td>Marketing-focused teams</td>
-  <td>$59/mo</td>
-  <td>Read review →</td>
-</tr>
-<tr>
   <td>ServiceTitan</td>
   <td>15+ tech enterprise teams</td>
   <td>Custom (~$200/tech)</td>
@@ -180,7 +174,7 @@ const faqItems = [
 </tbody>
 </table>
               <p class="text-sm text-foreground/70 mt-2">
-                For detailed comparisons, see: <a href="/hvac/crm/best-crm-for-small-hvac-companies" class="text-primary underline">Best CRM for Small HVAC Companies</a> | <a href="/hvac/crm/housecall-pro-vs-jobber" class="text-primary underline">Housecall Pro vs Jobber</a> | <a href="/hvac/crm/jobber-vs-servicetitan" class="text-primary underline">Jobber vs ServiceTitan</a>
+                For detailed comparisons, see: <a href="/hvac/crm/best-crm-for-small-hvac-companies" class="text-primary underline">Best CRM for Small HVAC Companies</a> | <a href="/hvac/crm/jobber-vs-servicetitan" class="text-primary underline">Jobber vs ServiceTitan</a>
               </p>
             </div>
 
@@ -204,7 +198,7 @@ const faqItems = [
             <div id="reviews" class="mt-10">
               <h2 class="font-heading font-semibold text-2xl mb-4">Category 3: Review Management</h2>
               <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
-                Google reviews are the single most important factor in local SEO for HVAC companies. A review management tool automates the process of requesting reviews after completed jobs, monitors your online reputation, and helps you respond to reviews quickly. Some CRM platforms (Housecall Pro, ServiceTitan) include basic review automation. If yours does not, add a dedicated tool.
+                Google reviews are the single most important factor in local SEO for HVAC companies. A review management tool automates the process of requesting reviews after completed jobs, monitors your online reputation, and helps you respond to reviews quickly. Some CRM platforms (ServiceTitan) include basic review automation. If yours does not, add a dedicated tool.
               </p>
               <table class="comparison-table">
 <thead><tr>
@@ -213,11 +207,6 @@ const faqItems = [
   <th>Key Feature</th>
 </tr></thead>
 <tbody>
-<tr>
-  <td>Housecall Pro (built-in)</td>
-  <td>Included</td>
-  <td>Automatic post-job review requests</td>
-</tr>
 <tr>
   <td>NiceJob</td>
   <td>$75/mo</td>
@@ -244,7 +233,7 @@ const faqItems = [
               </p>
               <div class="verdict-strip">
                 <p class="text-sm">
-                  <strong>Non-Negotiable:</strong> Whatever CRM you choose, verify that it has a native (not Zapier-based) integration with your accounting platform. Jobber, Housecall Pro, ServiceTitan, and Workiz all integrate with QuickBooks Online. If you use QuickBooks Desktop, check compatibility carefully — not all platforms support it.
+                  <strong>Non-Negotiable:</strong> Whatever CRM you choose, verify that it has a native (not Zapier-based) integration with your accounting platform. Jobber, ServiceTitan, and Workiz all integrate with QuickBooks Online. If you use QuickBooks Desktop, check compatibility carefully — not all platforms support it.
                 </p>
               </div>
             </div>
@@ -304,7 +293,7 @@ const faqItems = [
 <tbody>
 <tr>
   <td>CRM & Dispatch</td>
-  <td>Housecall Pro Essentials or Jobber Connect</td>
+  <td>Jobber Connect or Workiz Standard</td>
   <td>$129-149/mo</td>
 </tr>
 <tr>
@@ -319,7 +308,7 @@ const faqItems = [
 </tr>
 <tr>
   <td>Reviews</td>
-  <td>Included (HCP) or NiceJob</td>
+  <td>NiceJob</td>
   <td>$0-75/mo</td>
 </tr>
 <tr>
@@ -473,7 +462,7 @@ const faqItems = [
               <ul class="space-y-2 text-sm">
                 <li><a href="/hvac/crm/best-crm-for-small-hvac-companies" class="text-primary hover:underline">Best CRM for Small HVAC Companies</a></li>
                 <li><a href="/hvac/crm/servicetitan-alternatives" class="text-primary hover:underline">ServiceTitan Alternatives</a></li>
-                <li><a href="/hvac/crm/housecall-pro-vs-jobber" class="text-primary hover:underline">Housecall Pro vs Jobber</a></li>
+
                 <li><a href="/hvac/crm/jobber-vs-servicetitan" class="text-primary hover:underline">Jobber vs ServiceTitan</a></li>
                 <li><a href="/hvac/dispatch/best-dispatch-software-for-hvac" class="text-primary hover:underline">Best Dispatch Software for HVAC</a></li>
                 <li><a href="/hvac/call-tracking/best-call-tracking-for-hvac" class="text-primary hover:underline">Best Call Tracking Software for HVAC</a></li>
@@ -496,11 +485,11 @@ const faqItems = [
     </div>
     <div class="faq-item">
       <p class="faq-question">Should I get an all-in-one platform or best-of-breed tools?</p>
-      <p class="faq-answer">For companies under 10 techs, an all-in-one platform like Jobber or Housecall Pro is usually the better choice — simpler to manage, lower total cost, fewer integrations to maintain. For companies over 15 techs, a best-of-breed approach (ServiceTitan + CallRail + specialized tools) often provides better depth in each category.</p>
+      <p class="faq-answer">For companies under 10 techs, an all-in-one platform like Jobber or Workiz is usually the better choice — simpler to manage, lower total cost, fewer integrations to maintain. For companies over 15 techs, a best-of-breed approach (ServiceTitan + CallRail + specialized tools) often provides better depth in each category.</p>
     </div>
     <div class="faq-item">
       <p class="faq-question">What is the most important software for a new HVAC company?</p>
-      <p class="faq-answer">Start with a CRM/field service platform (Jobber or Housecall Pro) and QuickBooks. These two tools handle 80% of your operational needs: scheduling, dispatching, invoicing, and accounting. Add call tracking and review management once you start spending on marketing.</p>
+      <p class="faq-answer">Start with a CRM/field service platform (Jobber or Workiz) and QuickBooks. These two tools handle 80% of your operational needs: scheduling, dispatching, invoicing, and accounting. Add call tracking and review management once you start spending on marketing.</p>
     </div>
     <div class="faq-item">
       <p class="faq-question">How do I migrate from one platform to another?</p>

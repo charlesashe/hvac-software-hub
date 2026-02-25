@@ -5,11 +5,10 @@ const tocItems = [
   { id: "why-switch", label: "Why Contractors Switch" },
   { id: "fit-score", label: "Alternative Fit Score" },
   { id: "miss-vs-save", label: "What You'll Miss vs Save" },
-  { id: "housecall-pro", label: "1. Housecall Pro" },
-  { id: "workiz", label: "2. Workiz" },
-  { id: "jobber", label: "3. Jobber" },
-  { id: "fieldedge", label: "4. FieldEdge" },
-  { id: "service-fusion", label: "5. Service Fusion" },
+  { id: "workiz", label: "1. Workiz" },
+  { id: "jobber", label: "2. Jobber" },
+  { id: "fieldedge", label: "3. FieldEdge" },
+  { id: "service-fusion", label: "4. Service Fusion" },
   { id: "faq", label: "FAQ" },
   { id: "verdict", label: "Verdict" }
 ];
@@ -17,7 +16,7 @@ const faqItems = [
   { q: "Is it hard to switch from ServiceTitan?", a: "The technical migration (exporting data, importing to a new tool) takes 1-3 weeks depending on the platform. The harder part is retraining your team. Budget 2-4 weeks for the full transition. Most alternatives offer migration support." },
   { q: "Will I lose my customer data?", a: "No. ServiceTitan allows data export. All alternatives accept CSV imports. Your customer records, job history, and contact information can be transferred." },
   { q: "What features will I actually miss?", a: "The two features most contractors miss are ServiceTitan's marketing attribution dashboard and its pricebook with dynamic pricing. If these are critical to your operation, switching may not be worth the savings." },
-  { q: "Can I try an alternative before canceling ServiceTitan?", a: "Yes. Housecall Pro, Jobber, and Workiz all offer free trials. Run them in parallel for 2 weeks before making the switch." },
+  { q: "Can I try an alternative before canceling ServiceTitan?", a: "Yes. Jobber and Workiz both offer free trials. Run them in parallel for 2 weeks before making the switch." },
   { q: "What about my ServiceTitan contract?", a: "ServiceTitan uses annual contracts. Check your renewal date and cancellation terms. Some contractors negotiate early termination by citing the cost savings." }
 ];
 ---
@@ -98,15 +97,6 @@ const faqItems = [
 </tr></thead>
 <tbody>
 <tr>
-  <td>Housecall Pro</td>
-  <td>16</td>
-  <td>14</td>
-  <td>8</td>
-  <td>7</td>
-  <td>8</td>
-  <td>58/70</td>
-</tr>
-<tr>
   <td>Workiz</td>
   <td>14</td>
   <td>14</td>
@@ -157,12 +147,6 @@ const faqItems = [
 </tr></thead>
 <tbody>
 <tr>
-  <td>Housecall Pro</td>
-  <td>~$800-$1,200/mo</td>
-  <td>Dispatch, scheduling, invoicing, reviews</td>
-  <td>Marketing attribution, pricebook depth</td>
-</tr>
-<tr>
   <td>Workiz</td>
   <td>~$700-$1,100/mo</td>
   <td>Dispatch, call tracking, invoicing</td>
@@ -197,59 +181,10 @@ const faqItems = [
             <div class="mt-10">
               <h2 class="font-heading font-semibold text-2xl mb-6">Detailed Reviews</h2>
 
-              <div id="housecall-pro" class="mb-10 border border-border rounded-lg p-6 bg-white">
-                <div class="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 class="font-heading font-semibold text-xl">1. Housecall Pro</h3>
-                    <p class="text-sm text-muted-foreground">Best Overall ServiceTitan Alternative</p>
-                  </div>
-                  <div class="score-badge high">58</div>
-                </div>
-                <p class="text-sm text-foreground/80 mb-4 leading-relaxed">
-                  Housecall Pro replaces about 80% of what ServiceTitan does at a fraction of the cost. The biggest gap is marketing attribution — HCP does not track which ad campaign generated which job. But for most HVAC companies under 10 techs, that trade-off is worth $800-$1,200/mo in savings.
-                </p>
-                <p class="text-sm text-foreground/80 mb-4">
-                  <strong>Switching from ServiceTitan:</strong> HCP offers a dedicated migration team for larger accounts. Data import via CSV is straightforward. The main adjustment is losing ServiceTitan's pricebook depth — HCP's pricebook is simpler. Budget 2 weeks for the full transition.
-                </p>
-                <table class="comparison-table">
-<thead><tr>
-  <th>Plan</th>
-  <th>Monthly</th>
-  <th>Users</th>
-  <th>Notes</th>
-</tr></thead>
-<tbody>
-<tr>
-  <td>Basic</td>
-  <td>$79/mo</td>
-  <td>1</td>
-  <td>Single users — most ST switchers need Essentials+</td>
-</tr>
-<tr>
-  <td>Essentials</td>
-  <td>$149/mo ($189 monthly)</td>
-  <td>Up to 5</td>
-  <td>Reporting, GPS, QuickBooks, reviews</td>
-</tr>
-<tr>
-  <td>MAX</td>
-  <td>Custom</td>
-  <td>8+</td>
-  <td>Dedicated success manager</td>
-</tr>
-</tbody>
-</table>
-                <div class="cta-box">
-  <h3>Try Housecall Pro Free</h3>
-  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Best overall alternative to ServiceTitan for HVAC teams.</p>
-  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
-</div>
-              </div>
-
               <div id="workiz" class="mb-10 border border-border rounded-lg p-6 bg-white">
                 <div class="flex items-start justify-between mb-4">
                   <div>
-                    <h3 class="font-heading font-semibold text-xl">2. Workiz</h3>
+                    <h3 class="font-heading font-semibold text-xl">1. Workiz</h3>
                     <p class="text-sm text-muted-foreground">Best for Replacing ST's Call Tracking</p>
                   </div>
                   <div class="score-badge high">57</div>
@@ -270,7 +205,7 @@ const faqItems = [
               <div id="jobber" class="mb-10 border border-border rounded-lg p-6 bg-white">
                 <div class="flex items-start justify-between mb-4">
                   <div>
-                    <h3 class="font-heading font-semibold text-xl">3. Jobber</h3>
+                    <h3 class="font-heading font-semibold text-xl">2. Jobber</h3>
                     <p class="text-sm text-muted-foreground">Easiest and Most Affordable Alternative</p>
                   </div>
                   <div class="score-badge high">56</div>
@@ -291,7 +226,7 @@ const faqItems = [
               <div id="fieldedge" class="mb-10 border border-border rounded-lg p-6 bg-white">
                 <div class="flex items-start justify-between mb-4">
                   <div>
-                    <h3 class="font-heading font-semibold text-xl">4. FieldEdge</h3>
+                    <h3 class="font-heading font-semibold text-xl">3. FieldEdge</h3>
                     <p class="text-sm text-muted-foreground">Best for QuickBooks Desktop Users</p>
                   </div>
                   <div class="score-badge mid">53</div>
@@ -310,7 +245,7 @@ const faqItems = [
               <div id="service-fusion" class="mb-10 border border-border rounded-lg p-6 bg-white">
                 <div class="flex items-start justify-between mb-4">
                   <div>
-                    <h3 class="font-heading font-semibold text-xl">5. Service Fusion</h3>
+                    <h3 class="font-heading font-semibold text-xl">4. Service Fusion</h3>
                     <p class="text-sm text-muted-foreground">Best Flat-Rate Pricing</p>
                   </div>
                   <div class="score-badge mid">50</div>
@@ -337,14 +272,14 @@ const faqItems = [
               <h2 class="font-heading font-semibold text-2xl mb-4">Verdict</h2>
               <div class="prose">
                 <p>
-                  <strong>Housecall Pro</strong> is the best overall ServiceTitan alternative for most HVAC companies. It replaces the most features at the best price point. <strong>Workiz</strong> is the pick if call tracking is your must-have. <strong>Jobber</strong> is the easiest and cheapest path if you just want simplicity.
+                  <strong>Workiz</strong> is the best overall ServiceTitan alternative if call tracking is your must-have — it replaces one of ServiceTitan's strongest features natively. <strong>Jobber</strong> is the easiest and most affordable path if you want simplicity and fast setup. <strong>Service Fusion</strong> is the pick if per-user fees are your biggest pain point.
                 </p>
               </div>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
                 <div class="cta-box">
-  <h3>Our #1 Alternative: Housecall Pro</h3>
-  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">Replaces 80% of ServiceTitan at a fraction of the cost.</p>
-  <a href="#" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
+  <h3>Our #1 Alternative: Jobber</h3>
+  <p class="text-sm text-[var(--color-foreground)]/70 mb-4">The simplest path away from ServiceTitan. Operational in a day.</p>
+  <a href="https://go.getjobber.com/bo42cjptz4m2" class="cta-button" rel="sponsored nofollow" target="_blank">Learn More →</a>
 </div>
                 <div class="cta-box">
   <h3>Free Contractor Follow-Up Kit</h3>
@@ -359,7 +294,7 @@ const faqItems = [
               <h3 class="data-label mb-3">Related Guides</h3>
               <ul class="space-y-2 text-sm">
                 <li><a href="/hvac/crm/best-crm-for-small-hvac-companies" class="text-primary hover:underline">Best CRM for Small HVAC Companies</a></li>
-                <li><a href="/hvac/crm/housecall-pro-vs-jobber" class="text-primary hover:underline">Housecall Pro vs Jobber</a></li>
+
                 <li><a href="/hvac/dispatch/best-dispatch-software-for-hvac" class="text-primary hover:underline">Best Dispatch Software for HVAC</a></li>
               </ul>
             </div>
@@ -388,7 +323,7 @@ const faqItems = [
     </div>
     <div class="faq-item">
       <p class="faq-question">Can I try an alternative before canceling ServiceTitan?</p>
-      <p class="faq-answer">Yes. Housecall Pro, Jobber, and Workiz all offer free trials. Run them in parallel for 2 weeks before making the switch.</p>
+      <p class="faq-answer">Yes. Jobber and Workiz both offer free trials. Run them in parallel for 2 weeks before making the switch.</p>
     </div>
     <div class="faq-item">
       <p class="faq-question">What about my ServiceTitan contract?</p>
