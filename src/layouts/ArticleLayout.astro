@@ -64,6 +64,13 @@ const formattedDate = new Date(publishDate).toLocaleDateString("en-US", { month:
         <!-- Article Body -->
         <slot />
 
+        <!-- CTA Block A: In-article consulting CTA (after main content, before author byline) -->
+        <div style="background: #f0f7ff; border-left: 4px solid #1B4F72; padding: 20px 24px; margin: 32px 0; border-radius: 0 8px 8px 0;">
+          <p style="font-weight: 700; font-size: 18px; margin: 0 0 8px 0; color: #1B4F72;">Not sure which tool fits your operation?</p>
+          <p style="margin: 0 0 12px 0; color: #333; font-size: 15px;">We help HVAC shops in the Carolinas connect their tools so leads stop falling through the cracks. Get a free 15-minute diagnostic — no pitch, just data you can use.</p>
+          <a href="https://calendly.com/meridiangable/free-hvac-audit?utm_source=hvacsoftwarehub&utm_medium=in-content-cta&utm_campaign=service-routing" style="display: inline-block; background: #1B4F72; color: #fff; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 15px;">Book Free Audit</a>
+        </div>
+
         <!-- Author Byline -->
         <div class="mt-10 pt-6 border-t border-[var(--color-border)]">
           <div class="flex items-start gap-4">
@@ -80,21 +87,31 @@ const formattedDate = new Date(publishDate).toLocaleDateString("en-US", { month:
         </div>
       </article>
 
-      <!-- Sidebar TOC -->
-      {tocItems.length > 0 && (
-        <aside class="hidden lg:block w-64 flex-shrink-0">
-          <div class="sticky top-24">
-            <h4 class="data-label mb-3">On This Page</h4>
-            <nav class="space-y-1">
-              {tocItems.map((item) => (
-                <a href={`#${item.id}`} class="block text-sm text-[var(--color-muted)] hover:text-[var(--color-foreground)] no-underline py-1 transition-colors">
-                  {item.label}
-                </a>
-              ))}
-            </nav>
+      <!-- Sidebar -->
+      <aside class="hidden lg:block w-64 flex-shrink-0">
+        <div class="sticky top-24 space-y-6">
+          <!-- Sidebar TOC -->
+          {tocItems.length > 0 && (
+            <div>
+              <h4 class="data-label mb-3">On This Page</h4>
+              <nav class="space-y-1">
+                {tocItems.map((item) => (
+                  <a href={`#${item.id}`} class="block text-sm text-[var(--color-muted)] hover:text-[var(--color-foreground)] no-underline py-1 transition-colors">
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
+            </div>
+          )}
+
+          <!-- CTA Block B: Sidebar persistent consulting CTA -->
+          <div style="background: #1B4F72; color: #fff; padding: 24px; border-radius: 8px; text-align: center;">
+            <p style="font-weight: 700; font-size: 16px; margin: 0 0 8px 0;">Losing leads to slow follow-up?</p>
+            <p style="font-size: 14px; margin: 0 0 12px 0; opacity: 0.9;">Free 15-min HVAC audit. We show you where leads drop off.</p>
+            <a href="https://calendly.com/meridiangable/free-hvac-audit?utm_source=hvacsoftwarehub&utm_medium=sidebar-cta&utm_campaign=service-routing" style="display: inline-block; background: #fff; color: #1B4F72; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px;">Book Audit</a>
           </div>
-        </aside>
-      )}
+        </div>
+      </aside>
     </div>
   </div>
 
@@ -113,4 +130,21 @@ const formattedDate = new Date(publishDate).toLocaleDateString("en-US", { month:
       }))
     })} />
   )}
+
+  <!-- Affiliate click event tracking (GA4) -->
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('a[href*="getjobber"], a[href*="servicefusion"], a[href*="apollo.io"], a[href*="toggl"], a[href*="servicetitan"], a[data-affiliate]').forEach(function(link) {
+        link.addEventListener('click', function() {
+          if (typeof gtag === 'function') {
+            gtag('event', 'affiliate_click', {
+              'vendor': this.dataset.vendor || this.href.match(/getjobber|servicefusion|apollo|toggl|servicetitan|callrail/i)?.[0] || 'unknown',
+              'article': document.title,
+              'position': this.dataset.position || 'body'
+            });
+          }
+        });
+      });
+    });
+  </script>
 </Layout>
