@@ -141,11 +141,11 @@ const formattedDate = new Date(publishDate).toLocaleDateString("en-US", { month:
   <!-- Affiliate click event tracking (GA4) -->
   <script is:inline>
     document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('a[href*="getjobber"], a[href*="servicefusion"], a[href*="apollo.io"], a[href*="toggl"], a[href*="servicetitan"], a[data-affiliate]').forEach(function(link) {
+      document.querySelectorAll('a[href*="getjobber"], a[href*="servicefusion"], a[href*="apollo.io"], a[href*="toggl"], a[href*="servicetitan"], a[href*="meridiangable"], a[href*="thinkrr"], a[data-affiliate]').forEach(function(link) {
         link.addEventListener('click', function() {
           if (typeof gtag === 'function') {
             gtag('event', 'affiliate_click', {
-              'vendor': this.dataset.vendor || this.href.match(/getjobber|servicefusion|apollo|toggl|servicetitan|callrail/i)?.[0] || 'unknown',
+              'vendor': this.dataset.vendor || this.href.match(/getjobber|servicefusion|apollo|toggl|servicetitan|meridiangable|thinkrr|callrail/i)?.[0] || 'unknown',
               'article': document.title,
               'position': this.dataset.position || 'body'
             });
