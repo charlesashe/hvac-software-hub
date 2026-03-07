@@ -220,7 +220,7 @@ const kitContents = [
 
       // Submit to GHL Inbound Webhook
       // IMPORTANT: Replace this URL with your actual GHL Inbound Webhook URL
-      const GHL_WEBHOOK_URL = window.__GHL_WEBHOOK_URL || '';
+      const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/O9znf7czhaWZwcx0wVyo/webhook-trigger/1c03c7f8-f860-460b-80ca-e768d772dc77';
       if (GHL_WEBHOOK_URL) {
         try {
           await fetch(GHL_WEBHOOK_URL, {
