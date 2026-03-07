@@ -56,17 +56,45 @@ const kitContents = [
           </div>
           <form id="lead-form" class="space-y-3 max-w-sm">
             <input
-              type="email"
+              type="text"
+              name="firstName"
               required
-              placeholder="Your work email"
+              placeholder="First name"
               class="w-full px-4 py-3 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/30 bg-white"
             />
-            <select class="w-full px-4 py-3 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/30 bg-white text-[var(--color-foreground)]/70">
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder="Work email"
+              class="w-full px-4 py-3 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/30 bg-white"
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone number (for SMS tips)"
+              class="w-full px-4 py-3 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/30 bg-white"
+            />
+            <input
+              type="text"
+              name="companyName"
+              placeholder="Company name"
+              class="w-full px-4 py-3 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/30 bg-white"
+            />
+            <select name="teamSize" class="w-full px-4 py-3 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/30 bg-white text-[var(--color-foreground)]/70">
               <option value="">Team size (optional)</option>
               <option value="1">Solo operator</option>
               <option value="2-5">2-5 technicians</option>
               <option value="6-10">6-10 technicians</option>
               <option value="10+">10+ technicians</option>
+            </select>
+            <select name="biggestChallenge" class="w-full px-4 py-3 border border-[var(--color-border)] rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/30 bg-white text-[var(--color-foreground)]/70">
+              <option value="">Biggest challenge right now? (optional)</option>
+              <option value="missed_calls">Missing after-hours calls</option>
+              <option value="follow_up">Slow follow-up on estimates</option>
+              <option value="no_crm">No CRM or disorganized leads</option>
+              <option value="marketing">Not enough leads coming in</option>
+              <option value="hiring">Can't find or keep good techs</option>
             </select>
             <button
               type="submit"
@@ -75,7 +103,7 @@ const kitContents = [
               Get the Free Kit ↓
             </button>
             <p class="text-xs text-[var(--color-muted)]">
-              No spam. Unsubscribe anytime. We will also send you our weekly HVAC software tips.
+              No spam. Unsubscribe anytime. We'll also send you our best HVAC software tips.
             </p>
           </form>
           <div id="success-msg" class="hidden bg-green-50 border border-green-200 rounded-lg p-6 max-w-sm">
@@ -90,7 +118,7 @@ const kitContents = [
               Download PDF
             </a>
             <p class="text-xs text-green-600 mt-3">
-              We also added you to our weekly HVAC software tips. Check your inbox to confirm.
+              Check your inbox for a welcome email with more HVAC software tips.
             </p>
           </div>
         </div>
@@ -174,32 +202,43 @@ const kitContents = [
   if (form && successMsg) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const email = form.querySelector('input[type="email"]').value;
-      const teamSize = form.querySelector('select').value;
       const btn = form.querySelector('button[type="submit"]');
       btn.textContent = 'Sending...';
       btn.disabled = true;
 
-      try {
-        // Submit to ConvertKit form 9150571
-        const res = await fetch('https://app.kit.com/forms/9150571/subscriptions', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            email_address: email,
-            fields: { team_size: teamSize }
-          })
-        });
-      } catch (err) {
-        // ConvertKit may block CORS but the subscription still processes
-        console.log('ConvertKit submission attempted');
+      const data = {
+        firstName: form.querySelector('[name="firstName"]').value,
+        email: form.querySelector('[name="email"]').value,
+        phone: form.querySelector('[name="phone"]').value || '',
+        companyName: form.querySelector('[name="companyName"]').value || '',
+        teamSize: form.querySelector('[name="teamSize"]').value || '',
+        biggestChallenge: form.querySelector('[name="biggestChallenge"]').value || '',
+        source: 'hvacsoftwarehub_lead_magnet',
+        tags: ['lead-magnet-download', 'hvac-software-hub']
+      };
+
+      // Submit to GHL Inbound Webhook
+      // IMPORTANT: Replace this URL with your actual GHL Inbound Webhook URL
+      const GHL_WEBHOOK_URL = window.__GHL_WEBHOOK_URL || '';
+      if (GHL_WEBHOOK_URL) {
+        try {
+          await fetch(GHL_WEBHOOK_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            mode: 'no-cors',
+            body: JSON.stringify(data)
+          });
+        } catch (err) {
+          console.log('GHL webhook submission attempted');
+        }
       }
 
       // GA4 event
       if (typeof gtag === 'function') {
         gtag('event', 'lead_magnet_download', {
-          'email': email,
-          'team_size': teamSize
+          'team_size': data.teamSize,
+          'challenge': data.biggestChallenge,
+          'has_phone': data.phone ? 'yes' : 'no'
         });
       }
 
