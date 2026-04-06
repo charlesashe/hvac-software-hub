@@ -215,23 +215,31 @@ const kitContents = [
         teamSize: form.querySelector('[name="teamSize"]').value || '',
         biggestChallenge: form.querySelector('[name="biggestChallenge"]').value || '',
         source: 'hvacsoftwarehub_lead_magnet',
-        tags: ['lead-magnet-download', 'hvac-software-hub']
+        tags: 'lead-magnet-download,hvac-software-hub'
       };
 
       // Submit to GHL Inbound Webhook
       const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/O9znf7czhaWZwcx0wVyo/webhook-trigger/1c03c7f8-f860-460b-80ca-e768d772dc77';
-      if (GHL_WEBHOOK_URL) {
-        try {
-          // Use text/plain to avoid CORS preflight; body is still valid JSON
-          await fetch(GHL_WEBHOOK_URL, {
-            method: 'POST',
-            headers: { 'Content-Type': 'text/plain' },
-            mode: 'no-cors',
-            body: JSON.stringify(data)
-          });
-        } catch (err) {
-          console.log('GHL webhook submission attempted');
-        }
+      const jsonBody = JSON.stringify(data);
+
+      // Primary: sendBeacon (most reliable from browser, survives page unload)
+      try {
+        const blob = new Blob([jsonBody], { type: 'text/plain' });
+        navigator.sendBeacon(GHL_WEBHOOK_URL, blob);
+      } catch (err) {
+        console.log('sendBeacon unavailable');
+      }
+
+      // Fallback: fetch with no-cors + text/plain
+      try {
+        await fetch(GHL_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'text/plain' },
+          mode: 'no-cors',
+          body: jsonBody
+        });
+      } catch (err) {
+        console.log('fetch fallback attempted');
       }
 
       // GA4 event
