@@ -208,12 +208,12 @@ const kitContents = [
       btn.disabled = true;
 
       const data = {
-        firstName: form.querySelector('[name="firstName"]').value,
+        first_name: form.querySelector('[name="firstName"]').value,
         email: form.querySelector('[name="email"]').value,
         phone: form.querySelector('[name="phone"]').value || '',
-        companyName: form.querySelector('[name="companyName"]').value || '',
-        teamSize: form.querySelector('[name="teamSize"]').value || '',
-        biggestChallenge: form.querySelector('[name="biggestChallenge"]').value || '',
+        company_name: form.querySelector('[name="companyName"]').value || '',
+        team_size: form.querySelector('[name="teamSize"]').value || '',
+        biggest_challenge: form.querySelector('[name="biggestChallenge"]').value || '',
         source: 'hvacsoftwarehub_lead_magnet',
         tags: 'lead-magnet-download,hvac-software-hub'
       };
@@ -237,8 +237,8 @@ const kitContents = [
       // GA4 event
       if (typeof gtag === 'function') {
         gtag('event', 'lead_magnet_download', {
-          'team_size': data.teamSize,
-          'challenge': data.biggestChallenge,
+          'team_size': data.team_size,
+          'challenge': data.biggest_challenge,
           'has_phone': data.phone ? 'yes' : 'no'
         });
       }
