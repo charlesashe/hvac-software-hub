@@ -218,28 +218,20 @@ const kitContents = [
         tags: 'lead-magnet-download,hvac-software-hub'
       };
 
-      // Submit to GHL Inbound Webhook
-      const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/O9znf7czhaWZwcx0wVyo/webhook-trigger/1c03c7f8-f860-460b-80ca-e768d772dc77';
-      const jsonBody = JSON.stringify(data);
-
-      // Primary: sendBeacon (most reliable from browser, survives page unload)
+      // Submit via same-origin server proxy (Cloudflare Pages Function)
+      // This avoids all CORS issues; the server forwards to GHL with correct headers
       try {
-        const blob = new Blob([jsonBody], { type: 'text/plain' });
-        navigator.sendBeacon(GHL_WEBHOOK_URL, blob);
-      } catch (err) {
-        console.log('sendBeacon unavailable');
-      }
-
-      // Fallback: fetch with no-cors + text/plain
-      try {
-        await fetch(GHL_WEBHOOK_URL, {
+        const res = await fetch('/api/lead-magnet', {
           method: 'POST',
-          headers: { 'Content-Type': 'text/plain' },
-          mode: 'no-cors',
-          body: jsonBody
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
         });
+        const result = await res.json();
+        if (!result.success) {
+          console.error('GHL webhook error:', result.error);
+        }
       } catch (err) {
-        console.log('fetch fallback attempted');
+        console.error('Lead capture error:', err);
       }
 
       // GA4 event
