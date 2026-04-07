@@ -2,7 +2,7 @@ name: Daily Article Generator
 
 on:
   schedule:
-    - cron: '0 11 * * *'→ Runs at 11:00
+    - cron: '0 11 * * *'
   workflow_dispatch:
     inputs:
       article_count:
