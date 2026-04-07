@@ -1,0 +1,42 @@
+name: Daily Article Generator
+
+on:
+  schedule:
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+    inputs:
+      article_count:
+        description: 'Number of articles to generate (1-5)'
+        required: false
+        default: '3'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate articles
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          COUNT=${{ github.event.inputs.article_count || '3' }}
+          node scripts/generate-articles.js $COUNT
+
+      - name: Push changes
+        run: |
+          git push origin main
