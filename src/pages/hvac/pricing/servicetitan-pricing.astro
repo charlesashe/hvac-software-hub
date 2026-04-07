@@ -1,0 +1,236 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+
+const tocItems = [
+  { id: "overview", label: "Pricing Overview" },
+  { id: "tiers", label: "Plan Tiers" },
+  { id: "real-cost", label: "Real Monthly Cost" },
+  { id: "add-ons", label: "Add-On Costs" },
+  { id: "implementation", label: "Implementation Fees" },
+  { id: "contract", label: "Contract Terms" },
+  { id: "compare", label: "vs. Alternatives" },
+  { id: "who-fits", label: "Who Should Buy" },
+  { id: "faq", label: "FAQ" }
+];
+const faqItems = [
+  { q: "Does ServiceTitan publish pricing on their website?", a: "No. ServiceTitan requires you to sit through a sales demo before receiving a quote. Pricing is negotiated individually based on company size, number of technicians, and contract length. The ranges in this article are compiled from verified user reports, review platforms, and BBB filings." },
+  { q: "What is the minimum team size for ServiceTitan?", a: "ServiceTitan is designed for companies with 3 or more technicians. They have stated publicly that their platform is not optimized for companies with 3 or fewer technicians. Most users report the platform delivers ROI for teams of 10+ techs." },
+  { q: "Can I get out of a ServiceTitan contract early?", a: "ServiceTitan uses annual contracts (often multi-year for better rates). Early termination fees apply. Multiple BBB complaints describe difficulty canceling even at contract end. Check your renewal date and cancellation terms carefully." },
+  { q: "Is ServiceTitan worth the cost for HVAC companies?", a: "For HVAC companies running 10+ technicians with $2M+ revenue, ServiceTitan's pricebook and marketing attribution features typically generate enough additional revenue (15-25% average ticket increase) to justify the cost. For smaller operations, the ROI math rarely works." },
+  { q: "What are the cheapest ServiceTitan alternatives?", a: "Jobber starts at $39/month for solo operators. Housecall Pro starts at $59/month. Workiz starts at $49/month. All three offer free trials. See our full guide to ServiceTitan alternatives for scored comparisons." }
+];
+---
+
+<ArticleLayout
+  title="ServiceTitan Pricing 2026: What HVAC Companies Actually Pay — HVAC Software Hub"
+  description="ServiceTitan costs $245-$398/technician/month plus $5K-$50K implementation. Full pricing breakdown with real user data, add-on costs, and ROI analysis for HVAC companies."
+  canonicalPath="/hvac/pricing/servicetitan-pricing"
+  category="Pricing"
+  publishDate="2026-04-06"
+  readTime="14 min read"
+  intent="BOFU"
+  tocItems={tocItems}
+  faqItems={faqItems}
+>
+<div class="container py-8">
+  <div class="flex gap-12">
+    <article class="flex-1 min-w-0 max-w-3xl">
+
+      <div class="prose mt-8" id="overview">
+        <h2>ServiceTitan Pricing: Why It Is Hard to Find</h2>
+        <p>ServiceTitan does not publish pricing on their website. Unlike Jobber, Housecall Pro, or Workiz, you cannot see what ServiceTitan costs until you sit through a sales demo and receive a custom quote.</p>
+        <p>This article compiles pricing data from verified user reports on TrustRadius, Capterra, and G2, BBB filings, contractor forums, and direct conversations with ServiceTitan customers. The numbers below represent what HVAC companies actually pay, not marketing estimates.</p>
+      </div>
+
+      <div class="prose" id="tiers">
+        <h2>ServiceTitan Plan Tiers (2026)</h2>
+        <p>ServiceTitan uses per-technician pricing across three plan levels. The more technicians you add, the higher your monthly bill. Here is what each tier includes:</p>
+      </div>
+      <table style="width:100%; border-collapse:collapse; margin: 16px 0; font-size: 14px;">
+        <thead>
+          <tr style="background:#1B4F72; color:white;">
+            <th style="padding:10px; text-align:left;">Plan</th>
+            <th style="padding:10px; text-align:left;">Est. Cost/Tech/Month</th>
+            <th style="padding:10px; text-align:left;">Key Features</th>
+            <th style="padding:10px; text-align:left;">Best For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">Starter</td>
+            <td style="padding:10px;">$150-$245</td>
+            <td style="padding:10px;">Scheduling, dispatching, CRM, invoicing, mobile app, basic reporting</td>
+            <td style="padding:10px;">Companies getting started with field service software</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; font-weight:600;">Essentials</td>
+            <td style="padding:10px;">$245-$345</td>
+            <td style="padding:10px;">All Starter features + marketing attribution, pricebook, advanced reporting, memberships</td>
+            <td style="padding:10px;">Growing teams (10-25 techs) ready for data-driven operations</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">The Works</td>
+            <td style="padding:10px;">$345-$398+</td>
+            <td style="padding:10px;">All Essentials + Marketing Pro, Phones Pro, Fleet Pro, Pricebook Pro, advanced integrations</td>
+            <td style="padding:10px;">Enterprise operations (25+ techs) wanting the full platform</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:13px; color:#666; margin-top:4px;">Source: Compiled from ITQlick, TrustRadius, and contractor-reported data. Actual pricing varies by negotiation, contract length, and company size.</p>
+
+      <div class="prose" id="real-cost">
+        <h2>What HVAC Companies Actually Pay Monthly</h2>
+        <p>The per-technician price is just the starting point. Here is what real HVAC operations pay when you multiply by team size:</p>
+      </div>
+      <table style="width:100%; border-collapse:collapse; margin: 16px 0; font-size: 14px;">
+        <thead>
+          <tr style="background:#1B4F72; color:white;">
+            <th style="padding:10px;">Team Size</th>
+            <th style="padding:10px;">Essentials (est.)</th>
+            <th style="padding:10px;">Annual Cost</th>
+            <th style="padding:10px;">Revenue Needed to Break Even</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">5 techs</td>
+            <td style="padding:10px;">$1,225-$1,725/mo</td>
+            <td style="padding:10px;">$14,700-$20,700</td>
+            <td style="padding:10px;">~$1.5M annual revenue</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">10 techs</td>
+            <td style="padding:10px;">$2,450-$3,450/mo</td>
+            <td style="padding:10px;">$29,400-$41,400</td>
+            <td style="padding:10px;">~$3M annual revenue</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">20 techs</td>
+            <td style="padding:10px;">$4,900-$6,900/mo</td>
+            <td style="padding:10px;">$58,800-$82,800</td>
+            <td style="padding:10px;">~$5M+ annual revenue</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="prose">
+        <p>Break-even revenue assumes ServiceTitan needs to generate or recover roughly 1-2% of your annual revenue to justify its cost. For a 10-technician HVAC company at $30,000-$40,000/year in software cost, you need to be running at least $3M in annual revenue for the math to work.</p>
+      </div>
+
+      <div class="prose" id="add-ons">
+        <h2>Add-On Costs That Increase Your Bill</h2>
+        <p>The base subscription is only part of the story. ServiceTitan offers several "Pro" modules that are priced separately:</p>
+        <ul>
+          <li><strong>Marketing Pro:</strong> Starts around $2,000+/month. Ties marketing spend to incoming revenue. This is the feature most users cite as ServiceTitan's biggest differentiator.</li>
+          <li><strong>Phones Pro:</strong> $50-$200+/month. Call tracking and recording integrated into the CRM.</li>
+          <li><strong>Pricebook Pro:</strong> Additional monthly cost. Dynamic flat-rate pricing with Good-Better-Best presentation for technicians.</li>
+          <li><strong>Fleet Pro:</strong> Additional monthly cost. GPS tracking and vehicle management.</li>
+          <li><strong>Payment processing:</strong> 2.9% + $0.30 per transaction. On an $8,000 HVAC install, that is $232 in processing fees.</li>
+        </ul>
+        <p>A fully loaded ServiceTitan setup with all Pro modules can easily double your base monthly spend. A 10-tech team on Essentials with Marketing Pro and Phones Pro can exceed $5,000/month.</p>
+      </div>
+
+      <div class="prose" id="implementation">
+        <h2>Implementation and Setup Costs</h2>
+        <p>ServiceTitan requires a formal implementation process. This is not optional, and it is not cheap:</p>
+        <ul>
+          <li><strong>Small teams (5-10 techs):</strong> $5,000-$10,000 for setup, data migration, and training</li>
+          <li><strong>Mid-size (10-25 techs):</strong> $15,000-$30,000</li>
+          <li><strong>Enterprise (25+ techs):</strong> $30,000-$50,000+</li>
+        </ul>
+        <p>Implementation typically takes 6-16 weeks. The process includes data migration from your existing system, pricebook configuration, CSR training, dispatcher training, and technician training on the iPad app. Most companies run both their old system and ServiceTitan in parallel for 4-8 weeks during the transition.</p>
+        <p>For comparison: Jobber can be set up in 1-3 days. Housecall Pro offers a 14-day free trial with no setup fee.</p>
+      </div>
+
+      <div class="prose" id="contract">
+        <h2>Contract Terms and Cancellation</h2>
+        <p>ServiceTitan requires a minimum 12-month contract. Multi-year contracts (2-3 years) are common and often offered with lower per-technician rates as an incentive.</p>
+        <p>Cancellation is a known pain point. Multiple BBB complaints describe difficulty getting out of contracts, unclear auto-renewal terms, and challenges exporting data at the end of the relationship. If you sign up, budget the full contract term as a sunk cost and evaluate the platform thoroughly during onboarding before the cancellation window closes.</p>
+      </div>
+
+      <div class="prose" id="compare">
+        <h2>ServiceTitan vs. Alternatives: Cost Comparison</h2>
+        <p>Here is how ServiceTitan's pricing compares to the most common alternatives for a 5-technician HVAC company:</p>
+      </div>
+      <table style="width:100%; border-collapse:collapse; margin: 16px 0; font-size: 14px;">
+        <thead>
+          <tr style="background:#1B4F72; color:white;">
+            <th style="padding:10px; text-align:left;">Platform</th>
+            <th style="padding:10px;">Monthly Cost (5 techs)</th>
+            <th style="padding:10px;">Annual Cost</th>
+            <th style="padding:10px;">Implementation</th>
+            <th style="padding:10px;">Contract</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">ServiceTitan</td>
+            <td style="padding:10px;">$1,225-$1,725</td>
+            <td style="padding:10px;">$14,700-$20,700</td>
+            <td style="padding:10px;">$5,000-$10,000</td>
+            <td style="padding:10px;">12+ months</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; font-weight:600;"><a href="/hvac/pricing/housecall-pro-pricing">Housecall Pro</a></td>
+            <td style="padding:10px;">$149-$329</td>
+            <td style="padding:10px;">$1,788-$3,948</td>
+            <td style="padding:10px;">$0</td>
+            <td style="padding:10px;">Month-to-month</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;"><a href="/hvac/pricing/jobber-pricing">Jobber</a></td>
+            <td style="padding:10px;">$169-$349</td>
+            <td style="padding:10px;">$2,028-$4,188</td>
+            <td style="padding:10px;">$0</td>
+            <td style="padding:10px;">Month-to-month</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; font-weight:600;">Workiz</td>
+            <td style="padding:10px;">$198-$399</td>
+            <td style="padding:10px;">$2,376-$4,788</td>
+            <td style="padding:10px;">$0</td>
+            <td style="padding:10px;">Month-to-month</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="prose">
+        <p>The annual cost difference between ServiceTitan and a tool like Jobber ranges from $10,000 to $18,000 per year for a 5-tech team. That gap widens significantly for larger teams. The question is whether ServiceTitan's pricebook, marketing attribution, and enterprise reporting generate enough additional revenue to justify the premium.</p>
+        <p>For a detailed feature comparison, see our guide to <a href="/hvac/crm/servicetitan-alternatives">ServiceTitan alternatives</a> or our head-to-head <a href="/hvac/crm/jobber-vs-servicetitan">Jobber vs ServiceTitan</a> comparison.</p>
+      </div>
+
+      <div class="prose" id="who-fits">
+        <h2>Who Should (and Should Not) Buy ServiceTitan</h2>
+        <h3>ServiceTitan makes sense if:</h3>
+        <ul>
+          <li>You run 10+ technicians with dedicated office/dispatch staff</li>
+          <li>Your annual revenue exceeds $3M</li>
+          <li>You want marketing attribution tied to revenue (Marketing Pro)</li>
+          <li>You use flat-rate pricing and want the Good-Better-Best pricebook</li>
+          <li>You can commit to a 6-16 week implementation without disrupting operations</li>
+        </ul>
+        <h3>ServiceTitan is probably wrong if:</h3>
+        <ul>
+          <li>You have fewer than 5 technicians</li>
+          <li>Your annual revenue is under $1.5M</li>
+          <li>You need to be operational in days, not months</li>
+          <li>You do not have dedicated office staff to manage the platform</li>
+          <li>Budget flexibility is important (ServiceTitan requires annual contracts)</li>
+        </ul>
+        <p>If ServiceTitan is too expensive or too complex for your current operation, start with <a href="/hvac/crm/best-crm-for-small-hvac-companies">the best CRM for your team size</a> and revisit ServiceTitan when you scale past 10 technicians.</p>
+      </div>
+
+      <div class="prose" id="bottom-line">
+        <h2>Bottom Line</h2>
+        <p>ServiceTitan is the most powerful field service platform for HVAC companies, and also the most expensive. For large operations with the budget and team to maximize every feature, the ROI is real. For everyone else, the cost is hard to justify when alternatives offer 80% of the functionality at 20% of the price.</p>
+        <p>Before committing, get quotes from at least two alternatives (<a href="/hvac/pricing/jobber-pricing">Jobber</a> and <a href="/hvac/pricing/housecall-pro-pricing">Housecall Pro</a> both offer free trials) so you can make a data-driven comparison.</p>
+      </div>
+
+    </article>
+  </div>
+</div>
+
+<div class="article-section" style="margin-top: 2rem; padding: 1.5rem; background: var(--color-bg-muted, #f8f9fa); border-radius: 8px; border-left: 4px solid var(--color-primary, #1B4F72);">
+  <h3 style="margin-top: 0;">Missing Calls While You Evaluate Software?</h3>
+  <p>While you compare platforms, your after-hours calls are still going to voicemail. An <a href="/hvac/answering-service/best-hvac-answering-service">AI answering service</a> captures every call 24/7 and books appointments in real time, regardless of which CRM you choose.</p>
+</div>
+
+</ArticleLayout>

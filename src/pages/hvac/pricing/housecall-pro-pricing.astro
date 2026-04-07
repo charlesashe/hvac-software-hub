@@ -1,0 +1,216 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+
+const tocItems = [
+  { id: "plans", label: "Plan Breakdown" },
+  { id: "real-cost", label: "Real Monthly Cost" },
+  { id: "add-ons", label: "Add-On Costs" },
+  { id: "processing", label: "Payment Processing" },
+  { id: "compare", label: "vs. Alternatives" },
+  { id: "who-fits", label: "Who Should Buy" },
+  { id: "faq", label: "FAQ" }
+];
+const faqItems = [
+  { q: "How much does Housecall Pro cost per month?", a: "Basic starts at $59/month (annual) or $79/month (monthly) for 1 user. Essentials is $149/month (annual) or $189/month (monthly) for up to 5 users. MAX requires a custom quote for larger teams." },
+  { q: "Does Housecall Pro require a contract?", a: "No. Housecall Pro offers month-to-month billing with no long-term commitment. You can cancel anytime. Annual billing saves roughly 25% compared to monthly." },
+  { q: "Does Housecall Pro integrate with QuickBooks?", a: "Yes, but only on the Essentials plan ($149/month) and above. The Basic plan does not include QuickBooks integration. Some users report synchronization issues that require manual reconciliation." },
+  { q: "How much does Housecall Pro charge per additional user?", a: "Each additional user beyond your plan limit costs approximately $35/month. For a team of 10 on the MAX plan, this can add $70-$105/month to your base subscription." },
+  { q: "Is there a free trial?", a: "Yes. Housecall Pro offers a 14-day free trial on the MAX plan with no credit card required. This gives you access to all features so you can evaluate before committing." }
+];
+---
+
+<ArticleLayout
+  title="Housecall Pro Pricing 2026: Plans, Add-Ons, and Real Costs for HVAC — HVAC Software Hub"
+  description="Housecall Pro costs $59-$329/month in 2026. Full breakdown of Basic, Essentials, and MAX plans plus add-on fees, payment processing costs, and what HVAC teams actually pay."
+  canonicalPath="/hvac/pricing/housecall-pro-pricing"
+  category="Pricing"
+  publishDate="2026-04-06"
+  readTime="11 min read"
+  intent="BOFU"
+  tocItems={tocItems}
+  faqItems={faqItems}
+>
+<div class="container py-8">
+  <div class="flex gap-12">
+    <article class="flex-1 min-w-0 max-w-3xl">
+
+      <div class="prose mt-8" id="plans">
+        <h2>Housecall Pro Plans and Pricing (2026)</h2>
+        <p>Housecall Pro uses a flat-rate tiered model. Unlike ServiceTitan's per-technician pricing, you pay a fixed monthly fee per plan. The catch: the features you actually need to run an HVAC business (QuickBooks sync, GPS tracking, advanced estimates) are locked behind the higher tiers.</p>
+      </div>
+      <table style="width:100%; border-collapse:collapse; margin: 16px 0; font-size: 14px;">
+        <thead>
+          <tr style="background:#1B4F72; color:white;">
+            <th style="padding:10px; text-align:left;">Plan</th>
+            <th style="padding:10px;">Monthly (Annual)</th>
+            <th style="padding:10px;">Monthly (No Commit)</th>
+            <th style="padding:10px;">Users</th>
+            <th style="padding:10px; text-align:left;">Key Features</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">Basic</td>
+            <td style="padding:10px;">$59</td>
+            <td style="padding:10px;">$79</td>
+            <td style="padding:10px;">1</td>
+            <td style="padding:10px;">Scheduling, dispatching, invoicing, online booking, review management, job costing, pricebook</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; font-weight:600;">Essentials</td>
+            <td style="padding:10px;">$149</td>
+            <td style="padding:10px;">$189</td>
+            <td style="padding:10px;">Up to 5</td>
+            <td style="padding:10px;">All Basic + QuickBooks sync, employee GPS, automated marketing, customer notifications, equipment tracking</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">MAX</td>
+            <td style="padding:10px;">Custom quote</td>
+            <td style="padding:10px;">Custom quote</td>
+            <td style="padding:10px;">8+</td>
+            <td style="padding:10px;">All Essentials + advanced reporting, Zapier/API access, priority support, personalized onboarding, service plans</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:13px; color:#666;">Source: Housecall Pro pricing page and Capterra, verified April 2026. MAX pricing reported at $299-$329/month based on user reports.</p>
+
+      <div class="prose" id="real-cost">
+        <h2>What HVAC Companies Actually Pay</h2>
+        <p>The advertised price rarely matches the actual bill. Here is what different team sizes typically pay after adding users and essential features:</p>
+      </div>
+      <table style="width:100%; border-collapse:collapse; margin: 16px 0; font-size: 14px;">
+        <thead>
+          <tr style="background:#1B4F72; color:white;">
+            <th style="padding:10px;">Scenario</th>
+            <th style="padding:10px;">Base Plan</th>
+            <th style="padding:10px;">Extra Users</th>
+            <th style="padding:10px;">Common Add-Ons</th>
+            <th style="padding:10px;">Real Monthly Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">Solo operator</td>
+            <td style="padding:10px;">Basic $59</td>
+            <td style="padding:10px;">$0</td>
+            <td style="padding:10px;">$0</td>
+            <td style="padding:10px; font-weight:600;">$59</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">3-person team</td>
+            <td style="padding:10px;">Essentials $149</td>
+            <td style="padding:10px;">$0</td>
+            <td style="padding:10px;">Sales Proposals $40</td>
+            <td style="padding:10px; font-weight:600;">$189</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">5-person team</td>
+            <td style="padding:10px;">Essentials $149</td>
+            <td style="padding:10px;">$0</td>
+            <td style="padding:10px;">Proposals $40 + GPS $60</td>
+            <td style="padding:10px; font-weight:600;">$249</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">10-person team</td>
+            <td style="padding:10px;">MAX ~$329</td>
+            <td style="padding:10px;">$70 (2 extra)</td>
+            <td style="padding:10px;">Included in MAX</td>
+            <td style="padding:10px; font-weight:600;">$399+</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="prose" id="add-ons">
+        <h2>Add-On Costs</h2>
+        <p>Housecall Pro's add-on model is where the "affordable" pricing gets complicated. These are the most common add-ons HVAC companies end up buying:</p>
+        <ul>
+          <li><strong>Sales Proposals:</strong> ~$40/month. Visual sales proposals with side-by-side options. Essential for presenting Good-Better-Best options on HVAC installs.</li>
+          <li><strong>Vehicle GPS:</strong> ~$20/vehicle/month. Real-time technician location tracking. A 5-truck fleet adds $100/month.</li>
+          <li><strong>Price Book Pro:</strong> ~$149/month. Advanced flat-rate pricing with images, categories, and subcategories.</li>
+          <li><strong>Recurring Service Plans:</strong> Additional cost. Manage maintenance agreements and memberships.</li>
+          <li><strong>Pipeline:</strong> Additional cost. Visual sales pipeline for tracking estimates through to close.</li>
+        </ul>
+        <p>Cost creep from add-ons is the single most common complaint in Housecall Pro reviews. Budget 30-50% more than the advertised plan price to account for add-ons you will almost certainly need.</p>
+      </div>
+
+      <div class="prose" id="processing">
+        <h2>Payment Processing Fees</h2>
+        <p>Housecall Pro charges <strong>2.99% per card transaction</strong> through their integrated payments. This is slightly higher than the industry standard of 2.9% + $0.30.</p>
+        <p>On an $8,000 HVAC equipment installation, you pay $239.20 in processing fees. Over $50,000/month in card payments, that is $1,495/month in processing fees alone. Factor this into your total cost calculation.</p>
+      </div>
+
+      <div class="prose" id="compare">
+        <h2>Housecall Pro vs. Alternatives</h2>
+        <p>For a 5-person HVAC team, here is how Housecall Pro compares on total monthly cost:</p>
+      </div>
+      <table style="width:100%; border-collapse:collapse; margin: 16px 0; font-size: 14px;">
+        <thead>
+          <tr style="background:#1B4F72; color:white;">
+            <th style="padding:10px; text-align:left;">Platform</th>
+            <th style="padding:10px;">Monthly Cost</th>
+            <th style="padding:10px;">QuickBooks Sync</th>
+            <th style="padding:10px;">Contract</th>
+            <th style="padding:10px;">Free Trial</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">Housecall Pro</td>
+            <td style="padding:10px;">$149-$249</td>
+            <td style="padding:10px;">Essentials+ only</td>
+            <td style="padding:10px;">None</td>
+            <td style="padding:10px;">14 days</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; font-weight:600;"><a href="/hvac/pricing/jobber-pricing">Jobber</a></td>
+            <td style="padding:10px;">$169-$349</td>
+            <td style="padding:10px;">Connect+ only</td>
+            <td style="padding:10px;">None</td>
+            <td style="padding:10px;">14 days</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;"><a href="/hvac/pricing/servicetitan-pricing">ServiceTitan</a></td>
+            <td style="padding:10px;">$1,225-$1,725</td>
+            <td style="padding:10px;">All plans</td>
+            <td style="padding:10px;">12+ months</td>
+            <td style="padding:10px;">None</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="prose">
+        <p>Housecall Pro and Jobber are priced nearly identically for small teams. The choice between them comes down to feature preferences: Housecall Pro has better customer communication tools, while Jobber has better route optimization and client management. See our <a href="/hvac/crm/housecall-pro-vs-jobber">Housecall Pro vs Jobber</a> comparison for details.</p>
+      </div>
+
+      <div class="prose" id="who-fits">
+        <h2>Who Should (and Should Not) Buy Housecall Pro</h2>
+        <h3>Good fit:</h3>
+        <ul>
+          <li>Solo operators and small teams (1-8 technicians)</li>
+          <li>Companies that want customer-facing communication tools (text updates, online booking, review collection)</li>
+          <li>Businesses that need to be up and running in days, not weeks</li>
+          <li>Teams that value a clean mobile app for field technicians</li>
+        </ul>
+        <h3>Not a good fit:</h3>
+        <ul>
+          <li>Teams larger than 10 techs (per-user fees start adding up; consider ServiceTitan)</li>
+          <li>Companies that need advanced route optimization (Jobber is stronger here)</li>
+          <li>Operations that need the Basic plan but also need QuickBooks (forced to upgrade to Essentials)</li>
+          <li>Budget-conscious teams sensitive to add-on cost creep</li>
+        </ul>
+      </div>
+
+      <div class="prose">
+        <h2>Bottom Line</h2>
+        <p>Housecall Pro is a solid mid-market field service platform for small HVAC teams. Pricing is transparent compared to ServiceTitan, and no contracts make it low-risk. But budget 30-50% above the advertised plan price for the add-ons you will need. Start with the <a href="https://www.housecallpro.com/pricing/" target="_blank" rel="noopener">14-day free trial</a> on the MAX plan to test before committing.</p>
+      </div>
+
+    </article>
+  </div>
+</div>
+
+<div class="article-section" style="margin-top: 2rem; padding: 1.5rem; background: var(--color-bg-muted, #f8f9fa); border-radius: 8px; border-left: 4px solid var(--color-primary, #1B4F72);">
+  <h3 style="margin-top: 0;">Still Missing After-Hours Calls?</h3>
+  <p>No matter which CRM you choose, it cannot answer the phone at 9pm. See how <a href="/hvac/answering-service/best-hvac-answering-service">AI answering services</a> complement your field service software for less than a part-time receptionist.</p>
+</div>
+
+</ArticleLayout>

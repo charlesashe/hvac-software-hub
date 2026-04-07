@@ -1,0 +1,258 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+
+const tocItems = [
+  { id: "plans", label: "Plan Breakdown" },
+  { id: "team-cost", label: "Team Cost Calculator" },
+  { id: "add-ons", label: "Add-Ons and Hidden Fees" },
+  { id: "processing", label: "Payment Processing" },
+  { id: "compare", label: "vs. Alternatives" },
+  { id: "who-fits", label: "Who Should Buy" },
+  { id: "faq", label: "FAQ" }
+];
+const faqItems = [
+  { q: "How much does Jobber cost per month?", a: "Jobber starts at $39/month (Core) for a single user. Team plans run $169/month for 5 users (Connect), $349/month for 10 users (Grow), and $599/month for 15 users (Plus). Additional users cost $29/month each." },
+  { q: "Does Jobber require a contract?", a: "No. Jobber offers month-to-month billing. Annual billing saves up to 40% with current promotions. You can upgrade or downgrade anytime." },
+  { q: "Does Jobber have a free trial?", a: "Yes. Jobber offers a 14-day free trial of the Grow plan with no credit card required. This gives you access to premium features like job costing, automated quote follow-ups, and two-way SMS." },
+  { q: "Is Jobber good for HVAC companies?", a: "Yes. HVAC is one of Jobber's primary verticals. The platform handles scheduling, dispatching, quoting, invoicing, and customer management well for teams of 1-15 technicians. For larger operations, ServiceTitan is typically a better fit." },
+  { q: "What is the biggest hidden cost with Jobber?", a: "Per-user fees. Each user beyond your plan limit costs $29/month. A 10-person team on Grow ($349/month) is at the plan limit, but adding an 11th user adds $29/month. The Marketing Suite add-on at $79/month is also commonly needed." }
+];
+---
+
+<ArticleLayout
+  title="Jobber Pricing 2026: Plans, Per-User Costs, and What HVAC Teams Actually Pay — HVAC Software Hub"
+  description="Jobber pricing starts at $39/month for solo operators and $169-$599/month for teams. Full breakdown of all 6 plans, per-user fees, add-ons, and real costs for HVAC companies."
+  canonicalPath="/hvac/pricing/jobber-pricing"
+  category="Pricing"
+  publishDate="2026-04-06"
+  readTime="12 min read"
+  intent="BOFU"
+  tocItems={tocItems}
+  faqItems={faqItems}
+>
+<div class="container py-8">
+  <div class="flex gap-12">
+    <article class="flex-1 min-w-0 max-w-3xl">
+
+      <div class="prose mt-8" id="plans">
+        <h2>Jobber Plans and Pricing (2026)</h2>
+        <p>Jobber publishes its pricing openly, which is a major advantage over ServiceTitan. The platform offers 6 plans split into two categories: Individual (solo operators) and Team (businesses with employees).</p>
+      </div>
+      <table style="width:100%; border-collapse:collapse; margin: 16px 0; font-size: 14px;">
+        <thead>
+          <tr style="background:#1B4F72; color:white;">
+            <th style="padding:10px; text-align:left;">Plan</th>
+            <th style="padding:10px;">Monthly</th>
+            <th style="padding:10px;">Annual (per mo)</th>
+            <th style="padding:10px;">Users</th>
+            <th style="padding:10px; text-align:left;">Key Additions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">Core (Individual)</td>
+            <td style="padding:10px;">$39</td>
+            <td style="padding:10px;">$29</td>
+            <td style="padding:10px;">1</td>
+            <td style="padding:10px;">Scheduling, quoting, invoicing, online payments, online booking, CRM</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; font-weight:600;">Connect (Individual)</td>
+            <td style="padding:10px;">$119</td>
+            <td style="padding:10px;">~$99</td>
+            <td style="padding:10px;">1</td>
+            <td style="padding:10px;">+ Reminders, QuickBooks sync, job forms, time tracking, automations</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">Grow (Individual)</td>
+            <td style="padding:10px;">$199</td>
+            <td style="padding:10px;">~$149</td>
+            <td style="padding:10px;">1</td>
+            <td style="padding:10px;">+ Job costing, quote follow-ups, two-way SMS, quote add-ons</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; font-weight:600;">Connect Team</td>
+            <td style="padding:10px;">$169</td>
+            <td style="padding:10px;">~$129</td>
+            <td style="padding:10px;">5</td>
+            <td style="padding:10px;">Same as Connect Individual, built for teams</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">Grow Team</td>
+            <td style="padding:10px;">$349</td>
+            <td style="padding:10px;">~$249</td>
+            <td style="padding:10px;">10</td>
+            <td style="padding:10px;">Same as Grow Individual, built for teams</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; font-weight:600;">Plus</td>
+            <td style="padding:10px;">$599</td>
+            <td style="padding:10px;">~$499</td>
+            <td style="padding:10px;">15</td>
+            <td style="padding:10px;">All features + Marketing Suite, AI Receptionist, premium support, unlimited onboarding</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:13px; color:#666;">Source: Jobber pricing page, verified April 2026. Annual pricing includes current promotional discounts (up to 40% off).</p>
+
+      <div class="prose" id="team-cost">
+        <h2>What HVAC Teams Actually Pay</h2>
+        <p>The plan price is just the base. Add per-user fees and common add-ons to get the real number:</p>
+      </div>
+      <table style="width:100%; border-collapse:collapse; margin: 16px 0; font-size: 14px;">
+        <thead>
+          <tr style="background:#1B4F72; color:white;">
+            <th style="padding:10px;">Team Size</th>
+            <th style="padding:10px;">Best Plan</th>
+            <th style="padding:10px;">Base Cost</th>
+            <th style="padding:10px;">Extra Users</th>
+            <th style="padding:10px;">Real Monthly</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">1 (solo)</td>
+            <td style="padding:10px;">Core</td>
+            <td style="padding:10px;">$39</td>
+            <td style="padding:10px;">$0</td>
+            <td style="padding:10px; font-weight:600;">$39</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">3 (owner + 2 techs)</td>
+            <td style="padding:10px;">Connect Team</td>
+            <td style="padding:10px;">$169</td>
+            <td style="padding:10px;">$0</td>
+            <td style="padding:10px; font-weight:600;">$169</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">5 (within plan limit)</td>
+            <td style="padding:10px;">Connect Team</td>
+            <td style="padding:10px;">$169</td>
+            <td style="padding:10px;">$0</td>
+            <td style="padding:10px; font-weight:600;">$169</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">8 (3 extra users)</td>
+            <td style="padding:10px;">Connect Team</td>
+            <td style="padding:10px;">$169</td>
+            <td style="padding:10px;">$87</td>
+            <td style="padding:10px; font-weight:600;">$256</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">10 (at Grow limit)</td>
+            <td style="padding:10px;">Grow Team</td>
+            <td style="padding:10px;">$349</td>
+            <td style="padding:10px;">$0</td>
+            <td style="padding:10px; font-weight:600;">$349</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">15 (at Plus limit)</td>
+            <td style="padding:10px;">Plus</td>
+            <td style="padding:10px;">$599</td>
+            <td style="padding:10px;">$0</td>
+            <td style="padding:10px; font-weight:600;">$599</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">20 (5 extra on Plus)</td>
+            <td style="padding:10px;">Plus</td>
+            <td style="padding:10px;">$599</td>
+            <td style="padding:10px;">$145</td>
+            <td style="padding:10px; font-weight:600;">$744</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="prose">
+        <p>The key inflection point is around 8 users. Below that, Jobber is cost-effective. Above 15 users, per-user fees compound fast and alternatives with flat-rate pricing (like Service Fusion) or enterprise pricing (like ServiceTitan with volume discounts) start to make more sense.</p>
+      </div>
+
+      <div class="prose" id="add-ons">
+        <h2>Add-Ons and Hidden Fees</h2>
+        <p>Jobber keeps most features within its plan tiers, but two important add-ons are priced separately:</p>
+        <ul>
+          <li><strong>Marketing Suite:</strong> $79/month (included in Plus plan). Reviews, referrals, and email campaigns. Most HVAC companies want this for automated review collection alone.</li>
+          <li><strong>AI Receptionist:</strong> $99/month (included in Plus plan). 24/7 inbound AI call answering. Cannot make outbound calls. Only handles basic scheduling and customer inquiries.</li>
+          <li><strong>Extra users:</strong> $29/user/month beyond plan limits. This is the biggest hidden cost for growing teams.</li>
+        </ul>
+        <p>A contractor on Grow Team ($349) who adds Marketing Suite ($79) and AI Receptionist ($99) is paying $527/month. At that point, the Plus plan at $599 (which includes both) makes more sense.</p>
+      </div>
+
+      <div class="prose" id="processing">
+        <h2>Payment Processing Fees</h2>
+        <p>Jobber charges <strong>2.9% + $0.30 per credit card transaction</strong> and <strong>1% for ACH/bank payments</strong> through Jobber Payments (powered by Stripe).</p>
+        <p>On $50,000/month in card payments, expect ~$1,465 in processing fees. This is standard for the industry and comparable to Housecall Pro (2.99%) and ServiceTitan (2.9% + $0.30).</p>
+      </div>
+
+      <div class="prose" id="compare">
+        <h2>Jobber vs. Alternatives: Cost Comparison</h2>
+      </div>
+      <table style="width:100%; border-collapse:collapse; margin: 16px 0; font-size: 14px;">
+        <thead>
+          <tr style="background:#1B4F72; color:white;">
+            <th style="padding:10px; text-align:left;">Platform</th>
+            <th style="padding:10px;">5-Person Team</th>
+            <th style="padding:10px;">10-Person Team</th>
+            <th style="padding:10px;">Free Trial</th>
+            <th style="padding:10px;">Contract</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">Jobber</td>
+            <td style="padding:10px;">$169</td>
+            <td style="padding:10px;">$349</td>
+            <td style="padding:10px;">14 days</td>
+            <td style="padding:10px;">None</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; font-weight:600;"><a href="/hvac/pricing/housecall-pro-pricing">Housecall Pro</a></td>
+            <td style="padding:10px;">$149</td>
+            <td style="padding:10px;">$399+</td>
+            <td style="padding:10px;">14 days</td>
+            <td style="padding:10px;">None</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;"><a href="/hvac/pricing/servicetitan-pricing">ServiceTitan</a></td>
+            <td style="padding:10px;">$1,225-$1,725</td>
+            <td style="padding:10px;">$2,450-$3,450</td>
+            <td style="padding:10px;">None</td>
+            <td style="padding:10px;">12+ months</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="prose">
+        <p>Jobber and Housecall Pro are priced within $20/month of each other for small teams. The choice comes down to feature preference: Jobber excels at route optimization and client management, while Housecall Pro has stronger customer communication tools. See our <a href="/hvac/crm/housecall-pro-vs-jobber">Housecall Pro vs Jobber</a> head-to-head comparison.</p>
+        <p>ServiceTitan is 7-10x more expensive but includes enterprise features (marketing attribution, advanced pricebook, call tracking) that Jobber cannot match. For a detailed comparison, see <a href="/hvac/crm/jobber-vs-servicetitan">Jobber vs ServiceTitan</a>.</p>
+      </div>
+
+      <div class="prose" id="who-fits">
+        <h2>Who Should (and Should Not) Use Jobber</h2>
+        <h3>Good fit:</h3>
+        <ul>
+          <li>Solo operators who need professional quoting and invoicing from day one ($39/month)</li>
+          <li>Small to mid-size HVAC teams (2-15 technicians) who want a clean, fast-to-learn platform</li>
+          <li>Companies that value route optimization and reducing windshield time</li>
+          <li>Teams that need a strong mobile app (Jobber's iOS app is rated 4.8/5)</li>
+        </ul>
+        <h3>Not a good fit:</h3>
+        <ul>
+          <li>Teams larger than 15 people (per-user fees compound; evaluate ServiceTitan or flat-rate alternatives)</li>
+          <li>Companies that need advanced marketing attribution or dynamic flat-rate pricing (ServiceTitan territory)</li>
+          <li>Operations that rely heavily on visual sales proposals (Housecall Pro is stronger here)</li>
+        </ul>
+      </div>
+
+      <div class="prose">
+        <h2>Bottom Line</h2>
+        <p>Jobber is the best value CRM for HVAC companies with 1-10 technicians. Transparent pricing, no contracts, and a 14-day free trial make it low-risk to try. Start with the <a href="https://www.getjobber.com/pricing/" target="_blank" rel="noopener">free trial</a> and test against <a href="/hvac/pricing/housecall-pro-pricing">Housecall Pro</a> before committing.</p>
+      </div>
+
+    </article>
+  </div>
+</div>
+
+<div class="article-section" style="margin-top: 2rem; padding: 1.5rem; background: var(--color-bg-muted, #f8f9fa); border-radius: 8px; border-left: 4px solid var(--color-primary, #1B4F72);">
+  <h3 style="margin-top: 0;">Your CRM Tracks Leads. But Who Answers the Phone?</h3>
+  <p>Jobber handles scheduling and invoicing. It cannot answer a call at 9pm. Compare <a href="/hvac/answering-service/best-hvac-answering-service">HVAC answering services</a> that integrate with Jobber and book appointments automatically.</p>
+</div>
+
+</ArticleLayout>

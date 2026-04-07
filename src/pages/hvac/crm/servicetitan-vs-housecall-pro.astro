@@ -1,0 +1,223 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+
+const tocItems = [
+  { id: "pricing", label: "Pricing Comparison" },
+  { id: "features", label: "Feature Comparison" },
+  { id: "pricebook", label: "Pricebook & Sales" },
+  { id: "marketing", label: "Marketing Tools" },
+  { id: "onboarding", label: "Onboarding & Setup" },
+  { id: "who-fits", label: "Who Each Fits" },
+  { id: "verdict", label: "Verdict" },
+  { id: "faq", label: "FAQ" }
+];
+const faqItems = [
+  { q: "Is ServiceTitan worth the extra cost over Housecall Pro?", a: "For companies with 10+ technicians and $3M+ revenue, ServiceTitan's pricebook and marketing attribution typically generate enough additional revenue to justify the 5-10x price difference. For teams under 10 techs, Housecall Pro delivers 80% of the functionality at 20% of the cost." },
+  { q: "Can I switch from Housecall Pro to ServiceTitan?", a: "Yes, but expect a 6-16 week implementation process and $5,000-$50,000 in setup costs. ServiceTitan offers migration support. Most companies run both platforms in parallel for 4-8 weeks during the transition." },
+  { q: "Can I switch from ServiceTitan to Housecall Pro?", a: "Yes. Export your data from ServiceTitan (CSV) and import into Housecall Pro. The reverse migration is faster (days, not weeks) because Housecall Pro has no formal implementation process. Watch out for ServiceTitan early termination fees." },
+  { q: "Which is better for a 5-technician HVAC company?", a: "Housecall Pro. At $149/month vs $1,225-$1,725/month for ServiceTitan, the cost difference is $12,000-$18,000/year. A 5-tech team rarely uses the enterprise features that justify ServiceTitan's price." },
+  { q: "Which has better reporting?", a: "ServiceTitan. Its reporting dashboards cover technician performance, revenue by department, marketing ROI, and custom KPIs. Housecall Pro's reporting is adequate for small businesses but larger operations often outgrow it." }
+];
+---
+
+<ArticleLayout
+  title="ServiceTitan vs Housecall Pro for HVAC (2026): When to Pay 10x More — HVAC Software Hub"
+  description="ServiceTitan costs $1,225-$1,725/month for 5 techs. Housecall Pro costs $149. We compare features, pricing, and which platform fits different HVAC team sizes."
+  canonicalPath="/hvac/crm/servicetitan-vs-housecall-pro"
+  category="Comparisons"
+  publishDate="2026-04-06"
+  readTime="12 min read"
+  intent="BOFU"
+  tocItems={tocItems}
+  faqItems={faqItems}
+>
+<div class="container py-8">
+  <div class="flex gap-12">
+    <article class="flex-1 min-w-0 max-w-3xl">
+
+      <div class="prose mt-8">
+        <p>ServiceTitan and Housecall Pro serve the same industry but target different stages of growth. ServiceTitan is built for large, established HVAC operations. Housecall Pro is built for small to mid-size teams getting organized. The pricing gap between them is enormous, so the question is not "which is better" but "which one fits your current business."</p>
+      </div>
+
+      <div class="prose" id="pricing">
+        <h2>Pricing: The Core Difference</h2>
+      </div>
+      <table style="width:100%; border-collapse:collapse; margin: 16px 0; font-size: 14px;">
+        <thead>
+          <tr style="background:#1B4F72; color:white;">
+            <th style="padding:10px; text-align:left;"></th>
+            <th style="padding:10px;">ServiceTitan</th>
+            <th style="padding:10px;">Housecall Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">Pricing model</td>
+            <td style="padding:10px;">Per technician</td>
+            <td style="padding:10px;">Flat monthly tiers</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; font-weight:600;">5-tech monthly cost</td>
+            <td style="padding:10px;">$1,225-$1,725</td>
+            <td style="padding:10px;">$149-$249</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">10-tech monthly cost</td>
+            <td style="padding:10px;">$2,450-$3,450</td>
+            <td style="padding:10px;">$329-$399</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; font-weight:600;">Annual cost (10 techs)</td>
+            <td style="padding:10px;">$29,400-$41,400</td>
+            <td style="padding:10px;">$3,948-$4,788</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">Implementation fee</td>
+            <td style="padding:10px;">$5,000-$50,000</td>
+            <td style="padding:10px;">$0</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; font-weight:600;">Contract</td>
+            <td style="padding:10px;">12+ months (often multi-year)</td>
+            <td style="padding:10px;">Month-to-month</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px; font-weight:600;">Free trial</td>
+            <td style="padding:10px;">No</td>
+            <td style="padding:10px;">14 days, no credit card</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; font-weight:600;">Time to go live</td>
+            <td style="padding:10px;">6-16 weeks</td>
+            <td style="padding:10px;">1-3 days</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="prose">
+        <p>A 10-technician HVAC company saves <strong>$25,000-$37,000 per year</strong> by choosing Housecall Pro over ServiceTitan. The question is whether ServiceTitan's additional features generate enough revenue to cover that gap.</p>
+        <p>For detailed pricing breakdowns, see <a href="/hvac/pricing/servicetitan-pricing">ServiceTitan Pricing 2026</a> and <a href="/hvac/pricing/housecall-pro-pricing">Housecall Pro Pricing 2026</a>.</p>
+      </div>
+
+      <div class="prose" id="features">
+        <h2>Feature Comparison</h2>
+      </div>
+      <table style="width:100%; border-collapse:collapse; margin: 16px 0; font-size: 14px;">
+        <thead>
+          <tr style="background:#1B4F72; color:white;">
+            <th style="padding:10px; text-align:left;">Feature</th>
+            <th style="padding:10px;">ServiceTitan</th>
+            <th style="padding:10px;">Housecall Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">Scheduling & dispatch</td>
+            <td style="padding:10px;">Advanced (capacity planning, zone-based)</td>
+            <td style="padding:10px;">Standard (drag-and-drop, GPS)</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">Flat-rate pricebook</td>
+            <td style="padding:10px;">Best in class (Good-Better-Best, dynamic pricing)</td>
+            <td style="padding:10px;">Basic (Price Book add-on $149/mo)</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">Marketing attribution</td>
+            <td style="padding:10px;">Marketing Pro ($2,000+/mo) ties ad spend to revenue</td>
+            <td style="padding:10px;">Basic lead source tracking</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">Reporting</td>
+            <td style="padding:10px;">Enterprise-grade (custom KPI dashboards, department revenue)</td>
+            <td style="padding:10px;">Adequate for small teams</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">Online booking</td>
+            <td style="padding:10px;">Available</td>
+            <td style="padding:10px;">Built-in from Basic plan</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">Review management</td>
+            <td style="padding:10px;">Available</td>
+            <td style="padding:10px;">Built-in from Basic plan</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">Mobile app</td>
+            <td style="padding:10px;">iPad required</td>
+            <td style="padding:10px;">iOS and Android</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">QuickBooks integration</td>
+            <td style="padding:10px;">All plans</td>
+            <td style="padding:10px;">Essentials+ ($149/mo)</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">Memberships/service plans</td>
+            <td style="padding:10px;">Built-in</td>
+            <td style="padding:10px;">Add-on</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">Call tracking</td>
+            <td style="padding:10px;">Phones Pro (add-on)</td>
+            <td style="padding:10px;">VoIP add-on</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="prose" id="pricebook">
+        <h2>Pricebook and Sales Presentation</h2>
+        <p>This is ServiceTitan's biggest competitive advantage. The Good-Better-Best pricebook presentation lets technicians show homeowners three options on an iPad. Users consistently report a <strong>15-25% increase in average ticket size</strong> after implementing this feature.</p>
+        <p>For a 10-tech HVAC company running $3M in revenue, a 15% ticket increase adds $450,000 in annual revenue. That makes ServiceTitan's $30,000-$40,000 annual cost look like a 10:1 return.</p>
+        <p>Housecall Pro has a Sales Proposals add-on ($40/month) that achieves a similar result but with less polish and automation. It works, but it is not at ServiceTitan's level.</p>
+      </div>
+
+      <div class="prose" id="marketing">
+        <h2>Marketing Attribution</h2>
+        <p>ServiceTitan's Marketing Pro is the other feature that justifies the premium. It connects your ad spend (Google Ads, LSA, direct mail, radio) to actual booked revenue, showing you exactly which campaigns generate jobs and which ones waste money.</p>
+        <p>At $2,000+/month, Marketing Pro is expensive. But for companies spending $5,000-$20,000/month on advertising, knowing which half of the budget is wasted pays for the tool many times over.</p>
+        <p>Housecall Pro tracks lead sources at a basic level (which marketing channel the customer came from) but cannot tie ad spend to revenue the way ServiceTitan does.</p>
+      </div>
+
+      <div class="prose" id="onboarding">
+        <h2>Onboarding and Time to Value</h2>
+        <p><strong>Housecall Pro:</strong> Sign up, start the 14-day free trial, import your customer list, and you are running jobs within 1-3 days. There is no formal implementation. The learning curve is short.</p>
+        <p><strong>ServiceTitan:</strong> 6-16 weeks from contract signing to go-live. The implementation includes pricebook configuration, data migration, CSR training, dispatcher training, and technician training. You will run both your old system and ServiceTitan in parallel for 4-8 weeks. Most companies report that it takes 3-6 months to fully realize the platform's value.</p>
+        <p>If you need to be operational by next week, Housecall Pro is the only option. If you can invest 3-6 months in a platform transition, ServiceTitan's long-term payoff is typically worth the slow start.</p>
+      </div>
+
+      <div class="prose" id="who-fits">
+        <h2>Who Each Platform Fits</h2>
+        <h3>Choose Housecall Pro if:</h3>
+        <ul>
+          <li>Your team has fewer than 10 technicians</li>
+          <li>Annual revenue is under $3M</li>
+          <li>You need to be operational quickly (days, not months)</li>
+          <li>Budget flexibility matters (month-to-month, no contracts)</li>
+          <li>You do not have dedicated office staff to manage complex software</li>
+        </ul>
+        <h3>Choose ServiceTitan if:</h3>
+        <ul>
+          <li>Your team has 10+ technicians with dedicated dispatch and office staff</li>
+          <li>Annual revenue exceeds $3M (ideally $5M+)</li>
+          <li>You use flat-rate pricing and want Good-Better-Best pricebook automation</li>
+          <li>You spend $5,000+/month on marketing and need attribution data</li>
+          <li>You can invest in a 3-6 month implementation without disrupting operations</li>
+        </ul>
+      </div>
+
+      <div class="prose" id="verdict">
+        <h2>Verdict</h2>
+        <p><strong>Housecall Pro is the right choice for 80% of HVAC companies.</strong> It covers scheduling, dispatching, invoicing, customer communication, and review management at a price that makes sense for small to mid-size teams. The 14-day free trial makes it risk-free to evaluate.</p>
+        <p><strong>ServiceTitan is the right choice for the other 20%.</strong> Large, established operations with the team, budget, and operational maturity to maximize the pricebook, marketing attribution, and enterprise reporting features. If you are in that category and not on ServiceTitan, you are probably leaving revenue on the table.</p>
+        <p>The mistake most contractors make: buying ServiceTitan too early. If you have 5 technicians and $1M in revenue, you will pay enterprise prices for features your team cannot fully utilize. Start with Housecall Pro (or <a href="/hvac/pricing/jobber-pricing">Jobber</a>), grow to 10+ techs, then evaluate ServiceTitan when the ROI math works.</p>
+      </div>
+
+    </article>
+  </div>
+</div>
+
+<div class="article-section" style="margin-top: 2rem; padding: 1.5rem; background: var(--color-bg-muted, #f8f9fa); border-radius: 8px; border-left: 4px solid var(--color-primary, #1B4F72);">
+  <h3 style="margin-top: 0;">Your CRM Manages Jobs. Who Manages the Missed Calls?</h3>
+  <p>Whether you pick ServiceTitan or Housecall Pro, neither answers the phone at 9pm. An <a href="/hvac/answering-service/best-hvac-answering-service">AI answering service</a> captures every call 24/7 and integrates with both platforms.</p>
+</div>
+
+</ArticleLayout>

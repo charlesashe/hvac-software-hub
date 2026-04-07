@@ -1,0 +1,180 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+
+const tocItems = [
+  { id: "pricing", label: "Pricing Comparison" },
+  { id: "scheduling", label: "Scheduling & Dispatch" },
+  { id: "quoting", label: "Quoting & Invoicing" },
+  { id: "mobile", label: "Mobile App" },
+  { id: "crm", label: "CRM & Communication" },
+  { id: "integrations", label: "Integrations" },
+  { id: "verdict", label: "Verdict" },
+  { id: "faq", label: "FAQ" }
+];
+const faqItems = [
+  { q: "Which is cheaper, Housecall Pro or Jobber?", a: "For solo operators, Jobber is cheaper ($39/month vs $59/month). For teams of 5, pricing is nearly identical ($149-$169/month). For teams of 10+, Housecall Pro's MAX plan can be cheaper than Jobber's per-user model depending on your quote." },
+  { q: "Which has a better mobile app?", a: "Both have strong mobile apps. Jobber's iOS app is rated 4.8/5 and is consistently praised for speed and reliability. Housecall Pro's app is rated 4.7/5 with stronger customer communication features. Both work offline for basic functions." },
+  { q: "Can I switch from Housecall Pro to Jobber (or vice versa)?", a: "Yes. Both platforms support CSV data export. The typical migration takes 1-2 weeks. Both offer free trials so you can test the new platform before canceling the old one." },
+  { q: "Which integrates better with QuickBooks?", a: "Neither platform includes QuickBooks on their entry-level plans. Jobber requires Connect ($119/month) and Housecall Pro requires Essentials ($149/month). Users report Jobber's QuickBooks sync is slightly more reliable, while Housecall Pro's integration occasionally creates duplicates that need manual cleanup." },
+  { q: "Which is better for HVAC specifically?", a: "Both serve HVAC well. Jobber has stronger route optimization (reducing drive time between jobs) and job costing (tracking profitability per job). Housecall Pro has better customer-facing tools (online booking, automated reviews, text notifications). Pick based on which gap matters more in your operation." }
+];
+---
+
+<ArticleLayout
+  title="Housecall Pro vs Jobber for HVAC Companies (2026): Pricing, Features, and Verdict — HVAC Software Hub"
+  description="Detailed comparison of Housecall Pro and Jobber for HVAC companies. Side-by-side pricing, features, mobile apps, and which platform fits your team size."
+  canonicalPath="/hvac/crm/housecall-pro-vs-jobber"
+  category="Comparisons"
+  publishDate="2026-04-06"
+  readTime="13 min read"
+  intent="BOFU"
+  tocItems={tocItems}
+  faqItems={faqItems}
+>
+<div class="container py-8">
+  <div class="flex gap-12">
+    <article class="flex-1 min-w-0 max-w-3xl">
+
+      <div class="prose mt-8">
+        <p>Housecall Pro and Jobber are the two most popular field service platforms for small HVAC companies. They are priced similarly, offer overlapping features, and both have free trials. This makes the choice difficult unless you know exactly where they differ.</p>
+        <p>We evaluated both platforms across six categories that matter most to HVAC operations. Here is where each one wins and loses.</p>
+      </div>
+
+      <div class="prose" id="pricing">
+        <h2>Pricing Comparison</h2>
+      </div>
+      <table style="width:100%; border-collapse:collapse; margin: 16px 0; font-size: 14px;">
+        <thead>
+          <tr style="background:#1B4F72; color:white;">
+            <th style="padding:10px; text-align:left;">Scenario</th>
+            <th style="padding:10px;">Housecall Pro</th>
+            <th style="padding:10px;">Jobber</th>
+            <th style="padding:10px;">Winner</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">Solo operator</td>
+            <td style="padding:10px;">$59/mo (Basic)</td>
+            <td style="padding:10px;">$39/mo (Core)</td>
+            <td style="padding:10px; font-weight:600; color:#0D7C3D;">Jobber</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">3-person team</td>
+            <td style="padding:10px;">$149/mo (Essentials)</td>
+            <td style="padding:10px;">$169/mo (Connect Team)</td>
+            <td style="padding:10px; font-weight:600; color:#0D7C3D;">Housecall Pro</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">5-person team</td>
+            <td style="padding:10px;">$149/mo (Essentials)</td>
+            <td style="padding:10px;">$169/mo (Connect Team)</td>
+            <td style="padding:10px; font-weight:600; color:#0D7C3D;">Housecall Pro</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">10-person team</td>
+            <td style="padding:10px;">~$399/mo (MAX + extra users)</td>
+            <td style="padding:10px;">$349/mo (Grow Team)</td>
+            <td style="padding:10px; font-weight:600; color:#0D7C3D;">Jobber</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">Free trial</td>
+            <td style="padding:10px;">14 days (MAX plan)</td>
+            <td style="padding:10px;">14 days (Grow plan)</td>
+            <td style="padding:10px;">Tie</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">Contract required</td>
+            <td style="padding:10px;">No</td>
+            <td style="padding:10px;">No</td>
+            <td style="padding:10px;">Tie</td>
+          </tr>
+          <tr style="background:#f8f9fa;">
+            <td style="padding:10px;">Payment processing</td>
+            <td style="padding:10px;">2.99%</td>
+            <td style="padding:10px;">2.9% + $0.30</td>
+            <td style="padding:10px;">~Tie</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="prose">
+        <p><strong>Pricing verdict:</strong> Nearly identical. Jobber is cheaper for solo operators and 10+ person teams. Housecall Pro is slightly cheaper for 3-5 person teams. The $20/month difference is not enough to choose one over the other. Decide on features, not price.</p>
+        <p>For full pricing details, see <a href="/hvac/pricing/housecall-pro-pricing">Housecall Pro Pricing 2026</a> and <a href="/hvac/pricing/jobber-pricing">Jobber Pricing 2026</a>.</p>
+      </div>
+
+      <div class="prose" id="scheduling">
+        <h2>Scheduling and Dispatch</h2>
+        <p>Both platforms offer drag-and-drop calendar scheduling and real-time dispatching to field technicians. The differences:</p>
+        <p><strong>Jobber wins on route optimization.</strong> Jobber automatically sequences jobs to minimize drive time between stops. For HVAC companies with technicians covering a wide service area (common in rural markets), this saves 30-60 minutes per tech per day. Housecall Pro does not have built-in route optimization.</p>
+        <p><strong>Housecall Pro wins on real-time dispatching.</strong> Housecall Pro shows real-time technician locations via GPS (on Essentials+ plans) and lets dispatchers assign emergency calls to the nearest available tech. Jobber's GPS tracking updates less frequently.</p>
+        <p><strong>For HVAC:</strong> If your techs run 4+ stops per day across a large area, Jobber's route optimization matters more. If your dispatching is mostly reactive (emergency calls, same-day service), Housecall Pro's real-time GPS is more useful.</p>
+      </div>
+
+      <div class="prose" id="quoting">
+        <h2>Quoting and Invoicing</h2>
+        <p><strong>Housecall Pro wins on visual proposals.</strong> The Sales Proposals add-on ($40/month) lets techs build side-by-side Good-Better-Best options with images. This is particularly valuable for HVAC equipment replacements where showing the customer three options (from basic to premium) consistently increases average ticket size.</p>
+        <p><strong>Jobber wins on job costing.</strong> Jobber tracks labor hours, material costs, and profitability per job on the Grow plan. This tells you exactly which types of jobs make money and which ones lose money. Housecall Pro has basic job costing but it is not as detailed.</p>
+        <p><strong>Jobber wins on quote follow-ups.</strong> Automated quote follow-up reminders on the Grow plan send texts to customers who have not responded to estimates. This recovers jobs that would otherwise go to competitors.</p>
+        <p><strong>For HVAC:</strong> If you sell a lot of equipment installs ($5,000+ tickets), Housecall Pro's visual proposals close more deals. If you need to understand which jobs are profitable, Jobber's job costing is essential.</p>
+      </div>
+
+      <div class="prose" id="mobile">
+        <h2>Mobile App</h2>
+        <p>Both apps are well-rated:</p>
+        <ul>
+          <li><strong>Jobber:</strong> 4.8/5 on iOS. Praised for speed, reliability, and clean interface. Technicians can view job details, collect signatures, and process payments on site.</li>
+          <li><strong>Housecall Pro:</strong> 4.7/5 on iOS. Available in Spanish. Stronger customer notification features. Some users report occasional bugs after software updates.</li>
+        </ul>
+        <p>Both apps work offline for basic functions and sync when connectivity returns. Neither is a clear winner here.</p>
+      </div>
+
+      <div class="prose" id="crm">
+        <h2>CRM and Customer Communication</h2>
+        <p><strong>Housecall Pro wins on customer communication.</strong> Built-in online booking (customers book from Google or your website), automated text updates ("Your tech is on the way"), and review collection tools are included from the Essentials plan. Housecall Pro treats customer-facing communication as a core feature.</p>
+        <p><strong>Jobber wins on client management.</strong> Jobber's Client Hub gives customers a self-service portal to approve quotes, check appointments, and pay invoices. The CRM stores detailed contact information, property details, and service history that technicians can access in the field.</p>
+        <p><strong>Jobber has two-way SMS</strong> on the Grow plan ($199+ for individuals, $349+ for teams). Housecall Pro includes automated text notifications on Essentials but two-way texting is more limited.</p>
+        <p><strong>For HVAC:</strong> If your biggest pain point is customers not responding to estimates and not leaving reviews, Housecall Pro's communication tools help more. If your pain point is technicians not having context before arriving at a job, Jobber's CRM is stronger.</p>
+      </div>
+
+      <div class="prose" id="integrations">
+        <h2>Integrations</h2>
+        <p>Both integrate with QuickBooks, Stripe, and popular payment processors. Key differences:</p>
+        <ul>
+          <li><strong>Jobber:</strong> Native integrations with Mailchimp, Zapier, and a growing app marketplace. QuickBooks sync requires Connect plan ($119+/month).</li>
+          <li><strong>Housecall Pro:</strong> Native integrations with Thumbtack, Google Local Services, and a VoIP phone system add-on. QuickBooks sync requires Essentials plan ($149+/month). Zapier and API access only on MAX plan.</li>
+        </ul>
+        <p>If you rely heavily on Zapier for connecting tools, Jobber gives you access at a lower price tier. If you generate leads from Thumbtack or Google LSA, Housecall Pro's native integrations are more valuable.</p>
+      </div>
+
+      <div class="prose" id="verdict">
+        <h2>Verdict: Which Should You Choose?</h2>
+        <h3>Choose Jobber if:</h3>
+        <ul>
+          <li>You are a solo operator (cheapest entry at $39/month)</li>
+          <li>Route optimization matters (wide service area, 4+ stops/day)</li>
+          <li>You need job costing to track profitability</li>
+          <li>You want automated quote follow-up reminders</li>
+          <li>Your team size is 10+ (better per-user economics)</li>
+        </ul>
+        <h3>Choose Housecall Pro if:</h3>
+        <ul>
+          <li>Your team is 3-5 people (slightly cheaper at this size)</li>
+          <li>Customer-facing communication is your biggest gap (online booking, text updates, review collection)</li>
+          <li>You sell equipment installs and need visual sales proposals</li>
+          <li>You generate leads from Thumbtack or Google LSA</li>
+          <li>You need a Spanish-language option for your team</li>
+        </ul>
+        <p>Both platforms offer 14-day free trials with no credit card required. The best approach: try both simultaneously for one week with real jobs, then commit to whichever feels better for your daily workflow.</p>
+        <p>If both feel limited, you may have outgrown small-business CRMs. See our comparison of <a href="/hvac/crm/servicetitan-alternatives">ServiceTitan and its alternatives</a> for the next tier up.</p>
+      </div>
+
+    </article>
+  </div>
+</div>
+
+<div class="article-section" style="margin-top: 2rem; padding: 1.5rem; background: var(--color-bg-muted, #f8f9fa); border-radius: 8px; border-left: 4px solid var(--color-primary, #1B4F72);">
+  <h3 style="margin-top: 0;">Neither Platform Answers Your Phone at 9pm</h3>
+  <p>Jobber and Housecall Pro manage jobs after they are booked. Neither one answers the call that creates the job in the first place. Compare <a href="/hvac/answering-service/ai-vs-traditional-answering-service">AI vs traditional answering services</a> to cover the gap.</p>
+</div>
+
+</ArticleLayout>
