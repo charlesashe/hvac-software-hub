@@ -1,0 +1,152 @@
+[
+  {
+    "slug": "workiz-pricing",
+    "category": "pricing",
+    "categoryLabel": "Pricing",
+    "title": "Workiz Pricing 2026: Plans, Costs, and What HVAC Companies Pay",
+    "description": "Workiz pricing starts at $49/month. Full breakdown of plans, per-user costs, and real pricing for HVAC teams.",
+    "intent": "BOFU",
+    "keywords": "workiz pricing, workiz cost, workiz plans 2026",
+    "affiliateContext": "Compare with Jobber and Housecall Pro affiliate links"
+  },
+  {
+    "slug": "fieldedge-pricing",
+    "category": "pricing",
+    "categoryLabel": "Pricing",
+    "title": "FieldEdge Pricing 2026: What HVAC Contractors Actually Pay",
+    "description": "FieldEdge pricing breakdown for HVAC companies. Plans, implementation costs, and comparison to alternatives.",
+    "intent": "BOFU",
+    "keywords": "fieldedge pricing, fieldedge cost 2026",
+    "affiliateContext": "Compare with Jobber and Housecall Pro affiliate links"
+  },
+  {
+    "slug": "service-fusion-pricing",
+    "category": "pricing",
+    "categoryLabel": "Pricing",
+    "title": "Service Fusion Pricing 2026: Unlimited Users, Real Costs",
+    "description": "Service Fusion offers flat-rate pricing with unlimited users. Full cost breakdown for HVAC companies.",
+    "intent": "BOFU",
+    "keywords": "service fusion pricing, service fusion cost 2026",
+    "affiliateContext": "Compare with Jobber and Housecall Pro affiliate links"
+  },
+  {
+    "slug": "workiz-vs-jobber",
+    "category": "crm",
+    "categoryLabel": "Comparisons",
+    "title": "Workiz vs Jobber for HVAC (2026): Features, Pricing, and Verdict",
+    "description": "Head-to-head comparison of Workiz and Jobber for HVAC companies. Pricing, features, and which fits your team.",
+    "intent": "BOFU",
+    "keywords": "workiz vs jobber, workiz or jobber hvac",
+    "affiliateContext": "Jobber affiliate link in CTA"
+  },
+  {
+    "slug": "servicetitan-vs-jobber",
+    "category": "crm",
+    "categoryLabel": "Comparisons",
+    "title": "ServiceTitan vs Jobber for HVAC (2026): Enterprise vs Mid-Market",
+    "description": "ServiceTitan costs 10x more than Jobber. We compare features and which fits different HVAC team sizes.",
+    "intent": "BOFU",
+    "keywords": "servicetitan vs jobber, servicetitan or jobber",
+    "affiliateContext": "Jobber affiliate link in CTA"
+  },
+  {
+    "slug": "best-hvac-fleet-tracking",
+    "category": "dispatch",
+    "categoryLabel": "Dispatch & Scheduling",
+    "title": "Best Fleet GPS Tracking for HVAC Companies (2026)",
+    "description": "We compared 5 GPS fleet tracking tools for HVAC. See pricing, features, and which reduces fuel costs most.",
+    "intent": "BOFU",
+    "keywords": "hvac fleet tracking, gps tracking hvac trucks",
+    "affiliateContext": "Toggl for time tracking complement"
+  },
+  {
+    "slug": "best-hvac-review-management",
+    "category": "guides",
+    "categoryLabel": "Buyer's Guide",
+    "title": "Best Review Management Software for HVAC Companies (2026)",
+    "description": "We compared 5 review management tools. See which generates the most Google reviews for HVAC contractors.",
+    "intent": "BOFU",
+    "keywords": "hvac review management, google reviews hvac",
+    "affiliateContext": "Housecall Pro has built-in reviews"
+  },
+  {
+    "slug": "hvac-google-ads-guide",
+    "category": "guides",
+    "categoryLabel": "Buyer's Guide",
+    "title": "Google Ads for HVAC Companies: The Complete 2026 Guide",
+    "description": "How to run profitable Google Ads for HVAC. Keywords, budgets, landing pages, and what to expect at $500-$5,000/month.",
+    "intent": "MOFU",
+    "keywords": "google ads hvac, hvac ppc, hvac google ads cost",
+    "affiliateContext": "Apollo.io for B2B prospecting complement"
+  },
+  {
+    "slug": "hvac-seo-guide",
+    "category": "guides",
+    "categoryLabel": "Buyer's Guide",
+    "title": "SEO for HVAC Companies: How to Rank on Google in 2026",
+    "description": "Step-by-step SEO guide for HVAC contractors. Local SEO, Google Business Profile, content strategy, and realistic timelines.",
+    "intent": "MOFU",
+    "keywords": "hvac seo, seo for hvac companies, hvac local seo",
+    "affiliateContext": "Apollo.io for link building outreach"
+  },
+  {
+    "slug": "best-hvac-accounting-software",
+    "category": "guides",
+    "categoryLabel": "Buyer's Guide",
+    "title": "Best Accounting Software for HVAC Companies (2026)",
+    "description": "QuickBooks vs FreshBooks vs Wave for HVAC. Pricing, CRM integrations, and which handles job costing best.",
+    "intent": "BOFU",
+    "keywords": "hvac accounting software, quickbooks for hvac",
+    "affiliateContext": "Jobber and HCP QuickBooks integration discussion"
+  },
+  {
+    "slug": "housecall-pro-vs-servicetitan-vs-jobber",
+    "category": "crm",
+    "categoryLabel": "Comparisons",
+    "title": "Housecall Pro vs ServiceTitan vs Jobber: 3-Way Comparison (2026)",
+    "description": "The three most popular HVAC CRMs compared on pricing, features, and team size fit. One chart, clear verdict.",
+    "intent": "BOFU",
+    "keywords": "housecall pro vs servicetitan vs jobber, best hvac crm comparison",
+    "affiliateContext": "Jobber and HCP affiliate links in CTAs"
+  },
+  {
+    "slug": "hvac-maintenance-agreement-software",
+    "category": "crm",
+    "categoryLabel": "CRM & Automation",
+    "title": "Best HVAC Maintenance Agreement Software (2026)",
+    "description": "We compared 5 platforms for managing HVAC maintenance contracts and service agreements. See pricing and features.",
+    "intent": "BOFU",
+    "keywords": "hvac maintenance agreement software, hvac service agreement management",
+    "affiliateContext": "Jobber and HCP both offer service plan features"
+  },
+  {
+    "slug": "best-hvac-estimating-software",
+    "category": "crm",
+    "categoryLabel": "CRM & Automation",
+    "title": "Best HVAC Estimating Software (2026): Faster Quotes, More Wins",
+    "description": "We compared 5 estimating tools for HVAC contractors. See which creates professional quotes fastest.",
+    "intent": "BOFU",
+    "keywords": "hvac estimating software, hvac quoting software 2026",
+    "affiliateContext": "Jobber and HCP both have quoting features"
+  },
+  {
+    "slug": "hvac-customer-financing",
+    "category": "guides",
+    "categoryLabel": "Buyer's Guide",
+    "title": "HVAC Customer Financing: How to Offer Payment Plans in 2026",
+    "description": "How to offer financing on HVAC installs. Platforms, rates, approval processes, and how it increases close rates.",
+    "intent": "MOFU",
+    "keywords": "hvac financing options, hvac customer financing, hvac payment plans",
+    "affiliateContext": "Jobber integrates with Wisetack financing"
+  },
+  {
+    "slug": "best-hvac-marketing-ideas",
+    "category": "guides",
+    "categoryLabel": "Buyer's Guide",
+    "title": "21 HVAC Marketing Ideas That Actually Work in 2026",
+    "description": "Proven marketing strategies for HVAC companies ranked by cost, effort, and ROI. From $0 to $5,000/month budgets.",
+    "intent": "MOFU",
+    "keywords": "hvac marketing ideas, hvac marketing strategies 2026",
+    "affiliateContext": "Apollo.io for outbound, Toggl for time tracking marketing ROI"
+  }
+]
