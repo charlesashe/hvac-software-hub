@@ -22,6 +22,7 @@ const AFFILIATE_LINKS = {
   jobber1: 'https://go.getjobber.com/bo42cjptz4m2',
   jobber2: 'https://go.getjobber.com/vcuhehgs796s',
   housecallpro: 'https://housecallpro.partnerlinks.io/auy5xcz257sw',
+  callrail: 'https://partners.callrail.com/ut5waejxy35l',
   toggl: 'https://get.toggl.com/f71dwhbrzvzz',
   apollo1: 'https://get.apollo.io/fxnpnadnv4lb',
   apollo2: 'https://get.apollo.io/007acgxiffe2',
@@ -71,6 +72,7 @@ RULES:
 - All articles must reference these affiliate links where relevant (with rel="sponsored nofollow"):
   * Jobber: ${AFFILIATE_LINKS.jobber1} and ${AFFILIATE_LINKS.jobber2}
   * Housecall Pro: ${AFFILIATE_LINKS.housecallpro}
+  * CallRail: ${AFFILIATE_LINKS.callrail}
   * Toggl Track: ${AFFILIATE_LINKS.toggl}
   * Apollo.io: ${AFFILIATE_LINKS.apollo1} and ${AFFILIATE_LINKS.apollo2}
 - Every article must end with a Meridian Gable CTA block (dark gradient background, white text) with:
