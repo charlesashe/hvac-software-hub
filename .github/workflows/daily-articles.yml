@@ -2,7 +2,7 @@ name: Daily Article Generator
 
 on:
   schedule:
-    - cron: '0 11 * * *'
+    - cron: '0 11 * * *'→ Runs at 11:00
   workflow_dispatch:
     inputs:
       article_count:
@@ -35,7 +35,7 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           COUNT=${{ github.event.inputs.article_count || '3' }}
-          node scripts/generate-articles.js $COUNT
+          node scripts/generate-articles.cjs $COUNT
 
       - name: Push changes
         run: |
