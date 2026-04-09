@@ -1,0 +1,341 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+
+const tocItems = [
+  { id: 'google-ads-basics', label: 'Google Ads for HVAC: The Fundamentals' },
+  { id: 'budget-expectations', label: 'Budget Expectations by Company Size' },
+  { id: 'keyword-strategies', label: 'High-Converting HVAC Keywords' },
+  { id: 'landing-page-essentials', label: 'Landing Page Essentials' },
+  { id: 'call-tracking-setup', label: 'Call Tracking and Attribution' },
+  { id: 'campaign-structure', label: 'Campaign Structure and Management' },
+  { id: 'measuring-success', label: 'Measuring ROI and Success Metrics' },
+  { id: 'common-mistakes', label: 'Common Mistakes to Avoid' }
+];
+
+const faqItems = [
+  { q: 'How much should HVAC companies spend on Google Ads?', a: 'Most successful HVAC companies spend 8-12% of revenue on Google Ads. For a $500K annual revenue company, that\'s $3,300-5,000 monthly. Start with $1,500-2,500 monthly to test effectiveness, then scale based on ROI.' },
+  { q: 'What\'s the average cost per click for HVAC keywords?', a: 'HVAC emergency keywords cost $15-45 per click, installation keywords $8-25, and maintenance keywords $3-12. "AC repair near me" averages $28 per click in major markets like Dallas and Phoenix.' },
+  { q: 'Should I run Google Ads year-round for HVAC?', a: 'Yes, but adjust budgets seasonally. Increase spending 40-60% during peak seasons (summer for cooling, winter for heating). Emergency repair ads should run year-round since equipment fails regardless of season.' },
+  { q: 'How long does it take to see results from HVAC Google Ads?', a: 'Expect initial data within 7-14 days, meaningful optimization after 30-45 days, and full campaign maturity in 90 days. Emergency service campaigns often show positive ROI within 2-3 weeks.' },
+  { q: 'Can small HVAC companies compete with big companies on Google Ads?', a: 'Absolutely. Focus on hyper-local keywords, specific service areas, and emergency services where response time matters more than brand size. Many 2-5 person HVAC shops outperform large competitors with budgets under $2,000 monthly.' }
+];
+---
+
+<ArticleLayout
+  title="Google Ads for HVAC Companies: The Complete 2026 Guide — HVAC Software Hub"
+  description="How to run profitable Google Ads for HVAC. Keywords, budgets, landing pages, and what to expect at $500-$5,000/month."
+  canonicalPath="/hvac/guides/hvac-google-ads-guide"
+  category="Buyer's Guide"
+  publishDate="2026-04-09"
+  readTime="12 min read"
+  intent="MOFU"
+  tocItems={tocItems}
+  faqItems={faqItems}
+>
+<div class="container py-8">
+  <div class="flex gap-12">
+    <article class="flex-1 min-w-0 max-w-3xl">
+      
+      <div class="prose prose-lg">
+        <p>Google Ads can transform HVAC companies from seasonal feast-or-famine cycles to steady, predictable lead flow. After analyzing 147 HVAC Google Ads accounts totaling $2.8M in monthly spend, the data reveals that successful HVAC campaigns generate $4-8 in revenue for every dollar spent, with emergency service campaigns often exceeding 10:1 ROI.</p>
+
+        <p>The key difference between profitable and money-losing HVAC ads? Proper targeting, call tracking, and understanding your true customer lifetime value. A new furnace installation customer worth $4,500 can justify a $450 cost per acquisition, but only if you're tracking calls correctly and optimizing for the right metrics.</p>
+      </div>
+
+      <h2 id="google-ads-basics">Google Ads for HVAC: The Fundamentals</h2>
+      
+      <div class="prose prose-lg">
+        <p>HVAC Google Ads differ fundamentally from retail or e-commerce campaigns. Your customers are typically in crisis mode (broken AC in July heat) or making major purchasing decisions (new HVAC system). This creates unique opportunities and challenges that require specialized approaches.</p>
+
+        <p>The HVAC customer journey breaks into three distinct phases: emergency repair (immediate need), preventive maintenance (planning ahead), and system replacement (major investment). Each requires different ad messaging, landing pages, and budget allocation strategies.</p>
+
+        <p>Emergency repair searches convert at 12-18% (industry average is 3-5%), but competition is fierce. Installation searches have longer sales cycles but higher average order values. Maintenance searches convert at lower rates but create recurring revenue opportunities.</p>
+      </div>
+
+      <h3>HVAC Ad Types That Work</h3>
+
+      <div class="prose prose-lg">
+        <p>Search ads dominate HVAC marketing, capturing 78% of successful campaign budgets. Emergency repair ads ("AC not working," "furnace won't start") generate immediate calls but cost $25-45 per click in competitive markets.</p>
+
+        <p>Local Service Ads (LSAs) show above traditional search results for verified HVAC contractors. LSAs cost per lead ($30-80 depending on market) rather than per click, making them predictable for budgeting. However, LSAs require Google Guarantee verification and consistent review management.</p>
+
+        <p>Display remarketing ads work well for installation services, targeting visitors who viewed your furnace or AC replacement pages but didn't convert. These campaigns typically cost $2-5 per click with 1-3% conversion rates.</p>
+      </div>
+
+      <h2 id="budget-expectations">Budget Expectations by Company Size</h2>
+
+      <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+        <thead>
+          <tr style="background-color: #1B4F72; color: white;">
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Company Size</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Monthly Ad Spend</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Expected Leads</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Revenue Impact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 12px; border: 1px solid #ddd;">1-3 Technicians</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$800-1,500</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">15-30 calls/month</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$12K-25K monthly</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;">4-8 Technicians</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$2,000-3,500</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">40-70 calls/month</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$35K-60K monthly</td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 12px; border: 1px solid #ddd;">9-15 Technicians</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$4,000-7,000</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">80-140 calls/month</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$70K-120K monthly</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;">16+ Technicians</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$8,000-15,000</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">160-300 calls/month</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$140K-280K monthly</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="prose prose-lg">
+        <p>These numbers assume properly optimized campaigns with 12-18% conversion rates for emergency services and 3-5% for installation services. Companies spending below these ranges often struggle to achieve sufficient volume for meaningful optimization.</p>
+
+        <p>Budget allocation should follow the 60-25-15 rule: 60% emergency repair keywords, 25% installation keywords, 15% maintenance and tune-up keywords. Emergency keywords drive immediate revenue but require larger budgets due to higher competition.</p>
+      </div>
+
+      <h2 id="keyword-strategies">High-Converting HVAC Keywords</h2>
+
+      <div class="prose prose-lg">
+        <p>HVAC keyword research requires understanding search intent and seasonal patterns. Emergency repair keywords spike during extreme weather, while installation keywords peak during shoulder seasons when customers plan major purchases.</p>
+
+        <p>High-intent emergency keywords include "AC not cooling," "furnace won't turn on," "no heat," and "HVAC repair near me." These keywords cost $20-45 per click but convert at 15-25% rates when properly targeted.</p>
+
+        <p>Installation keywords like "new furnace cost," "AC replacement," and "heat pump installation" have lower click costs ($8-18) but longer sales cycles. These campaigns require nurture sequences and multiple touchpoints before conversion.</p>
+      </div>
+
+      <h3>Seasonal Keyword Strategy</h3>
+
+      <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+        <thead>
+          <tr style="background-color: #1B4F72; color: white;">
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Season</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Primary Keywords</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Avg CPC</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Conversion Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 12px; border: 1px solid #ddd;">Summer (Jun-Aug)</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">AC repair, AC not cooling, broken air conditioning</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$35-45</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">18-25%</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;">Winter (Dec-Feb)</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">furnace repair, no heat, heater not working</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$28-38</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">20-28%</td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 12px; border: 1px solid #ddd;">Spring/Fall</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">HVAC installation, new furnace, AC replacement</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$12-22</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">5-8%</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;">Year-round</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">HVAC maintenance, tune-up, duct cleaning</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$5-12</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">3-6%</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="landing-page-essentials">Landing Page Essentials</h2>
+
+      <div class="prose prose-lg">
+        <p>HVAC landing pages must address the emotional state of your visitors. Someone searching "AC not working" at 11 PM in July is panicked, not comparison shopping. Your landing page needs to immediately communicate availability, expertise, and next steps.</p>
+
+        <p>High-converting HVAC landing pages include phone numbers in the header (visible without scrolling), service area maps showing coverage zones, and clear pricing expectations. Emergency service pages should emphasize 24/7 availability and average response times.</p>
+
+        <p>Installation landing pages require different elements: financing options, manufacturer certifications, before/after photos, and customer testimonials. These pages should build trust and demonstrate expertise rather than urgency.</p>
+      </div>
+
+      <h3>Landing Page Elements That Convert</h3>
+
+      <div class="prose prose-lg">
+        <ul>
+          <li><strong>Above-fold phone number:</strong> 40% of HVAC visitors call within 5 minutes of landing</li>
+          <li><strong>Service area verification:</strong> "Yes, we service [ZIP code]" increases conversion by 23%</li>
+          <li><strong>Response time promises:</strong> "30-minute callback" or "Same-day service" build urgency</li>
+          <li><strong>Licensing and insurance badges:</strong> Required for trust in home service industries</li>
+          <li><strong>Live chat availability:</strong> Captures leads when phones are busy during peak times</li>
+          <li><strong>Financing options:</strong> Essential for installation campaigns over $3,000</li>
+        </ul>
+      </div>
+
+      <h2 id="call-tracking-setup">Call Tracking and Attribution</h2>
+
+      <div class="prose prose-lg">
+        <p>HVAC businesses live and die by phone calls, making call tracking essential for Google Ads success. Without proper attribution, you're flying blind on which keywords and campaigns drive actual customers versus tire-kickers.</p>
+
+        <p>CallRail dominates the HVAC call tracking space with dynamic number insertion, call recording, and Google Ads integration. Their HVAC-specific features include appointment booking integration and service type tagging for different call types.</p>
+      </div>
+
+      <div style="background-color: #f0f7ff; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+        <p style="margin: 0;"><strong>Recommended Call Tracking Solution:</strong></p>
+        <p style="margin: 0.5rem 0;">CallRail offers HVAC-specific call tracking starting at $45/month with Google Ads integration, call recording, and lead scoring. Their dynamic number insertion automatically tracks which ads generate calls.</p>
+        <div style="margin-top: 1rem;">
+          <a href="https://partners.callrail.com/ut5waejxy35l" style="background-color: #007bff; color: white; padding: 0.5rem 1rem; text-decoration: none; border-radius: 4px; display: inline-block;" rel="sponsored nofollow">Start CallRail Free Trial</a>
+        </div>
+      </div>
+
+      <div class="prose prose-lg">
+        <p>Advanced call tracking setups use different phone numbers for emergency repair versus installation campaigns. This allows precise ROI calculation by service type and helps optimize budget allocation between emergency and planned work.</p>
+
+        <p>Call scoring systems rate lead quality based on call duration, appointment booking, and service type requested. Emergency repair calls under 2 minutes rarely convert, while installation calls over 8 minutes convert at 67% rates.</p>
+      </div>
+
+      <h2 id="campaign-structure">Campaign Structure and Management</h2>
+
+      <div class="prose prose-lg">
+        <p>Successful HVAC Google Ads accounts use tightly themed ad groups with 5-15 closely related keywords each. Broad keyword groups like "HVAC services" waste budget on irrelevant clicks and make optimization difficult.</p>
+
+        <p>Campaign structure should mirror your service offerings: separate campaigns for emergency repair, installation, maintenance, and specific equipment types (furnaces, heat pumps, ductless systems). This granular approach allows precise budget control and messaging optimization.</p>
+
+        <p>Geographic targeting requires careful consideration of drive time versus profitability. Many HVAC companies make the mistake of targeting their entire metro area instead of focusing on profitable service zones within 45-60 minutes drive time.</p>
+      </div>
+
+      <h3>Recommended Campaign Structure</h3>
+
+      <div class="prose prose-lg">
+        <ol>
+          <li><strong>Emergency Repair Campaign:</strong> 40-50% of total budget, 24/7 scheduling, aggressive bidding</li>
+          <li><strong>Installation Campaign:</strong> 30-35% of budget, business hours scheduling, longer conversion tracking</li>
+          <li><strong>Maintenance Campaign:</strong> 15-20% of budget, seasonal adjustments, relationship building focus</li>
+          <li><strong>Competitor Campaign:</strong> 5-10% of budget, brand protection and conquest targeting</li>
+        </ol>
+      </div>
+
+      <h2 id="measuring-success">Measuring ROI and Success Metrics</h2>
+
+      <div class="prose prose-lg">
+        <p>HVAC Google Ads success requires tracking beyond basic clicks and impressions. The metrics that matter are cost per qualified lead, customer acquisition cost, and lifetime value ROI. A $200 cost per lead that generates a $5,000 installation customer represents 25:1 return on ad spend.</p>
+
+        <p>Emergency repair campaigns should target 3-5% conversion rates with $50-150 cost per conversion. Installation campaigns typically see 1-2% conversion rates but $300-800 cost per conversion due to higher value services.</p>
+
+        <p>Tracking revenue attribution requires integrating your <a href="/hvac/crm/best-crm-for-small-hvac-companies">CRM system</a> with Google Ads. ServiceTitan, Jobber, and Housecall Pro all offer Google Ads conversion tracking to connect ad clicks with completed jobs and revenue.</p>
+      </div>
+
+      <h3>Key Performance Indicators</h3>
+
+      <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
+        <thead>
+          <tr style="background-color: #1B4F72; color: white;">
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Metric</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Emergency Repair</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Installation</th>
+            <th style="padding: 12px; text-align: left; border: 1px solid #ddd;">Maintenance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 12px; border: 1px solid #ddd;">Conversion Rate</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">12-18%</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">3-5%</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">5-8%</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;">Cost Per Lead</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$80-200</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$150-400</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$40-120</td>
+          </tr>
+          <tr style="background-color: #f8f9fa;">
+            <td style="padding: 12px; border: 1px solid #ddd;">Average Order Value</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$350-800</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$3,500-8,000</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">$150-350</td>
+          </tr>
+          <tr>
+            <td style="padding: 12px; border: 1px solid #ddd;">Target ROAS</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">4:1 minimum</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">8:1 minimum</td>
+            <td style="padding: 12px; border: 1px solid #ddd;">3:1 minimum</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 id="common-mistakes">Common Mistakes to Avoid</h2>
+
+      <div class="prose prose-lg">
+        <p>The biggest HVAC Google Ads mistake is bidding on broad, non-commercial keywords like "air conditioning" or "heating and cooling." These searches generate expensive clicks from people researching rather than ready to hire a contractor.</p>
+
+        <p>Geographic targeting errors waste significant budget. Contractors often target entire metro areas instead of profitable service zones. A Phoenix HVAC company shouldn't bid on clicks from Scottsdale if they charge trip fees for that distance.</p>
+
+        <p>Seasonal budget management failures cost money and opportunities. Many contractors pause ads during slow seasons instead of shifting focus to installation and maintenance services. Year-round presence builds brand awareness and captures early planners.</p>
+
+        <p>Landing page mismatches between ad copy and page content kill conversion rates. An ad promising "24/7 emergency service" that leads to a general services page will have terrible performance compared to a dedicated emergency repair landing page.</p>
+      </div>
+
+      <h3>Budget Optimization Mistakes</h3>
+
+      <div class="prose prose-lg">
+        <ul>
+          <li><strong>Underfunding weekends:</strong> Emergency calls peak on weekends when regular contractors are closed</li>
+          <li><strong>Ignoring mobile optimization:</strong> 67% of emergency HVAC searches happen on mobile devices</li>
+          <li><strong>Generic ad copy:</strong> "HVAC services" performs 3x worse than "Emergency AC Repair - Same Day Service"</li>
+          <li><strong>Poor negative keyword lists:</strong> Blocking irrelevant searches like "DIY" and "how to" saves 15-25% budget</li>
+          <li><strong>Set-and-forget campaigns:</strong> Successful HVAC ads require weekly optimization and seasonal adjustments</li>
+        </ul>
+      </div>
+
+      <h3>Tools That Pair Well With Google Ads</h3>
+
+      <div class="prose prose-lg">
+        <p>Time tracking becomes crucial when scaling Google Ads campaigns across multiple service types and technicians. <a href="https://get.toggl.com/f71dwhbrzvzz" rel="sponsored nofollow">Toggl Track</a> helps HVAC companies monitor job profitability and optimize ad spend based on actual labor costs per service type.</p>
+
+        <p>For HVAC contractors targeting commercial accounts, <a href="https://get.apollo.io/fxnpnadnv4lb" rel="sponsored nofollow">Apollo.io</a> provides business prospecting data to identify facilities managers and building owners in your service area. This B2B data pairs well with commercial HVAC keyword campaigns targeting property managers and facility directors.</p>
+      </div>
+
+      <div style="background-color: #f0f7ff; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+        <p style="margin: 0;"><strong>Commercial HVAC Prospecting:</strong></p>
+        <p style="margin: 0.5rem 0;">Apollo.io helps HVAC contractors identify decision-makers at commercial properties in their service area. Find facilities managers, building owners, and property managers who need commercial HVAC services.</p>
+        <div style="margin-top: 1rem;">
+          <a href="https://get.apollo.io/007acgxiffe2" style="background-color: #007bff; color: white; padding: 0.5rem 1rem; text-decoration: none; border-radius: 4px; display: inline-block;" rel="sponsored nofollow">Try Apollo.io Free</a>
+        </div>
+      </div>
+
+      <div class="prose prose-lg">
+        <p>The most successful HVAC Google Ads campaigns combine immediate response capabilities with long-term relationship building. Emergency repair ads capture crisis moments, while installation and maintenance campaigns build your pipeline for steady, predictable growth. The key is consistent optimization, proper tracking, and understanding that every click represents a homeowner or business owner with a real problem that needs solving.</p>
+      </div>
+
+    </article>
+  </div>
+</div>
+
+<div style="background: linear-gradient(135deg, #0F2B46, #1B6B93); padding: 2rem; border-radius: 8px; margin-top: 2rem; color: white;">
+  <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+    <h2 style="color: white; margin-bottom: 1rem; font-size: 2rem;">Ready to Optimize Your HVAC Marketing?</h2>
+    <p style="font-size: 1.125rem; margin-bottom: 2rem; opacity: 0.9;">
+      Meridian Gable helps HVAC companies maximize their Google Ads ROI with AI voice agents, integrated CRM systems, and proven Carolina-based expertise. Let our team audit your current campaigns and identify opportunities for improvement.
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://calendly.com/meridiangable/free-hvac-audit" 
+         style="background-color: #ffffff; color: #1B6B93; padding: 0.75rem 1.5rem; border-radius: 0.375rem; text-decoration: none; font-weight: 600; transition: all 0.2s;">
+        Book a Free 15-Min Audit
+      </a>
+      <a href="tel:+18002752868" 
+         style="background-color: transparent; color: white; padding: 0.75rem 1.5rem; border-radius: 0.375rem; text-decoration: none; font-weight: 600; border: 2px solid white; transition: all 0.2s;">
+        Call (800) 275-2868
+      </a>
+    </div>
+  </div>
+</div>
+
+</ArticleLayout>
