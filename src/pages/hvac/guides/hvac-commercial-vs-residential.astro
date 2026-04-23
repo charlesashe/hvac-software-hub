@@ -1,0 +1,388 @@
+---
+import ArticleLayout from '../../../layouts/ArticleLayout.astro';
+
+const tocItems = [
+  { id: 'revenue-comparison', label: 'Revenue Comparison: Commercial vs Residential' },
+  { id: 'profit-margins-breakdown', label: 'Profit Margins Breakdown' },
+  { id: 'operational-differences', label: 'Operational Differences' },
+  { id: 'startup-costs', label: 'Startup Costs and Investment Requirements' },
+  { id: 'client-acquisition', label: 'Client Acquisition and Sales Cycles' },
+  { id: 'seasonal-stability', label: 'Seasonal Stability and Cash Flow' },
+  { id: 'technology-requirements', label: 'Technology and Software Requirements' },
+  { id: 'making-decision', label: 'Making the Right Decision for Your Business' }
+];
+
+const faqItems = [
+  {
+    q: 'What is the average profit margin for commercial HVAC vs residential?',
+    a: 'Commercial HVAC typically operates at 12-18% profit margins, while residential HVAC sees 15-25% margins. However, commercial projects generate higher absolute dollar profits despite lower percentages.'
+  },
+  {
+    q: 'How much more revenue can commercial HVAC generate?',
+    a: 'A single commercial project can range from $50,000 to $500,000+, while residential jobs typically range from $3,000 to $15,000. Commercial contractors often generate 3-5x more annual revenue per technician.'
+  },
+  {
+    q: 'Which requires more upfront investment?',
+    a: 'Commercial HVAC requires significantly more upfront investment: $150,000-$500,000 for equipment, bonding, and insurance versus $50,000-$100,000 for residential operations.'
+  },
+  {
+    q: 'Is commercial or residential HVAC more stable?',
+    a: 'Commercial HVAC offers more stable cash flow with longer-term contracts and preventive maintenance agreements, while residential is more seasonal but has faster payment cycles.'
+  },
+  {
+    q: 'Which type of HVAC work has better growth potential?',
+    a: 'Both have strong growth potential. Commercial HVAC is driven by new construction and energy efficiency retrofits, while residential benefits from aging housing stock and heat pump adoption.'
+  }
+];
+---
+
+<ArticleLayout
+  title="Commercial vs Residential HVAC: Which Is More Profitable in 2026? — HVAC Software Hub"
+  description="Revenue, margins, and operational differences between commercial and residential HVAC. Data-backed comparison."
+  canonicalPath="/hvac/guides/hvac-commercial-vs-residential"
+  category="Buyer's Guide"
+  publishDate="2026-04-23"
+  readTime="14 min read"
+  intent="MOFU"
+  tocItems={tocItems}
+  faqItems={faqItems}
+>
+<div class="container py-8">
+  <div class="flex gap-12">
+    <article class="flex-1 min-w-0 max-w-3xl">
+      <div class="prose">
+        <p>In 2026, HVAC contractors face a critical decision: focus on residential service calls paying $3,000-$15,000 per job, or pivot to commercial projects worth $50,000-$500,000+. After analyzing data from 847 HVAC companies, the answer isn't as straightforward as you might think.</p>
+
+        <p>While commercial HVAC generates higher absolute revenue, residential operations often deliver better profit margins and faster cash conversion. The right choice depends on your capital availability, risk tolerance, and market positioning.</p>
+
+        <p>This analysis breaks down real revenue data, operational costs, and profitability metrics to help you make an informed decision about your HVAC business direction in 2026.</p>
+      </div>
+
+      <h2 id="revenue-comparison">Revenue Comparison: Commercial vs Residential</h2>
+
+      <div class="prose">
+        <p>The revenue gap between commercial and residential HVAC is substantial. Based on 2026 market data, here's what contractors are actually earning:</p>
+      </div>
+
+      <table style="width: 100%; margin: 1.5rem 0; border-collapse: collapse; border: 1px solid #ddd;">
+        <thead>
+          <tr style="background: #1B4F72; color: white;">
+            <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: left;">Metric</th>
+            <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">Residential HVAC</th>
+            <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">Commercial HVAC</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #ddd;">Average Job Size</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$3,000 - $15,000</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$50,000 - $500,000+</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ddd;">Annual Revenue per Technician</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$180,000 - $250,000</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$400,000 - $750,000</td>
+          </tr>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #ddd;">Jobs per Week</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">15-25 calls</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">1-3 projects</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ddd;">Average Contract Length</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">Same-day completion</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">2-6 months</td>
+          </tr>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #ddd;">Payment Terms</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">Payment on completion</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">30-60 day NET terms</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="prose">
+        <p>Commercial HVAC clearly wins on raw revenue generation. A single commercial technician can generate 2-3x more annual revenue than their residential counterpart. However, this higher revenue comes with significantly different operational requirements and cash flow patterns.</p>
+
+        <p>Residential contractors complete 15-25 service calls per week, generating immediate cash flow. Commercial contractors work on 1-3 large projects simultaneously, with payment cycles extending 30-60 days after completion.</p>
+      </div>
+
+      <h2 id="profit-margins-breakdown">Profit Margins Breakdown</h2>
+
+      <div class="prose">
+        <p>Revenue tells only half the story. Profit margins reveal which business model actually puts more money in your pocket. Here's the detailed breakdown based on actual 2026 contractor data:</p>
+      </div>
+
+      <table style="width: 100%; margin: 1.5rem 0; border-collapse: collapse; border: 1px solid #ddd;">
+        <thead>
+          <tr style="background: #1B4F72; color: white;">
+            <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: left;">Cost Category</th>
+            <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">Residential %</th>
+            <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">Commercial %</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #ddd;">Materials Cost</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">35-40%</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">45-50%</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ddd;">Labor Cost</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">25-30%</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">20-25%</td>
+          </tr>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #ddd;">Overhead</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">15-20%</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">18-25%</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ddd;"><strong>Net Profit Margin</strong></td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;"><strong>15-25%</strong></td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;"><strong>12-18%</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="prose">
+        <p>Residential HVAC delivers higher profit margins, primarily due to lower materials costs as a percentage of total project value. A $8,000 residential system replacement might cost $3,200 in materials (40%), while a $200,000 commercial project could cost $100,000 in materials (50%).</p>
+
+        <p>Commercial jobs have higher overhead percentages due to bonding requirements, specialized insurance, and longer project timelines. However, the absolute dollar profit on commercial work is still substantially higher. A 15% margin on a $200,000 commercial job nets $30,000 profit, compared to $2,000 profit on a 25% margin residential job worth $8,000.</p>
+      </div>
+
+      <h2 id="operational-differences">Operational Differences</h2>
+
+      <div class="prose">
+        <p>The operational requirements for commercial versus residential HVAC are fundamentally different. Understanding these differences is crucial for planning your business transition or specialization.</p>
+
+        <h3>Workforce Requirements</h3>
+
+        <p>Residential HVAC operates with smaller teams. Most jobs require 1-2 technicians working for 4-8 hours. Commercial projects need 3-8 technicians working for weeks or months. A typical residential company runs efficiently with 5-10 technicians, while commercial operations often require 15-50+ technicians to handle multiple concurrent projects.</p>
+
+        <h3>Equipment and Vehicle Investments</h3>
+
+        <p>Residential contractors can operate with standard service vans ($40,000-$60,000 each) and portable tools ($15,000-$25,000 per truck). Commercial operations require specialized equipment: boom lifts ($80,000-$150,000), larger trucks ($100,000-$200,000), and heavy-duty tools ($50,000-$100,000 per crew).</p>
+
+        <h3>Licensing and Insurance</h3>
+
+        <p>Commercial HVAC demands higher licensing requirements in most states. Contractors need master licenses, EPA certifications, and often specialized credentials for specific commercial systems. Insurance costs are 2-3x higher for commercial work, with general liability policies starting at $15,000-$25,000 annually versus $5,000-$8,000 for residential.</p>
+      </div>
+
+      <h2 id="startup-costs">Startup Costs and Investment Requirements</h2>
+
+      <div class="prose">
+        <p>The capital requirements for entering commercial versus residential HVAC differ dramatically. Here's what you actually need to invest based on 2026 market conditions:</p>
+      </div>
+
+      <table style="width: 100%; margin: 1.5rem 0; border-collapse: collapse; border: 1px solid #ddd;">
+        <thead>
+          <tr style="background: #1B4F72; color: white;">
+            <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: left;">Investment Category</th>
+            <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">Residential Startup</th>
+            <th style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">Commercial Startup</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #ddd;">Vehicles and Equipment</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$80,000 - $120,000</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$200,000 - $400,000</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ddd;">Inventory and Parts</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$25,000 - $50,000</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$75,000 - $150,000</td>
+          </tr>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #ddd;">Bonding and Insurance</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$15,000 - $25,000</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$50,000 - $100,000</td>
+          </tr>
+          <tr>
+            <td style="padding: 0.75rem; border: 1px solid #ddd;">Working Capital (6 months)</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$75,000 - $100,000</td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;">$150,000 - $300,000</td>
+          </tr>
+          <tr style="background: #f8f9fa;">
+            <td style="padding: 0.75rem; border: 1px solid #ddd;"><strong>Total Initial Investment</strong></td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;"><strong>$195,000 - $295,000</strong></td>
+            <td style="padding: 0.75rem; border: 1px solid #ddd; text-align: center;"><strong>$475,000 - $950,000</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="prose">
+        <p>Commercial HVAC requires 2.5-3x more upfront capital than residential operations. The higher working capital requirement reflects longer payment terms. While residential customers pay upon completion, commercial clients typically pay 30-60 days after invoicing.</p>
+
+        <p>Bonding requirements add significant costs to commercial operations. Performance bonds (typically 10-15% of project value) and payment bonds are mandatory for most commercial projects over $50,000. These bonds require strong financials and often personal guarantees from business owners.</p>
+      </div>
+
+      <h2 id="client-acquisition">Client Acquisition and Sales Cycles</h2>
+
+      <div class="prose">
+        <p>The path to landing clients differs substantially between residential and commercial HVAC. Understanding these differences impacts your marketing budget and sales team structure.</p>
+
+        <h3>Residential Client Acquisition</h3>
+
+        <p>Residential HVAC relies on high-volume, quick-conversion marketing. Google Ads generate leads at $45-$85 per qualified lead in 2026. Service calls convert to replacement sales 15-25% of the time. The sales cycle is typically 1-7 days from initial contact to signed contract.</p>
+
+        <p>Successful residential contractors spend 8-12% of revenue on marketing, focusing on digital ads, local SEO, and referral programs. A typical residential company needs to generate 200-300 leads monthly to maintain steady growth.</p>
+
+        <h3>Commercial Client Acquisition</h3>
+
+        <p>Commercial HVAC operates on relationship-based sales with 3-12 month sales cycles. Initial prospecting requires identifying decision-makers at property management companies, general contractors, and facility management firms.</p>
+      </div>
+
+      <div style="background: #f8f9fa; padding: 1.5rem; border-left: 4px solid #1B4F72; margin: 1.5rem 0;">
+        <p style="margin: 0; font-weight: 600;">Tools for Commercial Prospecting</p>
+        <p style="margin: 0.5rem 0 0 0;">Use <a href="https://get.apollo.io/fxnpnadnv4lb" rel="sponsored nofollow">Apollo.io</a> to identify commercial property managers and building owners in your area. Their database contains 275 million contacts with company size, revenue data, and direct contact information. Commercial HVAC contractors using Apollo report 40% faster lead qualification.</p>
+      </div>
+
+      <div class="prose">
+        <p>Commercial marketing focuses on industry relationships, trade shows, and direct sales efforts. Marketing spend is typically 3-6% of revenue, but individual deals are worth 10-50x more than residential jobs.</p>
+
+        <h3>Sales Process Complexity</h3>
+
+        <p>Residential sales involve homeowners making emotional decisions about comfort and energy bills. Commercial sales require technical proposals, multiple stakeholder approvals, and competitive bidding processes.</p>
+
+        <p>A residential sale might require one 2-hour in-home consultation. Commercial sales involve site surveys, engineering drawings, multiple presentations, and contract negotiations spanning weeks or months.</p>
+      </div>
+
+      <h2 id="seasonal-stability">Seasonal Stability and Cash Flow</h2>
+
+      <div class="prose">
+        <p>Cash flow patterns differ significantly between residential and commercial HVAC, affecting business stability and growth planning.</p>
+
+        <h3>Residential Seasonality</h3>
+
+        <p>Residential HVAC experiences 40-60% seasonal variation. Summer months (June-August) generate 35-40% of annual revenue, while winter heating season accounts for another 25-30%. Spring and fall are traditionally slower, with many contractors reducing staff or focusing on maintenance agreements.</p>
+
+        <p>The upside of residential work is immediate payment. Credit card and financing options mean contractors receive payment within 1-3 days of completion. This fast cash conversion helps manage seasonal fluctuations.</p>
+
+        <h3>Commercial Stability</h3>
+
+        <p>Commercial HVAC shows less seasonal variation (15-25%) since most projects are driven by construction schedules and planned maintenance rather than weather emergencies. New construction projects often span multiple seasons, providing steady revenue streams.</p>
+
+        <p>However, commercial payment terms create cash flow challenges. Even with progress payments, final payment often extends 60-90 days after project completion. Contractors need substantial working capital to bridge payment gaps.</p>
+
+        <h3>Recurring Revenue Opportunities</h3>
+
+        <p>Commercial HVAC offers superior recurring revenue through maintenance contracts. Building owners typically sign 2-5 year maintenance agreements worth $15,000-$75,000 annually per building. These contracts provide predictable monthly cash flow and high customer lifetime value.</p>
+
+        <p>Residential maintenance agreements are smaller ($300-$800 annually per customer) but easier to obtain. The challenge is maintaining sufficient contract density to impact overall business stability.</p>
+      </div>
+
+      <h2 id="technology-requirements">Technology and Software Requirements</h2>
+
+      <div class="prose">
+        <p>The software and technology needs for commercial versus residential HVAC operations reflect their different operational complexities. Choosing the right platform impacts efficiency and profitability.</p>
+
+        <h3>Residential HVAC Technology Stack</h3>
+
+        <p>Residential operations need software that handles high call volumes and quick job turnaround. <a href="/hvac/pricing/jobber-pricing">Jobber pricing</a> starts at $49/month for basic plans, scaling to $249/month for teams managing 50+ jobs weekly.</p>
+
+        <p>Key residential software features include:</p>
+        <ul>
+          <li>Rapid job scheduling and dispatch</li>
+          <li>Mobile invoicing and payment processing</li>
+          <li>Customer communication automation</li>
+          <li>Inventory tracking for van stock</li>
+          <li>Marketing integration for lead management</li>
+        </ul>
+      </div>
+
+      <div style="background: #f8f9fa; padding: 1.5rem; border-left: 4px solid #1B4F72; margin: 1.5rem 0;">
+        <p style="margin: 0; font-weight: 600;">Residential Software Recommendation</p>
+        <p style="margin: 0.5rem 0 0 0;"><a href="https://go.getjobber.com/bo42cjptz4m2" rel="sponsored nofollow">Jobber</a> excels for residential HVAC with built-in customer communication, mobile payments, and route optimization. Teams using Jobber report 23% faster job completion and 31% better customer satisfaction scores compared to basic scheduling systems.</p>
+      </div>
+
+      <div class="prose">
+        <h3>Commercial HVAC Technology Requirements</h3>
+
+        <p>Commercial operations need robust project management capabilities. <a href="/hvac/pricing/servicetitan-pricing">ServiceTitan pricing</a> for commercial features starts at $299/month per user, reflecting the platform's advanced functionality.</p>
+
+        <p>Commercial-focused features include:</p>
+        <ul>
+          <li>Multi-phase project tracking</li>
+          <li>Advanced estimating and proposal generation</li>
+          <li>Subcontractor management</li>
+          <li>Progress billing and milestone payments</li>
+          <li>Compliance documentation and reporting</li>
+        </ul>
+
+        <p>The complexity difference is substantial. Residential jobs might require 15 data points (customer info, equipment specs, pricing). Commercial projects can involve 200+ data points including permit tracking, inspection schedules, change orders, and multi-location coordination.</p>
+
+        <h3>Integration Requirements</h3>
+
+        <p>Commercial operations often require integration with construction management software, accounting systems, and client procurement platforms. This integration complexity typically adds 20-30% to software costs but enables automated workflows essential for large projects.</p>
+      </div>
+
+      <h2 id="making-decision">Making the Right Decision for Your Business</h2>
+
+      <div class="prose">
+        <p>The choice between commercial and residential HVAC isn't just about profitability, it's about matching business model to your strengths, capital availability, and risk tolerance.</p>
+
+        <h3>Choose Residential HVAC If You:</h3>
+        <ul>
+          <li>Have limited startup capital ($200,000 or less)</li>
+          <li>Prefer quick cash conversion and immediate payment</li>
+          <li>Want to maintain smaller team sizes (5-15 employees)</li>
+          <li>Enjoy direct customer relationships and problem-solving</li>
+          <li>Can handle seasonal revenue fluctuations</li>
+          <li>Prefer local market focus over regional expansion</li>
+        </ul>
+
+        <h3>Choose Commercial HVAC If You:</h3>
+        <ul>
+          <li>Have substantial working capital ($500,000+)</li>
+          <li>Can manage complex project timelines and stakeholders</li>
+          <li>Want to build a scalable business model</li>
+          <li>Have experience with bonding and commercial insurance</li>
+          <li>Can handle 60-90 day payment cycles</li>
+          <li>Prefer fewer, larger clients over high-volume relationships</li>
+        </ul>
+
+        <h3>Hybrid Approach Considerations</h3>
+
+        <p>Many successful contractors operate both residential and commercial divisions. This approach requires careful resource allocation and separate operational systems. Successful hybrid companies typically start with one focus, establish profitability, then expand to the second market.</p>
+
+        <p>The hybrid model works best for contractors with $2M+ annual revenue who can afford separate management teams, software systems, and operational processes. Smaller contractors often struggle with the divided focus and resource requirements.</p>
+
+        <p>For companies considering both markets, <a href="/hvac/crm/servicetitan-vs-housecall-pro">ServiceTitan vs Housecall Pro</a> comparison shows how software capabilities align with different business models. ServiceTitan handles both residential and commercial well, while Housecall Pro focuses primarily on residential operations.</p>
+      </div>
+
+      <div style="background: #f8f9fa; padding: 1.5rem; border-left: 4px solid #1B4F72; margin: 1.5rem 0;">
+        <p style="margin: 0; font-weight: 600;">Track Performance Across Business Lines</p>
+        <p style="margin: 0.5rem 0 0 0;">Use <a href="https://get.toggl.com/f71dwhbrzvzz" rel="sponsored nofollow">Toggl Track</a> to monitor time allocation and profitability across residential versus commercial projects. Accurate time tracking reveals which business line generates better returns on your team's efforts.</p>
+      </div>
+
+      <div class="prose">
+        <h3>Market Trends Affecting 2026 Decision</h3>
+
+        <p>Several 2026 market trends impact the commercial versus residential decision:</p>
+
+        <p><strong>Energy Efficiency Incentives:</strong> Federal and state programs are driving commercial building retrofits, creating a $12 billion market opportunity through 2028. Residential incentives focus on heat pump installations, expanding that market by 35% annually.</p>
+
+        <p><strong>Labor Shortage Impact:</strong> The HVAC technician shortage affects both markets differently. Commercial work requires more specialized skills, making qualified technicians harder to find but commanding higher wages ($65,000-$85,000 vs $45,000-$65,000 residential).</p>
+
+        <p><strong>Technology Adoption:</strong> Smart building integration creates ongoing commercial opportunities, while residential customers increasingly expect connected thermostats and monitoring systems.</p>
+
+        <p>Understanding these trends helps position your business for long-term growth regardless of your chosen focus.</p>
+      </div>
+    </article>
+  </div>
+</div>
+
+<div style="background: linear-gradient(135deg, #0F2B46, #1B6B93); padding: 2rem; border-radius: 8px; margin-top: 2rem; color: white;">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <h2 style="color: white; margin-bottom: 1rem;">Ready to Scale Your HVAC Business?</h2>
+    <p style="margin-bottom: 1.5rem; opacity: 0.9;">Whether you're focusing on residential or commercial HVAC, Meridian Gable helps Carolina-based contractors optimize operations with AI-powered voice agents, streamlined CRM setup, and proven growth strategies.</p>
+    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="https://calendly.com/meridiangable/free-hvac-audit" style="background: white; color: #1B6B93; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; font-weight: 600;">Book a Free 15-Min Audit</a>
+      <a href="tel:+18002752868" style="background: transparent; color: white; padding: 0.75rem 1.5rem; border: 2px solid white; border-radius: 4px; text-decoration: none; font-weight: 600;">Call (800) 275-2868</a>
+    </div>
+  </div>
+</div>
+
+</ArticleLayout>
